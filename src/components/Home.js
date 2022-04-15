@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import toastifyFile from "../components/React-toastify/index"
 
 export default function Home() {
 
@@ -25,12 +27,22 @@ export default function Home() {
 
             default:
                 document.getElementById("scenarioCodeId").value = ""
-                console.log("error code")
+                toastifyFile.errorNotify("Error Code")
                 break;
         }
     }
     return (
         <>
+            <ToastContainer position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
             <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-md w-full space-y-8">
                     <div>
