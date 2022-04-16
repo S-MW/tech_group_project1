@@ -9,11 +9,11 @@ import { scene1 } from "../data/scene1";
 
 
 const App = () => {
-    const [currentSlide, setCurrentSlide] = useState(2)
+    const [currentSlide, setCurrentSlide] = useState(0)
     const [loaded, setLoaded] = useState(false)
     const [playAudio1, { stop: stopAudio1 }] = useSound(myaudio);
     const [sliderRef, instanceRef] = useKeenSlider({
-        initial: 2,
+        initial: 0,
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel)
         },
@@ -24,7 +24,7 @@ const App = () => {
     })
 
     useEffect(() => {
-        if (currentSlide === 3) {
+        if (currentSlide === 4) {
             playAudio1();
         } else {
             stopAudio1()
@@ -56,23 +56,34 @@ const App = () => {
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 2 &&
-                            <div className="px-10 pt-10 text-sm">
-                                {scene1.map((s) =>
+                            <div className="text-xl">
+                                {scene1.filter((s) => s.id <= 15).map((s) =>
                                     <p
                                         key={s.id}
                                         className={`animate__animated animate__fadeInDownBig animate__delay-${s.id - 1}s`}
                                     >
                                         {s.id}- {s.text}
                                     </p>
-
                                 )}
-
-
+                            </div>
+                        }
+                    </WithTitle>
+                    <WithTitle>
+                        {currentSlide === 3 &&
+                            <div className="text-xl">
+                                {scene1.filter((s) => s.id > 15).map((s) =>
+                                    <p
+                                        key={s.id}
+                                        className={`animate__animated animate__fadeInDownBig animate__delay-${s.id - 15}s`}
+                                    >
+                                        {s.id}- {s.text}
+                                    </p>
+                                )}
                             </div>
                         }
                     </WithTitle>
                     < WithTitle >
-                        {currentSlide === 3 &&
+                        {currentSlide === 4 &&
                             <h3 className="pr-5 text-3xl">
                                 <span className="animate__animated animate__fadeInDownBig animate__delay-1s"> علاقة</span>
                                 <span className="animate__animated animate__fadeInDownBig animate__delay-1s"> الجهد</span>
