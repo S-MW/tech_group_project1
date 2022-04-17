@@ -18,6 +18,8 @@ import slideAudio2_2 from '../audios/slide3-2.mp3'
 
 
 import slideAudio4 from '../audios/test.mp3'
+import WithVideo from "./Slides/WithVideo";
+import WithImageAndTab from "./Slides/WithImageAndTab";
 
 
 const App = () => {
@@ -55,12 +57,12 @@ const App = () => {
     let slide2Audios = [playAudio2_0, playAudio2_1, playAudio2_2]
 
     useEffect(() => {
-        
+
         setTimeout(() => {
             playAudio0();
-            
+
         }, 1000);
-}, [])
+    }, [])
 
     useEffect(() => {
         if (currentSlide == 2) {
@@ -147,11 +149,11 @@ const App = () => {
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 2 &&
-                            <div className="text-xl"  dangerouslySetInnerHTML={{ __html: slide2Word }} />
+                            <div className="text-xl" dangerouslySetInnerHTML={{ __html: slide2Word }} />
 
                         }
                     </WithTitle>
-               
+
                     < WithTitle >
                         {currentSlide === 3 &&
                             <h3 className="pr-5 text-3xl">
@@ -164,6 +166,11 @@ const App = () => {
                         }
                         {currentSlide == 3 ? playAudio4() : stopAudio4()}
                     </WithTitle>
+
+                    <WithImageAndTab currentSlide={currentSlide} src="/img-1.png" tab="https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_en.html" />
+
+                    <WithVideo currentSlide={currentSlide} src="https://www.youtube.com/embed/18u2WjUxN7Q" />
+
                 </div>
                 {loaded && instanceRef.current && (
                     <>
