@@ -3,15 +3,44 @@ import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import WithTitle from "./Slides/WithTitle"
 import 'animate.css';
-import useSound from 'use-sound';
-import myaudio from '../audios/test.mp3'
 import { scene1 } from "../data/scene1";
+
+// Audios imports
+import useSound from 'use-sound';
+
+import slideAudio0 from '../audios/slide1.mp3'
+import slideAudio1 from '../audios/slide2.mp3'
+
+import slideAudio2 from '../audios/slide3.mp3'
+import slideAudio2_0 from '../audios/slide3-0.mp3'
+import slideAudio2_1 from '../audios/slide3-1.mp3'
+import slideAudio2_2 from '../audios/slide3-2.mp3'
+
+
+import slideAudio4 from '../audios/test.mp3'
 
 
 const App = () => {
+
+    let slide2WordTimers = [4000, 4000, 4000, 4000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000,]
+
     const [currentSlide, setCurrentSlide] = useState(0)
     const [loaded, setLoaded] = useState(false)
-    const [playAudio1, { stop: stopAudio1 }] = useSound(myaudio);
+
+    const [slide2Word, setSlide2Word] = useState()
+
+
+    const [playAudio0, { stop: stopAudio0 }] = useSound(slideAudio0);
+    const [playAudio1, { stop: stopAudio1 }] = useSound(slideAudio1);
+
+    const [playAudio2, { stop: stopAudio2 }] = useSound(slideAudio2);
+    const [playAudio2_0, { stop: stopAudio2_0 }] = useSound(slideAudio2_0);
+    const [playAudio2_1, { stop: stopAudio2_1 }] = useSound(slideAudio2_1);
+    const [playAudio2_2, { stop: stopAudio2_2 }] = useSound(slideAudio2_2);
+
+    const [playAudio4, { stop: stopAudio4 }] = useSound(slideAudio4);
+
+
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
         slideChanged(slider) {
@@ -23,15 +52,75 @@ const App = () => {
         rtl: true,
     })
 
+    let slide2Audios = [playAudio2_0, playAudio2_1, playAudio2_2]
+
     useEffect(() => {
-        if (currentSlide === 4) {
-            playAudio1();
-        } else {
-            stopAudio1()
+        
+        setTimeout(() => {
+            playAudio0();
+            
+        }, 1000);
+}, [])
+
+    useEffect(() => {
+        if (currentSlide == 2) {
+
+            let timeToshow = 1;
+            for (let i = 0; i <= scene1.length - 1; i++) {
+                (
+                    function () {
+                        let testTime = setTimeout(() => {
+                            setSlide2Word(`<p class="animate__animated animate__fadeInDownBig" >${scene1[i].id + " - " + scene1[i].text}</p>`)
+                            slide2Audios[i]();
+                        }, timeToshow);
+                        addTestTimeToLocalStorage(testTime);
+                        timeToshow = timeToshow + slide2WordTimers[i];
+                    })();
+            }
+
+        }
+        else {
+            removeTestTimeToLocalStorage()
+        }
+    }, [currentSlide])
+
+    function removeTestTimeToLocalStorage() {
+        if (localStorage.getItem('keys')) {
+            var dd = localStorage.getItem('keys')
+            let ddAfter = JSON.parse(dd)
+
+            ddAfter.map((i, key) => {
+                clearTimeout(i[0].keys);
+            })
         }
 
-    }, [currentSlide, playAudio1, stopAudio1])
+        localStorage.removeItem("keys");
+    }
 
+
+    function addTestTimeToLocalStorage(testTime) {
+
+        // make itme at the best format  
+        var data = [[{ "keys": testTime }]]
+
+        // get the localstorage data if any!
+        if (localStorage.getItem('keys')) {
+            // there are pervoues data
+
+            // get the arrayDate form localstorage and push the new itme into it
+            var theDataFromLocalStorage = localStorage.getItem('keys')
+            let DataAfterParse
+            DataAfterParse = JSON.parse(theDataFromLocalStorage)
+
+            DataAfterParse.push([{ "keys": testTime }])
+
+            localStorage.setItem("keys", JSON.stringify(DataAfterParse))
+        }
+        else {
+            // there are no itmes , the first add 
+            localStorage.setItem("keys", JSON.stringify(data))
+        }
+    }
 
 
 
@@ -43,6 +132,7 @@ const App = () => {
                         {currentSlide === 0 &&
                             <h1 className="animate__animated animate__fadeInDownBig">الأهدافُ التعليمية</h1>
                         }
+                        {currentSlide === 0 ? playAudio0() : stopAudio0()}
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 1 &&
@@ -53,37 +143,17 @@ const App = () => {
                                 </h4>
                             </>
                         }
+                        {currentSlide == 1 ? playAudio1() : stopAudio1()}
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 2 &&
-                            <div className="text-xl">
-                                {scene1.filter((s) => s.id <= 15).map((s) =>
-                                    <p
-                                        key={s.id}
-                                        className={`animate__animated animate__fadeInDownBig animate__delay-${s.id - 1}s`}
-                                    >
-                                        {s.id}- {s.text}
-                                    </p>
-                                )}
-                            </div>
+                            <div className="text-xl"  dangerouslySetInnerHTML={{ __html: slide2Word }} />
+
                         }
                     </WithTitle>
-                    <WithTitle>
-                        {currentSlide === 3 &&
-                            <div className="text-xl">
-                                {scene1.filter((s) => s.id > 15).map((s) =>
-                                    <p
-                                        key={s.id}
-                                        className={`animate__animated animate__fadeInDownBig animate__delay-${s.id - 15}s`}
-                                    >
-                                        {s.id}- {s.text}
-                                    </p>
-                                )}
-                            </div>
-                        }
-                    </WithTitle>
+               
                     < WithTitle >
-                        {currentSlide === 4 &&
+                        {currentSlide === 3 &&
                             <h3 className="pr-5 text-3xl">
                                 <span className="animate__animated animate__fadeInDownBig animate__delay-1s"> علاقة</span>
                                 <span className="animate__animated animate__fadeInDownBig animate__delay-1s"> الجهد</span>
@@ -92,6 +162,7 @@ const App = () => {
                                 <span className="animate__animated animate__fadeInDownBig animate__delay-5s animate__slower"> في الدائرة الكهربائية</span>
                             </h3>
                         }
+                        {currentSlide == 3 ? playAudio4() : stopAudio4()}
                     </WithTitle>
                 </div>
                 {loaded && instanceRef.current && (
