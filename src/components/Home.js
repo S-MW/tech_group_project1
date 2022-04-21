@@ -15,7 +15,7 @@ export default function Home() {
     function navigatePage() {
 
         // fetch to backend to check the code & get student data
-        // tomprory data from admin
+        // tomprory data from BackEnd
 
         let student ={};
         if (studentCode == 999) {
@@ -58,7 +58,7 @@ export default function Home() {
                     <div className="rounded-md shadow-sm -space-y-px">
                         <div>
                             <label htmlFor="email-address" className="sr-only">Student Code</label>
-                            <input onChange={handleChangeStudentCode} id="StudentCodeId" type="text" required className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="رمز الطالبة" />
+                            <input onChange={handleChangeStudentCode} id="StudentCodeId" type="text" required className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="جرب 999" />
                         </div>
                     </div>
                     <div>
