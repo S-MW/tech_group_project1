@@ -18,6 +18,7 @@ import WithImageAndTab from "../../../Slides/WithImageAndTab";
 export default function SimpleScenarioLesson1() {
     let navigate = useNavigate();
 
+    const [isAudioOn, setIsAudioOn] = useState(false)
 
     const [currentSlide, setCurrentSlide] = useState(0)
     const [loaded, setLoaded] = useState(false)
@@ -39,12 +40,12 @@ export default function SimpleScenarioLesson1() {
                 <div ref={sliderRef} className="keen-slider">
                     <WithTitle>
                         {currentSlide === 0 &&
-                            <SL1s0 />
+                            <SL1s0 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 1 &&
-                            <SL1s1 />
+                            <SL1s1 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn}/>
                         }
                     </WithTitle>
 
@@ -74,8 +75,12 @@ export default function SimpleScenarioLesson1() {
                     <>
                         <Arrow
                             left
-                            onClick={(e) =>
-                                e.stopPropagation() || instanceRef.current?.next()
+                            onClick={(e) => 
+                            {
+                                if (!isAudioOn) {
+                                    e.stopPropagation() || instanceRef.current?.next()
+                                }
+                            }
                             }
                             disabled={
                                 currentSlide ===
@@ -85,7 +90,11 @@ export default function SimpleScenarioLesson1() {
 
                         <Arrow
                             onClick={(e) =>
-                                e.stopPropagation() || instanceRef.current?.prev()
+                                {
+                                    if (!isAudioOn) {
+                                        e.stopPropagation() || instanceRef.current?.prev()
+                                    }
+                                }
                             }
                             disabled={currentSlide === 0}
                         />
