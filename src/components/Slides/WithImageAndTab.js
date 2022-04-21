@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 export default function WithImageAndTab({ currentSlide, src, tab }) {
-    console.log(currentSlide)
+    // console.log(currentSlide)
     const [showLab, setShowLab] = useState(false)
 
     useEffect(() => {

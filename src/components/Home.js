@@ -5,31 +5,36 @@ import toastifyFile from "../components/React-toastify/index"
 
 export default function Home() {
 
-    const SimpleScenarioCode = "code1";
-    const ComplicatedScenario = "code2";
-
     let navigate = useNavigate();
-    const [scenarioCode, setScenarioCode] = useState("");
 
-    const handleChangeScenarioCode = (e) => {
-        setScenarioCode(e.target.value)
+    const [studentCode, setStudentCode] = useState("");
+    const handleChangeStudentCode = (e) => {
+        setStudentCode(e.target.value)
     }
 
     function navigatePage() {
-        switch (scenarioCode) {
-            case SimpleScenarioCode:
-                navigate("/SimpleScenario")
-                break;
 
-            case ComplicatedScenario:
-                navigate("/ComplicatedScenario")
-                break;
+        // fetch to backend to check the code & get student data
+        // tomprory data from admin
 
-            default:
-                document.getElementById("scenarioCodeId").value = ""
-                toastifyFile.errorNotify("Error Code")
-                break;
+        let student ={};
+        if (studentCode == 999) {
+            student = { isRegisteredStudent: true, name: "saad", sinarioType: "simple", isCompletedLesson1:false, progressLesson1Slide:2,isCompletedLesson2:false, progressLesson2Slide:0  }
+            localStorage.setItem("studentData", JSON.stringify(student))
         }
+        else {
+            student = { isRegisteredStudent: false }
+        }
+
+
+        if (student.isRegisteredStudent) {
+            navigate("/StudentHome")
+        }
+        else {
+            document.getElementById("StudentCodeId").value = ""
+            toastifyFile.errorNotify("الرمز خطأ")
+        }
+
     }
     return (
         <>
@@ -38,7 +43,7 @@ export default function Home() {
                 hideProgressBar={false}
                 newestOnTop={false}
                 closeOnClick
-                rtl={false}
+                rtl={true}
                 pauseOnFocusLoss
                 draggable
                 pauseOnHover
@@ -46,14 +51,14 @@ export default function Home() {
             <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-md w-full space-y-8">
                     <div>
-                        <img className="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow" />
-                        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">ادخل رمز السيناريو</h2>
+                        <img className="mx-auto h-auto w-auto" src="stem.png" alt="STEM image" />
+                        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">ادخل رمز الطالبة</h2>
 
                     </div>
                     <div className="rounded-md shadow-sm -space-y-px">
                         <div>
-                            <label htmlFor="email-address" className="sr-only">Scenario Code</label>
-                            <input onChange={handleChangeScenarioCode} id="scenarioCodeId" type="text" required className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="رمز السيناريو" />
+                            <label htmlFor="email-address" className="sr-only">Student Code</label>
+                            <input onChange={handleChangeStudentCode} id="StudentCodeId" type="text" required className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="رمز الطالبة" />
                         </div>
                     </div>
                     <div>
