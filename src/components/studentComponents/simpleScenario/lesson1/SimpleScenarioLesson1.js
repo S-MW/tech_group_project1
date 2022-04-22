@@ -9,16 +9,15 @@ import SL1s2_1 from "./SL1s2_1";
 import SL1s2_2 from "./SL1s2_2";
 import SL1s3 from "./SL1s3";
 import SL1s4 from "./SL1s4";
+import SL1s5 from "./SL1s5";
 
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import 'animate.css';
-import { scene1 } from "../../../../data/scene1";
-
 
 import WithTitle from "../../../Slides/WithTitle"
-import WithVideo from "../../../Slides/WithVideo";
-import WithImageAndTab from "../../../Slides/WithImageAndTab";
+// import WithVideo from "../../../Slides/WithVideo";
+// import WithImageAndTab from "../../../Slides/WithImageAndTab";
 
 export default function SimpleScenarioLesson1() {
     let navigate = useNavigate();
@@ -50,37 +49,42 @@ export default function SimpleScenarioLesson1() {
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 1 &&
-                            <SL1s1 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn}/>
+                            <SL1s1 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
 
                     < WithTitle >
                         {currentSlide === 2 &&
-                            <SL1s2_0 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn}/>
+                            <SL1s2_0 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     < WithTitle >
                         {currentSlide === 3 &&
-                            <SL1s2_1 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn}/>
+                            <SL1s2_1 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     < WithTitle >
                         {currentSlide === 4 &&
-                            <SL1s2_2 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn}/>
+                            <SL1s2_2 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     < WithTitle >
                         {currentSlide === 5 &&
-                            <SL1s3 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn}/>
+                            <SL1s3 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     < WithTitle >
                         {currentSlide === 6 &&
-                            <SL1s4 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn}/>
+                            <SL1s4 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                        }
+                    </WithTitle>
+                    < WithTitle >
+                        {currentSlide === 7 &&
+                            <SL1s5 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
-                        {currentSlide === 7 &&
+                        {currentSlide === 8 &&
                             <button className=" p-3 rounded-lg bg-blue-300" onClick={() => navigate("/StudentHome")}>العودة الى القائمة الرئيسية</button>
                         }
                     </WithTitle>
@@ -100,9 +104,9 @@ export default function SimpleScenarioLesson1() {
                     <>
                         <Arrow
                             left
-                            onClick={(e) => 
-                            {
-                                if (!isAudioOn) {
+                            onClick={(e) => {
+                                // !isAudioOn
+                                if (true) {
                                     e.stopPropagation() || instanceRef.current?.next()
                                 }
                             }
@@ -114,12 +118,12 @@ export default function SimpleScenarioLesson1() {
                         />
 
                         <Arrow
-                            onClick={(e) =>
-                                {
-                                    if (!isAudioOn) {
-                                        e.stopPropagation() || instanceRef.current?.prev()
-                                    }
+                            onClick={(e) => {
+                                // !isAudioOn
+                                if (true) {
+                                    e.stopPropagation() || instanceRef.current?.prev()
                                 }
+                            }
                             }
                             disabled={currentSlide === 0}
                         />
