@@ -4,6 +4,11 @@ import { useNavigate } from "react-router-dom";
 // simple Scenario Slide Imports
 import SL1s0 from "./SL1s0";
 import SL1s1 from "./SL1s1";
+import SL1s2_0 from "./SL1s2_0";
+import SL1s2_1 from "./SL1s2_1";
+import SL1s2_2 from "./SL1s2_2";
+import SL1s3 from "./SL1s3";
+import SL1s4 from "./SL1s4";
 
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
@@ -51,11 +56,31 @@ export default function SimpleScenarioLesson1() {
 
                     < WithTitle >
                         {currentSlide === 2 &&
-                            <h1>test</h1>
+                            <SL1s2_0 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn}/>
+                        }
+                    </WithTitle>
+                    < WithTitle >
+                        {currentSlide === 3 &&
+                            <SL1s2_1 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn}/>
+                        }
+                    </WithTitle>
+                    < WithTitle >
+                        {currentSlide === 4 &&
+                            <SL1s2_2 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn}/>
+                        }
+                    </WithTitle>
+                    < WithTitle >
+                        {currentSlide === 5 &&
+                            <SL1s3 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn}/>
+                        }
+                    </WithTitle>
+                    < WithTitle >
+                        {currentSlide === 6 &&
+                            <SL1s4 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn}/>
                         }
                     </WithTitle>
                     <WithTitle>
-                        {currentSlide === 3 &&
+                        {currentSlide === 7 &&
                             <button className=" p-3 rounded-lg bg-blue-300" onClick={() => navigate("/StudentHome")}>العودة الى القائمة الرئيسية</button>
                         }
                     </WithTitle>
