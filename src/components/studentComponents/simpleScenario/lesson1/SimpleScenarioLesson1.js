@@ -15,6 +15,7 @@ import SL1s7 from "./SL1s7";
 import SL1s8 from "./SL1s8";
 import SL1s9 from "./SL1s9";
 import SL1s10 from "./SL1s10";
+import SL1s11 from "./SL1s11";
 
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
@@ -113,6 +114,11 @@ export default function SimpleScenarioLesson1() {
                             <SL1s10 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
+                    < WithTitle >
+                        {currentSlide === 13 &&
+                            <SL1s11 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                        }
+                    </WithTitle>
 
 
 
@@ -121,7 +127,7 @@ export default function SimpleScenarioLesson1() {
 
                     {/* last Slide */}
                     <WithTitle>
-                        {currentSlide === 13 &&
+                        {currentSlide === 14 &&
                             <button className=" p-3 rounded-lg bg-blue-300" onClick={() => navigate("/StudentHome")}>العودة الى القائمة الرئيسية</button>
                         }
                     </WithTitle>
