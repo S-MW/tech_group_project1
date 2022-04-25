@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 // simple Scenario Slide Imports
 import CL1s0 from "./CL1s0";
 import CL1s1 from "./CL1s1";
+import CL1s2_0 from "./CL1s2_0";
+import CL1s2_1 from "./CL1s2_1";
+import CL1s2_2 from "./CL1s2_2";
 
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
@@ -44,12 +47,27 @@ export default function ComplicatedScenarioLesson1() {
                             <CL1s1 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
-                  
+                    <WithTitle>
+                        {currentSlide === 2 &&
+                            <CL1s2_0 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                        }
+                    </WithTitle>
+                    <WithTitle>
+                        {currentSlide === 3 &&
+                            <CL1s2_1 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                        }
+                    </WithTitle>
+                    <WithTitle>
+                        {currentSlide === 4 &&
+                            <CL1s2_2 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                        }
+                    </WithTitle>
+
 
 
                     {/* last Slide */}
                     <WithTitle>
-                        {currentSlide === 2 &&
+                        {currentSlide === 5 &&
                             <button className=" p-3 rounded-lg bg-blue-300" onClick={() => navigate("/StudentHome")}>العودة الى القائمة الرئيسية</button>
                         }
                     </WithTitle>
@@ -60,7 +78,8 @@ export default function ComplicatedScenarioLesson1() {
                         <Arrow
                             left
                             onClick={(e) => {
-                                if (!isAudioOn) {
+                                // !isAudioOn
+                                if (true) {
                                     e.stopPropagation() || instanceRef.current?.next()
                                 }
                             }
@@ -73,7 +92,8 @@ export default function ComplicatedScenarioLesson1() {
 
                         <Arrow
                             onClick={(e) => {
-                                if (!isAudioOn) {
+                                // !isAudioOn
+                                if (true) {
                                     e.stopPropagation() || instanceRef.current?.prev()
                                 }
                             }
