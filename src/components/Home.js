@@ -17,9 +17,12 @@ export default function Home() {
         // fetch to backend to check the code & get student data
         // tomprory data from BackEnd
 
-        let student ={};
+        let student = {};
         if (studentCode == 999) {
-            student = { isRegisteredStudent: true, name: "saad", sinarioType: "simple", isCompletedLesson1:false, progressLesson1Slide:2,isCompletedLesson2:false, progressLesson2Slide:0  }
+            student = { isRegisteredStudent: true, name: "saad", sinarioType: "simple", isCompletedLesson1: false, progressLesson1Slide: 2, isCompletedLesson2: false, progressLesson2Slide: 0 }
+            localStorage.setItem("studentData", JSON.stringify(student))
+        } else if (studentCode == 777) {
+            student = { isRegisteredStudent: true, name: "fahad", sinarioType: "complicated", isCompletedLesson1: false, progressLesson1Slide: 2, isCompletedLesson2: false, progressLesson2Slide: 0 }
             localStorage.setItem("studentData", JSON.stringify(student))
         }
         else {
@@ -58,7 +61,7 @@ export default function Home() {
                     <div className="rounded-md shadow-sm -space-y-px">
                         <div>
                             <label htmlFor="email-address" className="sr-only">Student Code</label>
-                            <input onChange={handleChangeStudentCode} id="StudentCodeId" type="text" required className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="جرب 999" />
+                            <input onChange={handleChangeStudentCode} id="StudentCodeId" type="text" required className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="999 بسيط - 777 معقد" />
                         </div>
                     </div>
                     <div>
