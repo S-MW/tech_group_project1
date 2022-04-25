@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 // simple Scenario Slide Imports
 import CL1s0 from "./CL1s0";
+import CL1s1 from "./CL1s1";
 
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
@@ -38,12 +39,17 @@ export default function ComplicatedScenarioLesson1() {
                             <CL1s0 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
+                    <WithTitle>
+                        {currentSlide === 1 &&
+                            <CL1s1 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                        }
+                    </WithTitle>
                   
 
 
                     {/* last Slide */}
                     <WithTitle>
-                        {currentSlide === 1 &&
+                        {currentSlide === 2 &&
                             <button className=" p-3 rounded-lg bg-blue-300" onClick={() => navigate("/StudentHome")}>العودة الى القائمة الرئيسية</button>
                         }
                     </WithTitle>
