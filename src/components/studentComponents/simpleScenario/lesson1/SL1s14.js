@@ -1,24 +1,44 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import useSound from 'use-sound';
-// Sound not found yet
-// import slideAudio12 from "../../../../audios/simpleScenarioAudios/lesson1/slide12.mp3"
+import slideAudio14_0 from "../../../../audios/simpleScenarioAudios/lesson1/slide14_0.mp3"
+import slideAudio14_1 from "../../../../audios/simpleScenarioAudios/lesson1/slide14_1.mp3"
 
 
 function SL1s14(props) {
 
-  // const [playAudio12, { stop: stopAudio7 }] = useSound(slideAudio12, {
-  //   onend: () => {
-  //     console.info('Sound ended!');
-  //     props.setIsAudioOn(false);
-  //   },
-  // });
+  const [audioNumber, setAudioNumber] = useState(0)
 
 
-  // useEffect(() => {
-  //   console.info('Sound Start!');
-  //   playAudio12();
-  //   props.setIsAudioOn(true);
-  // }, [playAudio12]);
+  const [playAudio14_0, { stop: stopAudio14_0 }] = useSound(slideAudio14_0, {
+    onend: () => {
+      console.info('Sound ended!');
+      setAudioNumber(1)
+    },
+  });
+
+  const [playAudio14_1, { stop: stopAudio14_1 }] = useSound(slideAudio14_1, {
+    onend: () => {
+      console.info('Sound ended!');
+      props.setIsAudioOn(false);
+    },
+  });
+
+
+
+
+  useEffect(() => {
+    if (audioNumber === 0) {
+      console.info('Sound Start!');
+      playAudio14_0();
+      props.setIsAudioOn(true);
+    }
+    if (audioNumber === 1) {
+      console.info('Sound Start!');
+      playAudio14_1();
+      props.setIsAudioOn(true);
+    }
+
+  }, [playAudio14_0, playAudio14_1, audioNumber]);
 
 
   return (
