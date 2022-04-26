@@ -9,6 +9,7 @@ import CL1s2_1 from "./CL1s2_1";
 import CL1s2_2 from "./CL1s2_2";
 import CL1s3 from "./CL1s3";
 import CL1s4 from "./CL1s4";
+import CL1s5 from "./CL1s5";
 
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
@@ -74,12 +75,17 @@ export default function ComplicatedScenarioLesson1() {
                             <CL1s4 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
+                    <WithTitle>
+                        {currentSlide === 7 &&
+                            <CL1s5 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                        }
+                    </WithTitle>
 
 
 
                     {/* last Slide */}
                     <WithTitle>
-                        {currentSlide === 7 &&
+                        {currentSlide === 8 &&
                             <button className=" p-3 rounded-lg bg-blue-300" onClick={() => navigate("/StudentHome")}>العودة الى القائمة الرئيسية</button>
                         }
                     </WithTitle>
