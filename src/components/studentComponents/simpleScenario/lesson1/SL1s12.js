@@ -1,24 +1,23 @@
 import { useEffect } from 'react';
 import useSound from 'use-sound';
-// Sound not found yet
-// import slideAudio12 from "../../../../audios/simpleScenarioAudios/lesson1/slide12.mp3"
+import slideAudio12 from "../../../../audios/simpleScenarioAudios/lesson1/slide12.mp3"
 
 
 function SL1s12(props) {
 
-  // const [playAudio12, { stop: stopAudio7 }] = useSound(slideAudio12, {
-  //   onend: () => {
-  //     console.info('Sound ended!');
-  //     props.setIsAudioOn(false);
-  //   },
-  // });
+  const [playAudio12, { stop: stopAudio7 }] = useSound(slideAudio12, {
+    onend: () => {
+      console.info('Sound ended!');
+      props.setIsAudioOn(false);
+    },
+  });
 
 
-  // useEffect(() => {
-  //   console.info('Sound Start!');
-  //   playAudio12();
-  //   props.setIsAudioOn(true);
-  // }, [playAudio12]);
+  useEffect(() => {
+    console.info('Sound Start!');
+    playAudio12();
+    props.setIsAudioOn(true);
+  }, [playAudio12]);
 
 
   return (
