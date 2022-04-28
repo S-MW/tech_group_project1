@@ -48,6 +48,7 @@ export default function SimpleScenarioLesson1() {
     const [loaded, setLoaded] = useState(false)
 
     const [sliderRef, instanceRef] = useKeenSlider({
+        drag: false,
         initial: 0,
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel)
