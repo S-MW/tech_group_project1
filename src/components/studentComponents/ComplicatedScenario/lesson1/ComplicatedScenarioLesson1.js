@@ -228,8 +228,7 @@ export default function ComplicatedScenarioLesson1() {
                         <Arrow
                             left
                             onClick={(e) => {
-                                // !isAudioOn
-                                if (true) {
+                                if (!isAudioOn) {
                                     e.stopPropagation() || instanceRef.current?.next()
                                 }
                             }
@@ -242,8 +241,7 @@ export default function ComplicatedScenarioLesson1() {
 
                         <Arrow
                             onClick={(e) => {
-                                // !isAudioOn
-                                if (true) {
+                                if (!isAudioOn) {
                                     e.stopPropagation() || instanceRef.current?.prev()
                                 }
                             }
