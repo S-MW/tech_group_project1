@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import toastifyFile from "../../components/React-toastify/index"
 
 
 export default function StudentHome() {
@@ -17,39 +19,50 @@ export default function StudentHome() {
     }
 
     function navigateToLesson2() {
-        if (student.isCompletedLesson1) {
-            if (student.sinarioType == "simple") {
-                navigate("/SimpleScenarioLesson2")
-            }
-            else {
-                // That mean she is Complicated Type.
-                navigate("/ComplicatedScenarioLesson2")
-            }
+        // if (student.isCompletedLesson1) {
+        if (student.sinarioType == "simple") {
+            navigate("/SimpleScenarioLesson2")
         }
         else {
-            console.log("You have to finish lesson1 first")
+            // That mean she is Complicated Type.
+            navigate("/ComplicatedScenarioLesson2")
         }
+        // }
+        // else {
+        //     console.log("You have to finish lesson1 first")
+        //     toastifyFile.warnNotify('يجب عليك الإنتهاء من الدرس الأول.')
+        // }
     }
 
     function navigateToExam() {
-        if (student.isCompletedLesson1 && student.isCompletedLesson2) 
-        {
-           console.log(" go to exam link")
+        if (student.isCompletedLesson1 && student.isCompletedLesson2) {
+            console.log(" go to exam link")
         }
         else {
             console.log("You have to finish lesson1 & lesson2")
+            toastifyFile.warnNotify('يجب عليك الإنتهاء من الدروس السابقة.')
         }
     }
 
 
     return (
         <>
+            <ToastContainer position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={true}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
             <div className="flex flex-col justify-center items-center h-screen w-screen space-y-2">
                 <div>
                     <button onClick={() => navigateToLesson1()} className="p-3 rounded-lg  bg-indigo-500 ">الدرس الاول : التيار الكهربائي</button>
                 </div>
                 <div>
-                    <button onClick={() => navigateToLesson2()} className="p-3 rounded-lg bg-red-400">الدرس الثاني : الدوائر الكهربائي</button>
+                    <button onClick={() => navigateToLesson2()} className="p-3 rounded-lg bg-red-400">الدرس الثاني : الدوائر الكهربائية</button>
                 </div>
                 <div>
                     <button onClick={() => navigateToExam()} className="p-3 rounded-lg bg-blue-400">الاختبار</button>
