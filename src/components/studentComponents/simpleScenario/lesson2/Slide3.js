@@ -21,11 +21,11 @@ export default function Slide3({ setIsOn, currentSlide }) {
     }, [playAudio, setIsOn, currentSlide, stop])
 
     return (
-        <>
-            <h4 className="animate__animated animate__fadeInDownBig text-center text-6xl mx-10">عزيزتى الطالبة ،</h4>
-            <h4 className="animate__animated animate__fadeInDownBig animate__delay-1s text-center text-6xl mx-10">من المتوقع بعد انتهائك منْ هذا الدرس
+        <div className='h-full flex flex-col justify-center gap-3 mx-5 text-[#efe3d9]'>
+            <h4 className="animate__animated animate__fadeInDownBig max-w-fit mx-auto text-center text-4xl shadow-md px-1 py-4 md:px-10 lg:text-1xl rounded-md bg-[#edac34]">عزيزتى الطالبة ،</h4>
+            <h4 className="animate__animated animate__fadeInDownBig animate__delay-1s text-center text-2xl shadow-md px-1 py-4 md:px-10 lg:text-1xl rounded-md bg-[#fa976d]">من المتوقع بعد انتهائك منْ هذا الدرس
                 أنْ تكونى قادرة وبكفاءة على أنْ:
             </h4>
-        </>
+        </div>
     )
 }

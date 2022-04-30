@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import useSound from 'use-sound';
-import Audio from "../../../../audios/simpleScenarioAudios/lesson2/slide5_head_title.mp3"
+import TitleAudio from "../../../../audios/simpleScenarioAudios/lesson2/slide5/head_title.mp3"
+import Audio from "../../../../audios/simpleScenarioAudios/lesson2/slide5/audio.mp3"
+import LabAudio from "../../../../audios/simpleScenarioAudios/lesson2/slide5/lab.mp3"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHandPointer } from '@fortawesome/free-regular-svg-icons'
 
@@ -13,8 +15,9 @@ export default function Slide3({ setIsOn }) {
     const [ohmsLaw, setOhmsLaw] = useState('hidden')
     const [isHeadTitleSoundLoaded, setIsHeadTitleSoundLoaded] = useState(false)
     const [isHeadTitleOver, setIsHeadTitleOver] = useState(false)
+    const [isLabTime, setIsLabTime] = useState(false)
 
-    const [playAudio, { duration }] = useSound(Audio, {
+    const [playTitleAudio, { duration }] = useSound(TitleAudio, {
         onend: () => {
             setIsOn(false);
             setIsHeadTitleOver(true)
@@ -23,16 +26,35 @@ export default function Slide3({ setIsOn }) {
             setIsHeadTitleSoundLoaded(true)
         }
     })
+    const [playAudio] = useSound(Audio, {
+        onend: () => {
+            setIsHeadTitleOver(true)
+            setIsLabTime(true)
+        }
+    })
+    const [playLab] = useSound(LabAudio, {
+        onend: () => {
+            setIsOn(false);
+            setIsHeadTitleOver(true)
+        }
+    })
 
     useEffect(() => {
         if (isHeadTitleOver) {
+            playAudio()
             setTitleClass('animate__animated animate__backInRight')
-            setDefinitionClass('animate__animated animate__backInRight animate__delay-5s')
-            setOhmsLaw('animate__animated animate__backInRight animate__delay-7s')
-            setLabClass('animate__animated animate__backInRight animate__delay-10s')
+            setDefinitionClass('animate__animated animate__backInRight animate__delay-14s')
+            setOhmsLaw('animate__animated animate__backInRight animate__delay-23s')
             setHeadTitleClass('hidden')
         }
-    }, [isHeadTitleOver, setTitleClass])
+    }, [isHeadTitleOver, setTitleClass, playAudio])
+
+    useEffect(() => {
+        if (isLabTime) {
+            playLab()
+            setLabClass('animate__animated animate__backInRight')
+        }
+    }, [isLabTime, playLab])
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -48,30 +70,28 @@ export default function Slide3({ setIsOn }) {
 
     useEffect(() => {
         const timeout = setTimeout(() => {
-            playAudio();
+            playTitleAudio();
             setIsOn(true);
         }, 1000);
         return () => {
             clearTimeout(timeout)
         }
-    }, [playAudio, setIsOn])
+    }, [playTitleAudio, setIsOn])
 
     return (
         <>
             <div className="mx-8 text-[#efe3d9] h-full font-normal w-4/6">
-                <h3 className={`p-4 lg:p-5 text-2xl max-w-fit mx-auto lg:text-xl rounded-md bg-[#639e98] mt-32 ${headTitleClass}`}>
+                <h3 className={`p-4 lg:p-5 text-2xl max-w-fit mx-auto lg:text-xl rounded-md shadow-md bg-[#639e98] mt-32 ${headTitleClass}`}>
                     علاقة الجهد والتيار الكهربائي والمقاومة الكهربائية في دائرة كهربائية
                 </h3>
                 <div className='mr-2 w-full ml-auto text-xl lg:text-2xl h-full flex flex-col justify-center '>
-                    <h3 className={`p-2 mb-2 max-w-fit rounded-md bg-[#edac34] ${titleClass}`}>
+                    <h3 className={`p-2 mb-2 max-w-fit rounded-md bg-[#edac34] shadow-md ${titleClass}`}>
                         المقاومة – شدة التيار – الجهد
                     </h3>
-                    <h3 className={`p-2 mb-2 max-w-fit rounded-md bg-[#639e98] ${definitionClass}`}>
+                    <h3 className={`p-2 mb-2 max-w-fit rounded-md bg-[#639e98] shadow-md ${definitionClass}`}>
                         قانون أوم: التيار الكهربائى المتدفق فى دائرة كهربائية يساوى حاصل قسمة الجهد على المقاومة
-
-
                     </h3>
-                    <h3 className={`p-2 mb-2 max-w-fit rounded-md bg-[#fc8b92] ${ohmsLaw}`}>
+                    <h3 className={`p-2 mb-2 max-w-fit rounded-md bg-[#fc8b92] shadow-md ${ohmsLaw}`}>
                         <p className='text-[#]  mt-2 p-1' style={{ textShadow: 'unset' }}>
                             <b className='text-[#000]'> قانون أوم: </b>
                             <br />
@@ -84,12 +104,13 @@ export default function Slide3({ setIsOn }) {
                             </span>
                         </p>
                     </h3>
-                    <h3 className={`p-2 rounded-sm mb-2 max-w-fit bg-[#96d2ca] ${labClass}`}>
-                        <button onClick={() => window.open('https://phet.colorado.edu/sims/html/ohms-law/latest/ohms-law_ar_SA.html')}>
+                    <div className={`mb-2 text-2xl lg:text-xl flex items-center animate__animated animate__backInDown ${labClass}`}>
+                        <button onClick={() => window.open('https://phet.colorado.edu/sims/html/ohms-law/latest/ohms-law_ar_SA.html')} className='bg-[#639e98] block mx-auto py-3 px-5 rounded-md text-3xl shadow-md border-2 animate__animated animate__pulse animate__infinite'>
                             التطبيق
-                            <FontAwesomeIcon icon={faHandPointer} className="mr-2 animate__animated animate__tada animate__infinite" />
+                            <FontAwesomeIcon icon={faHandPointer} className="mr-2 " />
                         </button>
-                    </h3>
+                    </div>
+
                 </div>
             </div>
         </>

@@ -11,6 +11,7 @@ import Slide6 from "./Slide6";
 import Slide7 from "./Slide7";
 import Slide8 from "./Slide8";
 import Slide9 from "./Slide9";
+import Slide10 from "./Slide10";
 
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
@@ -22,11 +23,11 @@ export default function Index() {
 
     const [isOn, setIsOn] = useState(false)
 
-    const [currentSlide, setCurrentSlide] = useState(0)
+    const [currentSlide, setCurrentSlide] = useState(3)
     const [loaded, setLoaded] = useState(false)
 
     const [sliderRef, instanceRef] = useKeenSlider({
-        initial: 0,
+        initial: 3,
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel)
         },
@@ -84,6 +85,11 @@ export default function Index() {
                     <WithTitle>
                         {currentSlide === 8 &&
                             <Slide9 isOn={isOn} setIsOn={setIsOn} currentSlide={currentSlide} />
+                        }
+                    </WithTitle>
+                    <WithTitle>
+                        {currentSlide === 9 &&
+                            <Slide10 isOn={isOn} setIsOn={setIsOn} currentSlide={currentSlide} />
                         }
                     </WithTitle>
 

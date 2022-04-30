@@ -22,14 +22,9 @@ body {
 }
 
 p {
-  text-shadow: 1px -2px rgb(236, 224, 214), 1px 2px rgb(236, 224, 214);
   padding: 5px 0;
-  /* font-size: 2rem; */
 }
 
-h4 {
-  text-shadow: 1px -2px rgb(236, 224, 214), 1px 2px rgb(236, 224, 214);
-}
 
 .navigation-wrapper {
   position: relative;
