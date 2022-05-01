@@ -23,10 +23,7 @@ export default function SL1s0(props) {
   return (
     <div className="h-screen grid place-items-center">
       <div>
-        <h1 className="shadow-md text-sm p-4 px-6 rounded-md bg-[#639e98] text-[#efe3d9]
-         animate__animated animate__fadeInDownBig
-          md:text-lg
-          lg:text-xl">
+        <h1 className="animate__animated animate__fadeInDownBig TitleHeading">
           الأهداف التعليمية
         </h1>
       </div>

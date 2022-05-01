@@ -22,7 +22,7 @@ function SL1s6(props) {
 
     return (
         <>
-            <h1 className="animate__animated animate__fadeInDownBig">حركة الايونات فى المحاليل</h1>
+            <h1 className="animate__animated animate__fadeInDownBig TitleHeading">حركة الايونات فى المحاليل</h1>
         </>
     );
 }

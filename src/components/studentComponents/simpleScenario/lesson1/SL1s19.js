@@ -20,7 +20,7 @@ export default function SL1s19(props) {
 
   return (
     <>
-      <h1 className="text-6xl animate__animated animate__fadeInDownBig">الدائرة الكهربائية </h1>
+      <h1 className="text-6xl animate__animated animate__fadeInDownBig TitleHeading">الدائرة الكهربائية </h1>
     </>
   );
 }

@@ -20,7 +20,7 @@ export default function SL1s21(props) {
 
   return (
     <>
-      <h1 className="text-6xl animate__animated animate__fadeInDownBig">الجهد الكهربائي </h1>
+      <h1 className="text-6xl animate__animated animate__fadeInDownBig TitleHeading">الجهد الكهربائي </h1>
     </>
   );
 }

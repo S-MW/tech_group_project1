@@ -20,7 +20,7 @@ export default function SL1s23(props) {
 
   return (
     <>
-      <h1 className="text-6xl animate__animated animate__fadeInDownBig">المقاومة الكهربائية</h1>
+      <h1 className="text-6xl animate__animated animate__fadeInDownBig TitleHeading">المقاومة الكهربائية</h1>
     </>
   );
 }

@@ -21,7 +21,7 @@ export default function SL1s9(props) {
 
     return (
         <>
-            <h1 className="text-6xl animate__animated animate__fadeInDownBig">تعريف العوازل والموصلات</h1>
+            <h1 className="text-6xl animate__animated animate__fadeInDownBig TitleHeading">تعريف العوازل والموصلات</h1>
         </>
     );
 }
