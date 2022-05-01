@@ -46,7 +46,6 @@ export default function ComplicatedScenarioLesson1() {
     const [loaded, setLoaded] = useState(false)
 
     const [sliderRef, instanceRef] = useKeenSlider({
-        drag: false,
         initial: 0,
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel)
@@ -55,6 +54,7 @@ export default function ComplicatedScenarioLesson1() {
             setLoaded(true)
         },
         rtl: true,
+        drag: !isAudioOn
     })
 
     return (
@@ -63,232 +63,144 @@ export default function ComplicatedScenarioLesson1() {
                 <div ref={sliderRef} className="keen-slider">
                     <WithTitle>
                         {currentSlide === 0 &&
-                            <>
-                                <CL1s0 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s0 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 1 &&
-                            <>
-                                <CL1s1 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s1 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 2 &&
-                            <>
-                                <CL1s2 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s2 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 3 &&
-                            <>
-                                <CL1s3 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s3 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 4 &&
-                            <>
-                                <CL1s4 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s4 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 5 &&
-                            <>
-                                <CL1s5 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s5 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 6 &&
-                            <>
-                                <CL1s6 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s6 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 7 &&
-                            <>
-                                <CL1s7 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s7 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 8 &&
-                            <>
-                                <CL1s8 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s8 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 9 &&
-                            <>
-                                <CL1s9 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s9 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 10 &&
-                            <>
-                                <CL1s10 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s10 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 11 &&
-                            <>
-                                <CL1s11 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s11 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 12 &&
-                            <>
-                                <CL1s12 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s12 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 13 &&
-                            <>
-                                <CL1s13 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s13 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 14 &&
-                            <>
-                                <CL1s14 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s14 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 15 &&
-                            <>
-                                <CL1s15 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s15 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 16 &&
-                            <>
-                                <CL1s16 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s16 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 17 &&
-                            <>
-                                <CL1s17 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s17 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 18 &&
-                            <>
-                                <CL1s18 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s18 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 19 &&
-                            <>
-                                <CL1s19 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s19 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 20 &&
-                            <>
-                                <CL1s20 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s20 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 21 &&
-                            <>
-                                <CL1s21 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s21 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 22 &&
-                            <>
-                                <CL1s22 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s22 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 23 &&
-                            <>
-                                <CL1s23 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s23 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 24 &&
-                            <>
-                                <CL1s24 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s24 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 25 &&
-                            <>
-                                <CL1s25 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s25 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 26 &&
-                            <>
-                                <CL1s26 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s26 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 27 &&
-                            <>
-                                <CL1s27 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
+                            <CL1s27 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                         }
                     </WithTitle>
-
-
-
-                    {/* last Slide */}
                     <WithTitle>
                         {currentSlide === 28 &&
                             <button className=" p-3 rounded-lg bg-blue-300" onClick={() => navigate("/StudentHome")}>العودة الى القائمة الرئيسية</button>
@@ -301,30 +213,32 @@ export default function ComplicatedScenarioLesson1() {
                         <Arrow
                             left
                             onClick={(e) => {
-                                if (!isAudioOn) {
+                                // !isAudioOn
+                                if (true) {
                                     e.stopPropagation() || instanceRef.current?.next()
                                 }
                             }
                             }
                             disabled={
                                 currentSlide ===
-                                instanceRef.current.track.details.slides.length - 1
+                                instanceRef.current.track.details.slides.length - 1 || isAudioOn
                             }
                         />
 
                         <Arrow
                             onClick={(e) => {
-                                if (!isAudioOn) {
+                                // !isAudioOn
+                                if (true) {
                                     e.stopPropagation() || instanceRef.current?.prev()
                                 }
                             }
                             }
-                            disabled={currentSlide === 0}
+                            disabled={currentSlide === 0 || isAudioOn}
                         />
                     </>
                 )}
             </div>
-            {
+            {/* {
                 loaded && instanceRef.current && (
                     <div className="dots">
                         {[
@@ -342,7 +256,7 @@ export default function ComplicatedScenarioLesson1() {
                         })}
                     </div>
                 )
-            }
+            } */}
         </>
     )
 
