@@ -4,9 +4,7 @@ import { useNavigate } from "react-router-dom";
 // simple Scenario Slide Imports
 import SL1s0 from "./SL1s0";
 import SL1s1 from "./SL1s1";
-import SL1s2_0 from "./SL1s2_0";
-import SL1s2_1 from "./SL1s2_1";
-import SL1s2_2 from "./SL1s2_2";
+import SL1s2 from "./SL1s2";
 import SL1s3 from "./SL1s3";
 import SL1s4 from "./SL1s4";
 import SL1s5 from "./SL1s5";
@@ -83,7 +81,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 2 &&
                             <>
-                                <SL1s2_0 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s2 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -91,7 +89,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 3 &&
                             <>
-                                <SL1s2_1 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s3 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -99,7 +97,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 4 &&
                             <>
-                                <SL1s2_2 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s4 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -107,7 +105,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 5 &&
                             <>
-                                <SL1s3 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s5 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -115,7 +113,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 6 &&
                             <>
-                                <SL1s4 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s6 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -123,7 +121,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 7 &&
                             <>
-                                <SL1s5 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s7 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -131,7 +129,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 8 &&
                             <>
-                                <SL1s6 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s8 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -139,7 +137,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 9 &&
                             <>
-                                <SL1s7 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s9 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -147,7 +145,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 10 &&
                             <>
-                                <SL1s8 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s10 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -155,7 +153,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 11 &&
                             <>
-                                <SL1s9 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s11 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -163,7 +161,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 12 &&
                             <>
-                                <SL1s10 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s12 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -171,7 +169,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 13 &&
                             <>
-                                <SL1s11 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s13 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -179,7 +177,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 14 &&
                             <>
-                                <SL1s12 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s14 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -187,7 +185,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 15 &&
                             <>
-                                <SL1s13 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s15 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -195,7 +193,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 16 &&
                             <>
-                                <SL1s14 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s16 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -203,7 +201,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 17 &&
                             <>
-                                <SL1s15 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s17 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -211,7 +209,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 18 &&
                             <>
-                                <SL1s16 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s18 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -219,7 +217,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 19 &&
                             <>
-                                <SL1s17 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s19 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -227,7 +225,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 20 &&
                             <>
-                                <SL1s18 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s20 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -235,7 +233,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 21 &&
                             <>
-                                <SL1s19 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s21 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -243,7 +241,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 22 &&
                             <>
-                                <SL1s20 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s22 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -251,7 +249,7 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 23 &&
                             <>
-                                <SL1s21 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <SL1s23 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -259,29 +257,13 @@ export default function SimpleScenarioLesson1() {
                     < WithTitle >
                         {currentSlide === 24 &&
                             <>
-                                <SL1s22 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
-                        }
-                    </WithTitle>
-                    < WithTitle >
-                        {currentSlide === 25 &&
-                            <>
-                                <SL1s23 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
-                        }
-                    </WithTitle>
-                    < WithTitle >
-                        {currentSlide === 26 &&
-                            <>
                                 <SL1s24 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
                     </WithTitle>
                     < WithTitle >
-                        {currentSlide === 27 &&
+                        {currentSlide === 25 &&
                             <>
                                 <SL1s25 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
@@ -295,7 +277,7 @@ export default function SimpleScenarioLesson1() {
 
                     {/* last Slide */}
                     <WithTitle>
-                        {currentSlide === 28 &&
+                        {currentSlide === 26 &&
                             <button className=" p-3 rounded-lg bg-blue-300" onClick={() => navigate("/StudentHome")}>العودة الى القائمة الرئيسية</button>
                         }
                     </WithTitle>
