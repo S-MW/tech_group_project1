@@ -42,7 +42,6 @@ function SL1s20(props) {
 
 
   useEffect(() => {
-    console.log("useEffect ::: " + audioNumber)
     if (audioNumber == 0) {
       console.info('playAudio20_0 Start!');
       playAudio20_0();
@@ -54,7 +53,6 @@ function SL1s20(props) {
     }
 
     if (audioNumber == 2) {
-      console.log("###############")
       console.info('playAudio20_2 Start!');
       playAudio20_2();
     }
