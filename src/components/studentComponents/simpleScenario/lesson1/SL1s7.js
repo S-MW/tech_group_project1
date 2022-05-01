@@ -25,7 +25,7 @@ function SL1s7(props) {
       <div>
         <img src="/SL1s7.png" alt="" className="animate__animated animate__bounceInDown animate__delay-1s" />
       </div>
-      <h3 className="animate__animated animate__fadeInDownBig animate__delay-1s">الايون هو الذرة المشحونة بشحنة موجبة أو سالبة</h3>
+      <h3 className="animate__animated animate__fadeInDownBig animate__delay-1s TitleHeading ">الايون هو الذرة المشحونة بشحنة موجبة أو سالبة</h3>
 
     </>
   );
