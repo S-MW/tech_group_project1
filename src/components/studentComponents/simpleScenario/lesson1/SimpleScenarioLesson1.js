@@ -298,7 +298,8 @@ export default function SimpleScenarioLesson1() {
                         <Arrow
                             left
                             onClick={(e) => {
-                                if (!isAudioOn) {
+                                // !isAudioOn
+                                if (true) {
                                     e.stopPropagation() || instanceRef.current?.next()
                                 }
                             }
@@ -311,7 +312,8 @@ export default function SimpleScenarioLesson1() {
 
                         <Arrow
                             onClick={(e) => {
-                                if (!isAudioOn) {
+                                // !isAudioOn
+                                if (true) {
                                     e.stopPropagation() || instanceRef.current?.prev()
                                 }
                             }
@@ -330,9 +332,9 @@ export default function SimpleScenarioLesson1() {
                             return (
                                 <button
                                     key={idx}
-                                    // onClick={() => {
-                                    //     instanceRef.current?.moveToIdx(idx)
-                                    // }}
+                                    onClick={() => {
+                                        instanceRef.current?.moveToIdx(idx)
+                                    }}
                                     className={"dot" + (currentSlide === idx ? " active" : "")}
                                 ></button>
                             )
