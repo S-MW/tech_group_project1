@@ -40,7 +40,7 @@ function CL1s15(props) {
         <>
             <h1 className="text-3xl font-bold animate__animated animate__fadeInDownBig ">هل يمكن للبرق ان يحرز شحنات كهربائية؟
             </h1>
-            <h1 className="text-3xl font-bold animate__animated animate__fadeInDownBig  animate__delay-3s ">
+            <h1 className="text-3xl font-bold animate__animated animate__fadeInDownBig  animate__delay-4s ">
                 -يمكن للتفريغ الكهربائى أن يحرز كمية هائلة من الطاقة الكهربائية فى لحظة واحدة ، كما يحدث فى صاعقة البرق
             </h1>
             <div>
