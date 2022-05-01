@@ -19,7 +19,11 @@ function SL1s3(props) {
 
     return (
         <>
-            <h1 className="animate__animated animate__fadeInDownBig">الشحنة الكهرائية الساكنة</h1>
+            <h1 className="shadow-md text-sm p-4 px-6 rounded-md bg-[#639e98] text-[#efe3d9]
+         animate__animated animate__fadeInDownBig
+          md:text-lg
+          lg:text-xl">
+                الشحنة الكهربائية الساكنة</h1>
         </>
     );
 }
