@@ -73,7 +73,7 @@ function SL1s4(props) {
       <div>
         <div className="text-xl" dangerouslySetInnerHTML={{ __html: image }} />
       </div>
-      <h3 className="animate__animated animate__fadeInDownBig animate__delay-18s">قوة ارتباط ذرات الشعر بإلكتروناتها أقل من قوة ارتباط ذرات البالون بإلكتروناتها</h3>
+      <h3 className="animate__animated animate__fadeInDownBig animate__delay-18s TitleHeading">قوة ارتباط ذرات الشعر بإلكتروناتها أقل من قوة ارتباط ذرات البالون بإلكتروناتها</h3>
     </>
   );
 }
