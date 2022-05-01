@@ -46,8 +46,8 @@ function SL1s5(props) {
     return (
         <>
             <div className="animate__animated animate__bounceInDown">
-                <h1 className="mb-3 text-2xl animate__animated animate__fadeInDownBig animate__delay-5s">الشحنة الكهربائية الساكنة Charge Static</h1>
-                <button className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 animate__animated animate__fadeInDownBig animate__delay-10s" onClick={() => window.open(slideLink)}>
+                <h1 className="mb-3 text-2xl animate__animated animate__fadeInDownBig animate__delay-3s">الشحنة الكهربائية الساكنة Charge Static</h1>
+                <button className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 animate__animated animate__fadeInDownBig animate__delay-7s" onClick={() => window.open(slideLink)}>
                     التجربة
                 </button>
             </div>
