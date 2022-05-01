@@ -21,10 +21,14 @@ export default function SL1s1(props) {
 
   return (
     <>
-      <h4 className="animate__animated animate__fadeInDownBig text-center text-6xl mx-10">عزيزتى الطالبة ،</h4>
-      <h4 className="animate__animated animate__fadeInDownBig animate__delay-1s text-center text-6xl mx-10">من المتوقع بعد انتهائك منْ هذا الدرس
-        أنْ تكونى قادرة وبكفاءة على أنْ:
-      </h4>
+      <h4 className="animate__animated animate__fadeInDownBig text-sm text-center mb-5 p-3 rounded-md bg-[#edac34]
+      md:text-lg
+      lg:text-4xl
+      ">عزيزتى الطالبة ،</h4>
+      <h4 className="animate__animated animate__fadeInDownBig animate__delay-1s text-sm text-center p-3 rounded-md bg-[#fa976d]
+      md:text-lg
+      lg:text-4xl
+      ">من المتوقع بعد انتهائك منْ هذا الدرس أنْ تكونى قادرة وبكفاءة على أنْ:</h4>
     </>
   );
 }
