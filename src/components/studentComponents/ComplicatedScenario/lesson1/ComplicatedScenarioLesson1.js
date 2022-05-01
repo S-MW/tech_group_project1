@@ -4,9 +4,7 @@ import { useNavigate } from "react-router-dom";
 // simple Scenario Slide Imports
 import CL1s0 from "./CL1s0";
 import CL1s1 from "./CL1s1";
-import CL1s2_0 from "./CL1s2_0";
-import CL1s2_1 from "./CL1s2_1";
-import CL1s2_2 from "./CL1s2_2";
+import CL1s2 from "./CL1s2";
 import CL1s3 from "./CL1s3";
 import CL1s4 from "./CL1s4";
 import CL1s5 from "./CL1s5";
@@ -82,7 +80,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 2 &&
                             <>
-                                <CL1s2_0 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s2 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -90,7 +88,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 3 &&
                             <>
-                                <CL1s2_1 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s3 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -98,7 +96,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 4 &&
                             <>
-                                <CL1s2_2 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s4 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -106,7 +104,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 5 &&
                             <>
-                                <CL1s3 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s5 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -114,7 +112,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 6 &&
                             <>
-                                <CL1s4 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s6 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -122,7 +120,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 7 &&
                             <>
-                                <CL1s5 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s7 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -130,7 +128,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 8 &&
                             <>
-                                <CL1s6 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s8 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -138,7 +136,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 9 &&
                             <>
-                                <CL1s7 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s9 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -146,7 +144,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 10 &&
                             <>
-                                <CL1s8 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s10 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -154,7 +152,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 11 &&
                             <>
-                                <CL1s9 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s11 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -162,7 +160,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 12 &&
                             <>
-                                <CL1s10 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s12 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -170,7 +168,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 13 &&
                             <>
-                                <CL1s11 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s13 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -178,7 +176,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 14 &&
                             <>
-                                <CL1s12 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s14 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -186,7 +184,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 15 &&
                             <>
-                                <CL1s13 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s15 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -194,7 +192,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 16 &&
                             <>
-                                <CL1s14 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s16 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -202,7 +200,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 17 &&
                             <>
-                                <CL1s15 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s17 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -210,7 +208,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 18 &&
                             <>
-                                <CL1s16 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s18 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -218,7 +216,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 19 &&
                             <>
-                                <CL1s17 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s19 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -226,7 +224,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 20 &&
                             <>
-                                <CL1s18 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s20 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -234,7 +232,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 21 &&
                             <>
-                                <CL1s19 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s21 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -242,7 +240,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 22 &&
                             <>
-                                <CL1s20 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s22 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -250,7 +248,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 23 &&
                             <>
-                                <CL1s21 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s23 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -258,7 +256,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 24 &&
                             <>
-                                <CL1s22 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s24 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -266,7 +264,7 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 25 &&
                             <>
-                                <CL1s23 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
+                                <CL1s25 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
@@ -274,29 +272,13 @@ export default function ComplicatedScenarioLesson1() {
                     <WithTitle>
                         {currentSlide === 26 &&
                             <>
-                                <CL1s24 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
-                        }
-                    </WithTitle>
-                    <WithTitle>
-                        {currentSlide === 27 &&
-                            <>
-                                <CL1s25 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
-                                <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
-                            </>
-                        }
-                    </WithTitle>
-                    <WithTitle>
-                        {currentSlide === 28 &&
-                            <>
                                 <CL1s26 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
                             </>
                         }
                     </WithTitle>
                     <WithTitle>
-                        {currentSlide === 29 &&
+                        {currentSlide === 27 &&
                             <>
                                 <CL1s27 isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
                                 <p className="text-xl font-bold absolute bottom-5 left-5">{currentSlide + 1} </p>
@@ -308,7 +290,7 @@ export default function ComplicatedScenarioLesson1() {
 
                     {/* last Slide */}
                     <WithTitle>
-                        {currentSlide === 30 &&
+                        {currentSlide === 28 &&
                             <button className=" p-3 rounded-lg bg-blue-300" onClick={() => navigate("/StudentHome")}>العودة الى القائمة الرئيسية</button>
                         }
                     </WithTitle>
