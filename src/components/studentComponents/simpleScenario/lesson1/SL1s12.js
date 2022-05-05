@@ -25,7 +25,9 @@ function SL1s12(props) {
       <div>
         <img src="/slide12.jpg" alt="" className="animate__animated animate__bounceInDown w-60 h-60" />
       </div>
-      <h3 className="animate__animated animate__fadeInDownBig ">هي القوة التي تؤثر بها الأجسام المشحونة في بعضها البعض البعض وهذه القوة يمكن  ان تكون تجاذب أو تنافر</h3>
+      <h3 className="animate__animated animate__fadeInDownBig text-sm w-2/3 text-center p-3 m-2 rounded-md bg-[#fa976d]
+      md:text-lg
+      lg:text-3xl">هي القوة التي تؤثر بها الأجسام المشحونة في بعضها البعض البعض وهذه القوة يمكن  ان تكون تجاذب أو تنافر</h3>
 
     </>
   );
