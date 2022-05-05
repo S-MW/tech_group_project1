@@ -11,7 +11,7 @@ function SL1s4(props) {
   const [audioNumber, setAudioNumber] = useState(0)
 
 
-  const [playAudio4_0, { stop: stopAudio4_0 }] = useSound(slideAudio4_0, {
+  const [playAudio4_0] = useSound(slideAudio4_0, {
     onend: () => {
       console.info('Sound ended!');
       setImage(`<img src="/slide4_0.jpg" alt="" class="animate__animated animate__bounceInDown w-60 h-60" />`)
@@ -19,14 +19,14 @@ function SL1s4(props) {
     },
   });
 
-  const [playAudio4_1, { stop: stopAudio4_1 }] = useSound(slideAudio4_1, {
+  const [playAudio4_1] = useSound(slideAudio4_1, {
     onend: () => {
       console.info('Sound ended!');
       setAudioNumber(2);
     },
   });
 
-  const [playAudio4_2, { stop: stopAudio4_2 }] = useSound(slideAudio4_2, {
+  const [playAudio4_2] = useSound(slideAudio4_2, {
     onend: () => {
       console.info('Sound ended!');
       setImage(`<img src="/slide4_1.jpg" alt="" class="animate__animated animate__bounceInDown w-60 h-60" />`)
@@ -34,7 +34,7 @@ function SL1s4(props) {
     },
   });
 
-  const [playAudio4_3, { stop: stopAudio4_3 }] = useSound(slideAudio4_3, {
+  const [playAudio4_3] = useSound(slideAudio4_3, {
     onend: () => {
       console.info('Sound ended!');
       props.setIsAudioOn(false);
@@ -73,7 +73,9 @@ function SL1s4(props) {
       <div>
         <div className="text-xl" dangerouslySetInnerHTML={{ __html: image }} />
       </div>
-      <h3 className="animate__animated animate__fadeInDownBig animate__delay-18s TitleHeading">قوة ارتباط ذرات الشعر بإلكتروناتها أقل من قوة ارتباط ذرات البالون بإلكتروناتها</h3>
+      <h3 className="animate__animated animate__fadeInDownBig animate__delay-18s text-sm w-2/3 text-center p-3 rounded-md bg-[#fa976d]
+      md:text-lg
+      lg:text-3xl">قوة ارتباط ذرات الشعر بإلكتروناتها أقل من قوة ارتباط ذرات البالون بإلكتروناتها</h3>
     </>
   );
 }

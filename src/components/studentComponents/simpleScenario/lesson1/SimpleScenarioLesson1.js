@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 
 // simple Scenario Slide Imports
@@ -227,7 +227,7 @@ export default function SimpleScenarioLesson1() {
                     </>
                 )}
             </div>
-            {/* {
+            {
                 loaded && instanceRef.current && (
                     <div className="dots">
                         {[
@@ -245,7 +245,7 @@ export default function SimpleScenarioLesson1() {
                         })}
                     </div>
                 )
-            } */}
+            }
         </>
     )
 
