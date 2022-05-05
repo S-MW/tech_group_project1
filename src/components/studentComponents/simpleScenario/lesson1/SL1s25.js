@@ -3,10 +3,11 @@ import useSound from 'use-sound';
 import slideAudio25_0 from "../../../../audios/simpleScenarioAudios/lesson1/slide25_0.mp3"
 import slideAudio25_1 from "../../../../audios/simpleScenarioAudios/lesson1/slide25_1.mp3"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHandPointer } from '@fortawesome/free-regular-svg-icons'
 
 function SL1s25(props) {
 
-  const slideLink = "https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_en.html"
   const [audioNumber, setAudioNumber] = useState(0)
 
   const [playAudio25_0, { stop: stopAudio25_0 }] = useSound(slideAudio25_0, {
@@ -41,9 +42,12 @@ function SL1s25(props) {
     <>
       <div>
         <img src="/slide25.jpg" alt="" className="animate__animated animate__bounceInDown w-60 h-60" />
-        <button className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 animate__animated animate__fadeInDownBig animate__delay-30s" onClick={() => window.open(slideLink)}>
-          التجربة
-        </button>
+        <div className={`mb-2 text-2xl lg:text-xl flex items-center animate__animated animate__backInDown animate__delay-30s`}>
+          <button onClick={() => window.open('https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_en.html')} className='bg-[#fc8b92] block mx-auto py-3 px-5 rounded-md text-3xl shadow-md border-2 animate__animated animate__pulse animate__infinite'>
+            التجربة
+            <FontAwesomeIcon icon={faHandPointer} className="mr-2 " />
+          </button>
+        </div>
       </div>
     </>
   );
