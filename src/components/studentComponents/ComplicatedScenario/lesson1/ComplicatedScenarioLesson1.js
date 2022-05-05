@@ -238,7 +238,7 @@ export default function ComplicatedScenarioLesson1() {
                     </>
                 )}
             </div>
-            {/* {
+            {
                 loaded && instanceRef.current && (
                     <div className="dots">
                         {[
@@ -256,7 +256,7 @@ export default function ComplicatedScenarioLesson1() {
                         })}
                     </div>
                 )
-            } */}
+            }
         </>
     )
 
