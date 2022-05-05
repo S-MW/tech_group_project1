@@ -23,7 +23,9 @@ function SL1s8(props) {
   return (
     <>
       <img src="/SL1s8_1.jpg" alt="" className="animate__animated animate__bounceInDown w-60 h-32" />
-      <h3 className="animate__animated animate__fadeInDownBig animate__delay-9s">وزن معادلة التفكك</h3>
+      <h3 className="animate__animated animate__fadeInDownBig animate__delay-9s text-sm my-2 w-fit text-center p-3 rounded-md bg-[#fa976d]
+      md:text-lg
+      lg:text-3xl">وزن معادلة التفكك</h3>
       <img src="/SL1s8_2.jpg" alt="" className="animate__animated animate__bounceInDown animate__delay-9s" />
     </>
   );
