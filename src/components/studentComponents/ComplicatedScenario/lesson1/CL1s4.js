@@ -8,11 +8,12 @@ import slideAudio4_3 from "../../../../audios/complicatedScenarioAudios/lesson1/
 import slideAudio4_4 from "../../../../audios/complicatedScenarioAudios/lesson1/slide4_4.mp3"
 import slideAudio4_5 from "../../../../audios/simpleScenarioAudios/lesson1/slide5_1.mp3"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHandPointer } from '@fortawesome/free-regular-svg-icons'
 
 
 function CL1s4(props) {
 
-  const slideLink = "https://phet.colorado.edu/sims/html/john-travoltage/latest/john-travoltage_ar_SA.html"
   const [audioNumber, setAudioNumber] = useState(0)
   const [image, setImage] = useState(`<img src="ComplicatedScenarioImages/slide4_0.jpg" alt="" class="animate__animated animate__bounceInDown w-60 h-60" />`)
 
@@ -45,8 +46,12 @@ function CL1s4(props) {
   const [playAudio4_3, { stop: stopAudio4_3 }] = useSound(slideAudio4_3, {
     onend: () => {
       console.info('Sound ended!');
-      setImage(`<h4 class="animate__animated animate__fadeInDownBig text-center text-6xl mx-10">اذا كيف يصبح الجسم مشحونًا كهربائيًا؟</h4>
-      <h4 class="animate__animated animate__fadeInDownBig animate__delay-3s text-center text-6xl mx-10">يصبح الجسم مشحونا بالكهرباء إذا افقد أو اكتسب الكترونات.</h4>`)
+      setImage(`<h4 class="animate__animated animate__fadeInDownBig  mx-10 text-sm w-2/3 text-center p-3 m-2 rounded-md bg-[#96d2ca]
+      md:text-lg
+      lg:text-3xl">اذا كيف يصبح الجسم مشحونًا كهربائيًا؟</h4>
+      <h4 class="animate__animated animate__fadeInDownBig animate__delay-3s mx-10 text-sm w-2/3 text-center p-3 m-2 rounded-md bg-[#507570]
+      md:text-lg
+      lg:text-3xl">يصبح الجسم مشحونا بالكهرباء إذا افقد أو اكتسب الكترونات.</h4>`)
       setAudioNumber(4);
     },
   });
@@ -100,12 +105,13 @@ function CL1s4(props) {
 
   return (
     <>
-      <div>
-        <div className="text-xl" dangerouslySetInnerHTML={{ __html: image }} />
+      <div className="grid justify-items-center" dangerouslySetInnerHTML={{ __html: image }} />
+      <div className={`mb-2 text-2xl lg:text-xl flex items-center animate__animated animate__backInDown animate__delay-50s`}>
+        <button onClick={() => window.open('https://phet.colorado.edu/sims/html/john-travoltage/latest/john-travoltage_ar_SA.html')} className='bg-[#fc8b92] block mx-auto py-3 px-5 rounded-md text-3xl shadow-md border-2 animate__animated animate__pulse animate__infinite'>
+          التجربة
+          <FontAwesomeIcon icon={faHandPointer} className="mr-2 " />
+        </button>
       </div>
-      <button className="group relative w-16 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 animate__animated animate__fadeInDownBig animate__delay-50s" onClick={() => window.open(slideLink)}>
-        التجربة
-      </button>
     </>
   );
 }
