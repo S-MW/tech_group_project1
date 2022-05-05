@@ -19,7 +19,7 @@ function CL1s3(props) {
 
     return (
         <>
-            <h1 className="animate__animated animate__fadeInDownBig">الشحنة الكهرائية الساكنة</h1>
+            <h1 className="animate__animated animate__fadeInDownBig TitleHeading">الشحنة الكهرائية الساكنة</h1>
         </>
     );
 }
