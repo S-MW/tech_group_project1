@@ -35,7 +35,9 @@ function SL1s22(props) {
       <div>
         <div className="text-xl" dangerouslySetInnerHTML={{ __html: image }} />
       </div>
-      <h3 className="animate__animated animate__fadeInDownBig ">هو مقياس كمّيّة طاقة الوضع الكهربائيّة التي تسبّب حركة الإلكترونات في الدائرة الكهربائيّة، وتُقاس بوحدة الفولت</h3>
+      <h3 className="animate__animated animate__fadeInDownBig  text-sm w-2/3 text-center p-3 m-2 rounded-md bg-[#8c7c5e]
+      md:text-lg
+      lg:text-3xl">هو مقياس كمّيّة طاقة الوضع الكهربائيّة التي تسبّب حركة الإلكترونات في الدائرة الكهربائيّة، وتُقاس بوحدة الفولت</h3>
     </>
   );
 }
