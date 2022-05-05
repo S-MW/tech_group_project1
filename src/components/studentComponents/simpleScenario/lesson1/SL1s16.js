@@ -25,7 +25,9 @@ function SL1s16(props) {
       <div>
         <img src="/slide16.jpg" alt="" className="animate__animated animate__bounceInDown w-60 h-60" />
       </div>
-      <h3 className="animate__animated animate__fadeInDownBig ">هو الحركة السريعة للشحنات الفائضة من مكان إلى آخر</h3>
+      <h3 className="animate__animated animate__fadeInDownBig text-sm w-2/3 text-center p-3 m-2 rounded-md bg-[#fa976d]
+      md:text-lg
+      lg:text-3xl">هو الحركة السريعة للشحنات الفائضة من مكان إلى آخر</h3>
     </>
   );
 }
