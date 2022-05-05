@@ -25,7 +25,7 @@ export default function SL1s1(props) {
       md:text-lg
       lg:text-4xl
       ">عزيزتى الطالبة ،</h4>
-      <h4 className="animate__animated animate__fadeInDownBig animate__delay-1s text-sm text-center p-3 rounded-md bg-[#fa976d]
+      <h4 className="animate__animated animate__fadeInDownBig animate__delay-1s text-sm w-2/3 text-center p-3 rounded-md bg-[#fa976d]
       md:text-lg
       lg:text-4xl
       ">من المتوقع بعد انتهائك منْ هذا الدرس أنْ تكونى قادرة وبكفاءة على أنْ:</h4>
