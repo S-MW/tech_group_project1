@@ -19,7 +19,7 @@ function CL1s25(props) {
 
     return (
         <>
-            <h1 className="animate__animated animate__fadeInDownBig">الربط مع الكيمياء</h1>
+            <h1 className="animate__animated animate__fadeInDownBig TitleHeading">الربط مع الكيمياء</h1>
         </>
     );
 }
