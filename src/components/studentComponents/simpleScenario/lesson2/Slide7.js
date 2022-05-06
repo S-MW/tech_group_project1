@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHandPointer } from '@fortawesome/free-regular-svg-icons'
 
 
-export default function Slide3({ setIsOn }) {
+export default function Index({ setIsOn }) {
     const [introImg, setIntroImg] = useState(false)
     const [way1Img, setWay1Img] = useState(false)
     const [way2Img, setWay2Img] = useState(false)

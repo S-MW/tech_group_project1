@@ -3,7 +3,7 @@ import useSound from 'use-sound';
 import intro from "../../../../audios/simpleScenarioAudios/lesson2/slide8.mp3"
 
 
-export default function Slide3({ setIsOn }) {
+export default function Index({ setIsOn }) {
 
     const [playIntro] = useSound(intro, {
         onend: () => {

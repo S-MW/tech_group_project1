@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHandPointer } from '@fortawesome/free-regular-svg-icons'
 
 
-export default function Slide3({ setIsOn }) {
+export default function Index({ setIsOn }) {
     const [headTitleClass, setHeadTitleClass] = useState('animate__animated animate__backInDown animate__slower')
     const [titleClass, setTitleClass] = useState('hidden')
     const [definitionClass, setDefinitionClass] = useState('hidden')
