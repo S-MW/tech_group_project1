@@ -38,11 +38,17 @@ function CL1s11(props) {
 
     return (
         <>
-            <div className='absolute top-5 right-5 animate__animated animate__bounceInDown'>
-                <h2 className='text-4xl'>تنوع الثقافات</h2>
+            <div className='absolute top-5 right-5 animate__animated animate__bounceInDown text-sm my-2 w-fit text-center p-3 rounded-md bg-[#fa976d]
+                md:text-lg
+                lg:text-3xl'>
+                <h2>تنوع الثقافات</h2>
             </div>
-            <h1 className="text-3xl font-bold animate__animated animate__fadeInDownBig animate__delay-2s">هل تعلمى عزيزتى الطالبة اصل كلمة كهرباء؟</h1>
-            <h1 className="text-4xl text-blue-600 fort-bold font-bold animate__animated animate__fadeInDownBig animate__delay-5s">كلمة كهرباء أصلها من اللغة اإلغريقية ومعناها الكترون. حيث وجد عالم إغريقي أن دلك العنبر بالفرو يجعل العنبر ً قادرا على جذب قطع صغيرة من القش.</h1>
+            <h1 className="font-bold animate__animated animate__fadeInDownBig animate__delay-2s text-sm my-2 w-fit text-center p-3 rounded-md bg-[#96d2ca]
+                md:text-lg
+                lg:text-3xl">هل تعلمى عزيزتى الطالبة اصل كلمة كهرباء؟</h1>
+            <h1 className=" text-white fort-bold font-bold animate__animated animate__fadeInDownBig animate__delay-5s text-sm my-2 w-2/3 text-center p-3 rounded-md bg-[#a19a8c]
+                md:text-lg
+                lg:text-3xl">كلمة كهرباء أصلها من اللغة اإلغريقية ومعناها الكترون. حيث وجد عالم إغريقي أن دلك العنبر بالفرو يجعل العنبر ً قادرا على جذب قطع صغيرة من القش.</h1>
 
 
 
