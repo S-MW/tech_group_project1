@@ -73,6 +73,7 @@ function CL1s4(props) {
 
   useEffect(() => {
     if (audioNumber == 0) {
+      stopAudio4_0();
       console.info('playAudio4_0 Start!');
       playAudio4_0();
     }

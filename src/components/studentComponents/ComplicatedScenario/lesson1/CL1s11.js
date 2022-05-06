@@ -24,6 +24,7 @@ function CL1s11(props) {
 
     useEffect(() => {
         if (audioNumber === 0) {
+            stopAudio11_0()
             console.info('playAudio9_0 Start!');
             playAudio11_0();
             props.setIsAudioOn(true);
