@@ -2,12 +2,20 @@ import { useEffect, useState } from 'react';
 import useSound from 'use-sound';
 import slideAudio10 from "../../../../audios/complicatedScenarioAudios/lesson1/slide10.mp3"
 
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHandPointer } from '@fortawesome/free-regular-svg-icons'
+
 function CL1s10(props) {
 
-    const [question1, setQuestion1] = useState(`<button class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2
-     focus:ring-indigo-500 animate__animated animate__fadeInDownBig animate__delay-2s">
-    الجواب
-  </button>`)
+    
+
+    const [question1, setQuestion1] = useState(`<div class='text-2xl lg:text-xl flex items-center animate__animated animate__backInDown'>
+    <button class='bg-[#fc8b92] block mx-auto py-3 px-5 rounded-md text-3xl shadow-md border-2 animate__animated animate__pulse animate__infinite'>
+        الجواب
+        <FontAwesomeIcon icon={faHandPointer} class="mr-2 " />
+    </button>
+</div>`)
 
     const [playAudio10, { stop: stopAudio10 }] = useSound(slideAudio10, {
         onend: () => {
@@ -24,30 +32,32 @@ function CL1s10(props) {
 
     return (
         <>
-            <div className='absolute top-5 right-5 animate__animated animate__bounceInDown'>
-                <h2 className='text-4xl'>التفكير الناقد</h2>
+            <div className='absolute top-5 right-5 animate__animated animate__bounceInDown text-sm my-2 w-fit text-center p-3 rounded-md bg-[#fa976d]
+                md:text-lg
+                lg:text-3xl'>
+                <h2 className=''>التفكير الناقد</h2>
             </div>
 
-            <div className='mt-3'>
-                <table className="table-auto border-collapse  border-2 border-black animate__animated animate__bounceInDown animate__delay-1s">
-                    <thead>
-                        <tr>
-                            <th className="border-2 border-black">السؤال</th>
-                            <th className="border-2 border-black">الجواب</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className='animate__animated animate__fadeInDownBig'>
-                            <td className="border-2  border-black animate__animated animate__bounceInDown animate__delay-1s"> قارن بين القوة التى أثر بها البالون فى القصاصات ، والقوة التى أثر بها أحد البالونين فى البالون الآخر.</td>
-                            <td className="border-2  border-black" >
-                                <div onClick={() => {
-                                    setQuestion1(`<h2 class='text-base text-blue-600'>لم يكن للبالون في الخطوة الثانية أي تأثير في قصاصات الورق، في حين جذب البالون في الخطوة 4 قصاصات الورق. أما في الخطوة 5 فقد تنافر البالونان بعضهما مع بعض.</h2>`)
-                                }} dangerouslySetInnerHTML={{ __html: question1 }} />
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <table className="table-auto  animate__animated animate__bounceInDown animate__delay-1s w-2/3 text-sm my-2 text-center p-3 rounded-md bg-[#639e98]
+                md:text-lg
+                lg:text-3xl">
+                <thead>
+                    <tr>
+                        <th className="">السؤال</th>
+                        <th className="">الجواب</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr className='animate__animated animate__fadeInDownBig'>
+                        <td className="animate__animated animate__bounceInDown animate__delay-1s"> قارن بين القوة التى أثر بها البالون فى القصاصات ، والقوة التى أثر بها أحد البالونين فى البالون الآخر.</td>
+                        <td className="" >
+                            <div onClick={() => {
+                                setQuestion1(`<h2 class='text-base text-white'>لم يكن للبالون في الخطوة الثانية أي تأثير في قصاصات الورق، في حين جذب البالون في الخطوة 4 قصاصات الورق. أما في الخطوة 5 فقد تنافر البالونان بعضهما مع بعض.</h2>`)
+                            }} dangerouslySetInnerHTML={{ __html: question1 }} />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </>
     );
 }
