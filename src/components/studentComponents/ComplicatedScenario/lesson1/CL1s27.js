@@ -24,10 +24,14 @@ function CL1s27(props) {
 
     return (
         <>
-            <div className='absolute top-5 right-5 animate__animated animate__bounceInDown'>
-                <h2 className='text-4xl'>الربط مع التاريخ</h2>
+            <div className='absolute top-5 right-5 animate__animated animate__bounceInDown text-sm my-2 w-fit text-center p-3 rounded-md bg-[#fa976d]
+                md:text-lg
+                lg:text-3xl'>
+                <h2>الربط مع التاريخ</h2>
             </div>
-            <h1 className="text-3xl font-bold animate__animated animate__fadeInDownBig animate__delay-2s">الأوم.... وحدة قياس المقاومة الكهربائية</h1>
+            <h1 className="font-bold animate__animated animate__fadeInDownBig animate__delay-2s text-sm my-2 w-fit text-center p-3 rounded-md bg-[#96d2ca]
+                md:text-lg
+                lg:text-3xl">الأوم.... وحدة قياس المقاومة الكهربائية</h1>
             <img src="ComplicatedScenarioImages/slide27.jpg" alt="" className="animate__animated animate__bounceInDown animate__delay-7s w-60 h-60" />
         </>
     );
