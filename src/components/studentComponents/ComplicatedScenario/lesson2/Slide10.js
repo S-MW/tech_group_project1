@@ -65,14 +65,14 @@ export default function Index({ setIsOn }) {
 
                 {showBtns &&
                     <>
-                        <div className='mx-auto my-3 border text-xl flex items-center animate__animated animate__backInDown w-3/4 md:w-56'>
+                        <div className='mx-auto my-3 text-xl flex items-center animate__animated animate__backInDown w-3/4 md:w-56'>
                             <button className='bg-[#edac34] block mx-auto px-3 py-2 md:py-5 md:px-8 w-full rounded-md text-lg md:text-3xl shadow-md border-2 animate__animated animate__pulse animate__infinite' onClick={() => window.open('https://phet.colorado.edu/sims/html/circuit-construction-kit-dc-virtual-lab/latest/circuit-construction-kit-dc-virtual-lab_en.html')}>
                                 التجربة
                                 <FontAwesomeIcon icon={faHandPointer} className="mr-2 " />
                             </button>
                         </div>
 
-                        <div className='mx-auto border text-xl flex items-center animate__animated animate__backInDown animate__delay-1s w-3/4 md:w-56'>
+                        <div className='mx-auto text-xl flex items-center animate__animated animate__backInDown animate__delay-3s w-3/4 md:w-56'>
                             <button className='bg-[#fa976d] block mx-auto px-3 py-2 md:py-5 md:px-8 w-full rounded-md text-lg md:text-3xl shadow-md border-2 animate__animated animate__pulse animate__infinite' onClick={() => setShowAnswer(true)}>
                                 الاجابة
                                 <FontAwesomeIcon icon={faQuestionCircle} className="mr-2" />

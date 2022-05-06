@@ -35,7 +35,7 @@ export default function Index({ setIsOn }) {
                             ما هى اكثر الاجهزة استهلاكا للقدرة الكهربائية؟
                         </div>
                         <div className='animate__animated animate__backInDown animate__delay-7s'>
-                            <img src="./lesson2/slide11/table.png" className='shadow-md mx-auto w-3/4 md:w-1/2 lg:w-1/4' alt="جدول المقارنة بين الأجهزة الكهربائية" />
+                            <img src="./lesson2/slide11/table.png" className='shadow-md mx-auto md:w-1/2 lg:w-1/4' alt="جدول المقارنة بين الأجهزة الكهربائية" />
                             <div className="flex justify-center gap-1 mt-2">
                                 <img src="./lesson2/slide11/conditioner.png" className='shadow-md' alt="مكيف" />
                                 <img src="./lesson2/slide11/fridge.png" className='shadow-md' alt="ثلاجة" />

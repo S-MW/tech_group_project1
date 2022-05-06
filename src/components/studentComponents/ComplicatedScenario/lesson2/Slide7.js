@@ -79,19 +79,19 @@ export default function Index({ setIsOn }) {
                     <p className='text-black md:text-xl'>العالم توماس أديسون 1847م-1913م</p>
                 </div>
 
-                <div className='md:flex justify-between flex-wrap mx:mt-5 md:mx-auto md:w-full'>
+                <div className='flex justify-between flex-wrap md:mt-5 md:mx-auto md:w-full'>
                     <div className={`bg-white max-w-fit p-2 mt-4 shadow-md mx-auto md:mx-0 ${lampClass}`}>
-                        <img src="./lesson2/slide7/c/lamp.jpg" className='mx-auto w-40 md:w-32' alt="صورة المصباح الكهربائي" />
+                        <img src="./lesson2/slide7/c/lamp.jpg" className='mx-auto w-28 md:w-32' alt="صورة المصباح الكهربائي" />
                         <p className='text-black md:text-xl'>المصباح الكهربائي</p>
                     </div>
 
                     <div className={`bg-white max-w-fit p-2 mt-4 shadow-md mx-auto md:mx-0 ${phonographClass}`}>
-                        <img src="./lesson2/slide7/c/phonograph.jpg" className='mx-auto w-40 md:w-32' alt="صورة جهاز الفونوجراف" />
+                        <img src="./lesson2/slide7/c/phonograph.jpg" className='mx-auto w-28 md:w-32' alt="صورة جهاز الفونوجراف" />
                         <p className='text-black md:text-xl'>جهاز الفونوجراف</p>
                     </div>
 
                     <div className={`bg-white max-w-fit p-2 mt-4 shadow-md mx-auto md:mx-0 ${cameraClass}`}>
-                        <img src="./lesson2/slide7/c/camera.jpg" className='mx-auto w-40 md:w-32' alt="آلة التصوير السينمائية." />
+                        <img src="./lesson2/slide7/c/camera.jpg" className='mx-auto w-28 md:w-32' alt="آلة التصوير السينمائية." />
                         <p className='text-black md:text-xl'>آلة التصوير السينمائية.</p>
                     </div>
                 </div>

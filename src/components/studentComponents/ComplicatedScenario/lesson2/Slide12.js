@@ -28,7 +28,7 @@ export default function Index({ setIsOn }) {
                 <div className='px-6 py-2 text-base sm:text-lg mx-auto md:text-3xl shadow-md lg:text-4xl rounded-md animate__animated animate__backInDown animate__delay-7s bg-[#639e98]'>
                     ما معنى ان المكيف استهلك 2كيلو واط بالساعة
                 </div>
-                <div className='animate__animated animate__backInDown animate__delay-9s mx-auto w-3/4 md:w-1/2 lg:w-1/4 '>
+                <div className='animate__animated animate__backInDown animate__delay-9s mx-auto md:w-1/2 lg:w-1/4 '>
                     <img src="./lesson2/slide10/conditioner.png" className='shadow-md mx-auto w-full' alt="conditioner" />
                 </div>
                 <h3 className='md:w-1/2 px-6 py-2 shadow-md text-xl sm:text-lg mx-auto md:text-3xl lg:text-4xl rounded-md animate__animated animate__backInDown animate__delay-13s bg-[#fc8b92]'>

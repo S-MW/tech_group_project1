@@ -86,7 +86,7 @@ export default function Index({ setIsOn }) {
                     </div>
                 }
                 {way1Img &&
-                    <div className='text-2xl w-80 h-80 lg:text-xl'>
+                    <div className='text-xl w-80 h-80 lg:text-2xl'>
                         <h3 className='p-4 mb-5 rounded-md bg-[#639e98] animate__animated animate__backInDown shadow-md'>
                             <b>دوائر التوصيل على التوالى </b>
                             وهى دائرة كهربائية تتضمن مسارأ واحدًا فقط ، يتدفق فيه التيار الكهربائى
@@ -95,7 +95,7 @@ export default function Index({ setIsOn }) {
                     </div>
                 }
                 {way2Img &&
-                    <div className='mx-auto text-2xl w-80 h-80 lg:text-xl'>
+                    <div className='mx-auto text-xl w-80 h-80 lg:text-2xl'>
                         <h3 className='p-4 mb-5 rounded-md bg-[#639e98] animate__animated animate__backInDown shadow-md'>
                             <b>دوائر التوصيل على التوازى </b>
                             وهى دائرة كهربائية تتضمن أكثر من مسار لتدفق التيار الكهربائى خلالها.
@@ -104,7 +104,7 @@ export default function Index({ setIsOn }) {
                     </div>
                 }
                 {lab &&
-                    <div className='mx-auto text-2xl w-80 h-80 lg:text-xl flex items-center lg:mt-16 animate__animated animate__backInDown'>
+                    <div className='mx-auto text-2xl sm:w-80 w-80 h-80 lg:text-xl flex items-center lg:mt-16 animate__animated animate__backInDown'>
                         <button className='bg-[#639e98] block mx-auto py-5 px-8 rounded-md text-3xl shadow-md border-2 animate__animated animate__pulse animate__infinite' onClick={() => window.open('https://phet.colorado.edu/sims/html/circuit-construction-kit-dc-virtual-lab/latest/circuit-construction-kit-dc-virtual-lab_en.html')}>
                             التطبيق
                             <FontAwesomeIcon icon={faHandPointer} className="mr-2 " />
