@@ -7,14 +7,14 @@ function SL1s7(props) {
 
   const [playAudio7, { stop: stopAudio7 }] = useSound(slideAudio7, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       props.setIsAudioOn(false);
     },
   });
 
 
   useEffect(() => {
-    console.info('Sound Start!');
+    //console.info('Sound Start!');
     playAudio7();
     props.setIsAudioOn(true);
   }, [playAudio7]);

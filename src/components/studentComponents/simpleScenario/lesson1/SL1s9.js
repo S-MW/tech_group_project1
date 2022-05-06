@@ -7,14 +7,14 @@ export default function SL1s9(props) {
 
     const [playAudio9 , { stop: stopAudio9 }] = useSound(slideAudio9, {
         onend: () => {
-          console.info('Sound ended!');
+          //console.info('Sound ended!');
           props.setIsAudioOn(false);
         },
       });
 
 
     useEffect(() => {
-        console.info('Sound Start!');
+        //console.info('Sound Start!');
         playAudio9();
         props.setIsAudioOn(true);
       },[playAudio9]);

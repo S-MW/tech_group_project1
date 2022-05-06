@@ -10,26 +10,26 @@ function CL1s15(props) {
 
     const [playAudio15_0, { stop: stopAudio15_0 }] = useSound(slideAudio15_0, {
         onend: () => {
-            console.info('Sound ended!');
+            //console.info('Sound ended!');
             setAudioNumber(1);
         },
     });
 
     const [playAudio15_1, { stop: stopAudio15_01 }] = useSound(slideAudio15_1, {
         onend: () => {
-            console.info('Sound ended!');
+            //console.info('Sound ended!');
             props.setIsAudioOn(false);
         },
     });
 
     useEffect(() => {
         if (audioNumber === 0) {
-            console.info('playAudio15_0 Start!');
+            //console.info('playAudio15_0 Start!');
             playAudio15_0();
             props.setIsAudioOn(true);
         }
         if (audioNumber === 1) {
-            console.info('playAudio15_1 Start!');
+            //console.info('playAudio15_1 Start!');
             playAudio15_1();
             props.setIsAudioOn(true);
         }

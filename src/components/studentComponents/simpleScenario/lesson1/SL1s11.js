@@ -6,14 +6,14 @@ export default function SL1s11(props) {
 
     const [playAudio11 , { stop: stopAudi11 }] = useSound(slideAudio11, {
         onend: () => {
-          console.info('Sound ended!');
+          //console.info('Sound ended!');
           props.setIsAudioOn(false);
         },
       });
 
 
     useEffect(() => {
-        console.info('Sound Start!');
+        //console.info('Sound Start!');
         playAudio11();
         props.setIsAudioOn(true);
       },[playAudio11]);

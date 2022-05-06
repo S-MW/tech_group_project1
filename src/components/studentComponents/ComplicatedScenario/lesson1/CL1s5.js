@@ -46,14 +46,14 @@ function CL1s5(props) {
 
   const [playAudio5_0, { stop: stopAudio5_0 }] = useSound(slideAudio5_0, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       setAudioNumber(1);
     },
   });
 
   const [playAudio5_1, { stop: stopAudio5_1 }] = useSound(slideAudio5_1, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       setImage(`<h2 class="m-2 animate__animated animate__fadeInDownBig animate__delay-3s">	الشحنة الكهرابائية الساكنة بانها هى عدم توازن للشحنة الكهربائية على الجسم</h2>`)
       setAudioNumber(2);
     },
@@ -61,7 +61,7 @@ function CL1s5(props) {
 
   const [playAudio5_2, { stop: stopAudio5_2 }] = useSound(slideAudio5_2, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       props.setIsAudioOn(false);
     },
   });
@@ -71,17 +71,17 @@ function CL1s5(props) {
 
   useEffect(() => {
     if (audioNumber == 0) {
-      console.info('playAudio5_0 Start!');
+      //console.info('playAudio5_0 Start!');
       playAudio5_0();
       props.setIsAudioOn(true);
     }
     if (audioNumber == 1) {
-      console.info('playAudio5_1 Start!');
+      //console.info('playAudio5_1 Start!');
       playAudio5_1();
       props.setIsAudioOn(true);
     }
     if (audioNumber == 2) {
-      console.info('playAudio5_2 Start!');
+      //console.info('playAudio5_2 Start!');
       playAudio5_2();
       props.setIsAudioOn(true);
     }

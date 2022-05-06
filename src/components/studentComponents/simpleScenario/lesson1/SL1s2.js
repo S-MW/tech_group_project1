@@ -7,13 +7,13 @@ export default function SL1s2(props) {
 
   const [playAudio2, { stop: stopAudio2 }] = useSound(slideAudio2, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       props.setIsAudioOn(false);
     },
   });
 
   useEffect(() => {
-    console.info('Sound Start!');
+    //console.info('Sound Start!');
     playAudio2();
     props.setIsAudioOn(true);
   }, [playAudio2]);

@@ -29,11 +29,11 @@ function CL1s9(props) {
 
   const [playAudio9_0, { stop: stopAudio9_0 }] = useSound(slideAudio9_0, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       setImage(`<img src="ComplicatedScenarioImages/slide9_0.gif" alt="" class="w-60 h-60" />`)
 
       const timer = setTimeout(() => {
-        console.log(' setTimeout :: playAudio9_0 : 13s')
+        //console.log(' setTimeout :: playAudio9_0 : 13s')
         setAudioNumber(1);
       }, 13000);
     },
@@ -41,11 +41,11 @@ function CL1s9(props) {
 
   const [playAudio9_1, { stop: stopAudio9_1 }] = useSound(slideAudio9_1, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       setImage(`<img src="ComplicatedScenarioImages/slide9_1.gif" alt="" class="w-60 h-60" />`)
 
       const timer = setTimeout(() => {
-        console.log(' setTimeout :: playAudio9_0 : 10s')
+        //console.log(' setTimeout :: playAudio9_0 : 10s')
         setImage(``)
         setAudioNumber(2);
       }, 10000);
@@ -55,7 +55,7 @@ function CL1s9(props) {
 
   const [playAudio9_2, { stop: stopAudio9_2 }] = useSound(slideAudio9_2, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       props.setIsAudioOn(false);
 
     },
@@ -67,17 +67,17 @@ function CL1s9(props) {
 
   useEffect(() => {
     if (audioNumber === 0) {
-      console.info('playAudio9_0 Start!');
+      //console.info('playAudio9_0 Start!');
       playAudio9_0();
       props.setIsAudioOn(true);
     }
     if (audioNumber === 1) {
-      console.info('playAudio9_1 Start!');
+      //console.info('playAudio9_1 Start!');
       playAudio9_1();
       props.setIsAudioOn(true);
     }
     if (audioNumber === 2) {
-      console.info('playAudio9_2 Start!');
+      //console.info('playAudio9_2 Start!');
       playAudio9_2();
       props.setIsAudioOn(true);
     }

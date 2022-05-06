@@ -14,14 +14,14 @@ function SL1s5(props) {
 
     const [playAudio5_1, { stop: stopAudio5_1 }] = useSound(slideAudio5_1, {
         onend: () => {
-            console.info('Sound playAudio5_1 ended!');
+            //console.info('Sound playAudio5_1 ended!');
             props.setIsAudioOn(false);
         },
     });
 
     const [playAudio5_0, { stop: stopAudio5_0 }] = useSound(slideAudio5_0, {
         onend: () => {
-            console.info('playAudio5_0 ended!');
+            //console.info('playAudio5_0 ended!');
             setAudioNumber(audioNumber + 1)
         },
     });
@@ -30,12 +30,12 @@ function SL1s5(props) {
 
     useEffect(() => {
         if (audioNumber == 0) {
-            console.info('playAudio5_0 Start!');
+            //console.info('playAudio5_0 Start!');
             playAudio5_0();
         }
 
         if (audioNumber == 1) {
-            console.info('playAudio5_1 Start!');
+            //console.info('playAudio5_1 Start!');
             playAudio5_1();
         }
 

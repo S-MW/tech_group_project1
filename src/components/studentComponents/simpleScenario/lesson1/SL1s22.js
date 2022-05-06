@@ -11,18 +11,18 @@ function SL1s22(props) {
 
   const [playAudio22, { stop: stopAudio22 }] = useSound(slideAudio22, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       props.setIsAudioOn(false);
     },
   });
 
 
   useEffect(() => {
-    console.info('Sound Start!');
+    //console.info('Sound Start!');
     playAudio22();
 
     const timer = setTimeout(() => {
-      console.log('This will run after 8 second!')
+      //console.log('This will run after 8 second!')
       setImage(`<img src="/slide22_1.jpg" alt="" class="animate__animated animate__bounceInDown w-60 h-60" />`)
     }, 8000);
 

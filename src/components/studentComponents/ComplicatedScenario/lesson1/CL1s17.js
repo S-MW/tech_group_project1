@@ -7,14 +7,14 @@ function CL1s17(props) {
 
   const [playAudio17, { stop: stopAudio17 }] = useSound(slideAudio17, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       props.setIsAudioOn(false);
     },
   });
 
 
   useEffect(() => {
-    console.info('Sound Start!');
+    //console.info('Sound Start!');
     playAudio17();
     props.setIsAudioOn(true);
   }, [playAudio17]);

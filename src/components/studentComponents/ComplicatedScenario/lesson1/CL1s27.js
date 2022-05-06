@@ -11,13 +11,13 @@ function CL1s27(props) {
 
     const [playAudio27, { stop: stopAudio27 }] = useSound(slideAudio27, {
         onend: () => {
-            console.info('Sound ended!');
+            //console.info('Sound ended!');
             props.setIsAudioOn(false);
         },
     });
 
     useEffect(() => {
-        console.info('playAudio9_0 Start!');
+        //console.info('playAudio9_0 Start!');
         playAudio27();
         props.setIsAudioOn(true);
     }, [playAudio27]);

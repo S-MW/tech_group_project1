@@ -12,21 +12,21 @@ function SL1s25(props) {
 
   const [playAudio25_0, { stop: stopAudio25_0 }] = useSound(slideAudio25_0, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       setAudioNumber(audioNumber + 1);
     },
   });
 
   const [playAudio25_1, { stop: stopAudio25_1 }] = useSound(slideAudio25_1, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       props.setIsAudioOn(false);
     },
   });
 
 
   useEffect(() => {
-    console.info('Sound Start!');
+    //console.info('Sound Start!');
     if (audioNumber == 0) {
       playAudio25_0();
     }

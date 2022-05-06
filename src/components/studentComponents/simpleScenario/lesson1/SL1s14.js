@@ -11,14 +11,14 @@ function SL1s14(props) {
 
   const [playAudio14_0, { stop: stopAudio14_0 }] = useSound(slideAudio14_0, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       setAudioNumber(1)
     },
   });
 
   const [playAudio14_1, { stop: stopAudio14_1 }] = useSound(slideAudio14_1, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       props.setIsAudioOn(false);
     },
   });
@@ -28,12 +28,12 @@ function SL1s14(props) {
 
   useEffect(() => {
     if (audioNumber === 0) {
-      console.info('Sound Start!');
+      //console.info('Sound Start!');
       playAudio14_0();
       props.setIsAudioOn(true);
     }
     if (audioNumber === 1) {
-      console.info('Sound Start!');
+      //console.info('Sound Start!');
       playAudio14_1();
       props.setIsAudioOn(true);
     }

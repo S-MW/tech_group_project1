@@ -18,11 +18,11 @@ function SL1s20(props) {
 
   const [playAudio20_0, { stop: stopAudio20_0 }] = useSound(slideAudio20_0, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       setAudioNumber(audioNumber + 1);
 
       const timer = setTimeout(() => {
-        console.log('This will run after 5 second!')
+        //console.log('This will run after 5 second!')
         setImage(`<img src="/slide20_1.gif" alt="" class="animate__animated animate__bounceInDown w-60 h-60 bg-white" />`)
       }, 16000);
     },
@@ -30,14 +30,14 @@ function SL1s20(props) {
 
   const [playAudio20_1, { stop: stopAudio20_1 }] = useSound(slideAudio20_1, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       setAudioNumber(2);
     },
   });
 
   const [playAudio20_2, { stop: stopAudio20_2 }] = useSound(slideAudio20_2, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       props.setIsAudioOn(false);
     },
   });
@@ -46,17 +46,17 @@ function SL1s20(props) {
   useEffect(() => {
     if (audioNumber == 0) {
       stopAudio20_0();
-      console.info('playAudio20_0 Start!');
+      //console.info('playAudio20_0 Start!');
       playAudio20_0();
     }
 
     if (audioNumber == 1) {
-      console.info('playAudio20_1 Start!');
+      //console.info('playAudio20_1 Start!');
       playAudio20_1();
     }
 
     if (audioNumber == 2) {
-      console.info('playAudio20_2 Start!');
+      //console.info('playAudio20_2 Start!');
       playAudio20_2();
     }
 

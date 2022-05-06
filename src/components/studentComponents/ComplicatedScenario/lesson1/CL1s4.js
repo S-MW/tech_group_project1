@@ -21,7 +21,7 @@ function CL1s4(props) {
 
   const [playAudio4_0, { stop: stopAudio4_0 }] = useSound(slideAudio4_0, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       setImage(`<img src="ComplicatedScenarioImages/slide4_1.jpg" alt="" class="animate__animated animate__bounceInDown w-60 h-60" />`)
       setAudioNumber(1);
     },
@@ -29,7 +29,7 @@ function CL1s4(props) {
 
   const [playAudio4_1, { stop: stopAudio4_1 }] = useSound(slideAudio4_1, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       setImage(`<img src="ComplicatedScenarioImages/slide4_2.jpg" alt="" class="animate__animated animate__bounceInDown w-60 h-60" />`)
       setAudioNumber(2);
     },
@@ -37,7 +37,7 @@ function CL1s4(props) {
 
   const [playAudio4_2, { stop: stopAudio4_2 }] = useSound(slideAudio4_2, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       setImage(`<img src="ComplicatedScenarioImages/slide4_3.jpg" alt="" class="animate__animated animate__bounceInDown w-60 h-60" />`)
       setAudioNumber(3);
     },
@@ -45,7 +45,7 @@ function CL1s4(props) {
 
   const [playAudio4_3, { stop: stopAudio4_3 }] = useSound(slideAudio4_3, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       setImage(`<h4 class="animate__animated animate__fadeInDownBig  mx-10 text-sm w-2/3 text-center p-3 m-2 rounded-md bg-[#96d2ca]
       md:text-lg
       lg:text-3xl">اذا كيف يصبح الجسم مشحونًا كهربائيًا؟</h4>
@@ -58,14 +58,14 @@ function CL1s4(props) {
 
   const [playAudio4_4, { stop: stopAudio4_4 }] = useSound(slideAudio4_4, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       setAudioNumber(5);
     },
   });
 
   const [playAudio4_5, { stop: stopAudio4_5 }] = useSound(slideAudio4_5, {
     onend: () => {
-      console.info('Sound ended!');
+      //console.info('Sound ended!');
       props.setIsAudioOn(false);
     },
   });
@@ -74,29 +74,29 @@ function CL1s4(props) {
   useEffect(() => {
     if (audioNumber == 0) {
       stopAudio4_0();
-      console.info('playAudio4_0 Start!');
+      //console.info('playAudio4_0 Start!');
       playAudio4_0();
     }
 
     if (audioNumber == 1) {
-      console.info('playAudio4_1 Start!');
+      //console.info('playAudio4_1 Start!');
       playAudio4_1();
     }
 
     if (audioNumber == 2) {
-      console.info('playAudio4_2 Start!');
+      //console.info('playAudio4_2 Start!');
       playAudio4_2();
     }
     if (audioNumber == 3) {
-      console.info('playAudio4_3 Start!');
+      //console.info('playAudio4_3 Start!');
       playAudio4_3();
     }
     if (audioNumber == 4) {
-      console.info('playAudio4_4 Start!');
+      //console.info('playAudio4_4 Start!');
       playAudio4_4();
     }
     if (audioNumber == 5) {
-      console.info('playAudio4_5 Start!');
+      //console.info('playAudio4_5 Start!');
       playAudio4_5();
     }
 
