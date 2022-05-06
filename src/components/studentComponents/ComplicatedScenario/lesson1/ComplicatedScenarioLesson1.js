@@ -213,8 +213,7 @@ export default function ComplicatedScenarioLesson1() {
                         <Arrow
                             left
                             onClick={(e) => {
-                                // !isAudioOn
-                                if (true) {
+                                if (!isAudioOn) {
                                     e.stopPropagation() || instanceRef.current?.next()
                                 }
                             }
@@ -227,8 +226,7 @@ export default function ComplicatedScenarioLesson1() {
 
                         <Arrow
                             onClick={(e) => {
-                                // !isAudioOn
-                                if (true) {
+                                if (!isAudioOn) {
                                     e.stopPropagation() || instanceRef.current?.prev()
                                 }
                             }
@@ -238,7 +236,7 @@ export default function ComplicatedScenarioLesson1() {
                     </>
                 )}
             </div>
-            {
+            {/* {
                 loaded && instanceRef.current && (
                     <div className="dots">
                         {[
@@ -256,7 +254,7 @@ export default function ComplicatedScenarioLesson1() {
                         })}
                     </div>
                 )
-            }
+            } */}
         </>
     )
 
