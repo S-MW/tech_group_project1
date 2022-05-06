@@ -11,7 +11,7 @@ function SL1s4(props) {
   const [audioNumber, setAudioNumber] = useState(0)
 
 
-  const [playAudio4_0] = useSound(slideAudio4_0, {
+  const [playAudio4_0 , { stop: stopAudio4_0 }] = useSound(slideAudio4_0, {
     onend: () => {
       console.info('Sound ended!');
       setImage(`<img src="/slide4_0.jpg" alt="" class="animate__animated animate__bounceInDown w-60 h-60" />`)
@@ -44,6 +44,7 @@ function SL1s4(props) {
 
   useEffect(() => {
     if (audioNumber === 0) {
+      stopAudio4_0();
       console.info('playAudio4_0 Start!');
       playAudio4_0();
       props.setIsAudioOn(true);

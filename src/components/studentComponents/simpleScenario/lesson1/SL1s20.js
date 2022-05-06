@@ -45,6 +45,7 @@ function SL1s20(props) {
 
   useEffect(() => {
     if (audioNumber == 0) {
+      stopAudio20_0();
       console.info('playAudio20_0 Start!');
       playAudio20_0();
     }
