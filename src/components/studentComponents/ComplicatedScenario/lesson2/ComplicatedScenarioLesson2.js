@@ -161,34 +161,12 @@ export default function Index() {
                     </>
                 )}
             </div>
-            {
-                loaded && instanceRef.current && (
-                    <div className="dots">
-                        {[
-                            ...Array(instanceRef.current.track.details.slides.length).keys(),
-                        ].map((idx) => {
-                            return (
-                                <button
-                                    key={idx}
-                                    onClick={() => {
-                                        if (!isOn) {
-                                            instanceRef.current?.moveToIdx(idx)
-                                        }
-                                    }}
-                                    className={"dot" + (currentSlide === idx ? " active" : "")}
-                                ></button>
-                            )
-                        })}
-                    </div>
-                )
-            }
         </>
     )
 
 
 
     function Arrow(props) {
-        // console.log(props.disabeld)
         const disabeld = props.disabled ? " arrow--disabled" : ""
         return (
             <svg

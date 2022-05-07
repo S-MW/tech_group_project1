@@ -23,11 +23,11 @@ export default function Index() {
 
     const [isOn, setIsOn] = useState(false)
 
-    const [currentSlide, setCurrentSlide] = useState(3)
+    const [currentSlide, setCurrentSlide] = useState(0)
     const [loaded, setLoaded] = useState(false)
 
     const [sliderRef, instanceRef] = useKeenSlider({
-        initial: 3,
+        initial: 0,
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel)
         },
@@ -44,52 +44,52 @@ export default function Index() {
                 <div ref={sliderRef} className="keen-slider">
                     <WithTitle>
                         {currentSlide === 0 &&
-                            <Intro isOn={isOn} setIsOn={setIsOn} />
+                            <Intro setIsOn={setIsOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 1 &&
-                            <Slide2 isOn={isOn} setIsOn={setIsOn} />
+                            <Slide2 setIsOn={setIsOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 2 &&
-                            <Slide3 isOn={isOn} setIsOn={setIsOn} currentSlide={currentSlide} />
+                            <Slide3 setIsOn={setIsOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 3 &&
-                            <Slide4 isOn={isOn} setIsOn={setIsOn} currentSlide={currentSlide} />
+                            <Slide4 setIsOn={setIsOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 4 &&
-                            <Slide5 isOn={isOn} setIsOn={setIsOn} currentSlide={currentSlide} />
+                            <Slide5 setIsOn={setIsOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 5 &&
-                            <Slide6 isOn={isOn} setIsOn={setIsOn} currentSlide={currentSlide} />
+                            <Slide6 setIsOn={setIsOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 6 &&
-                            <Slide7 isOn={isOn} setIsOn={setIsOn} currentSlide={currentSlide} />
+                            <Slide7 setIsOn={setIsOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 7 &&
-                            <Slide8 isOn={isOn} setIsOn={setIsOn} currentSlide={currentSlide} />
+                            <Slide8 setIsOn={setIsOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 8 &&
-                            <Slide9 isOn={isOn} setIsOn={setIsOn} currentSlide={currentSlide} />
+                            <Slide9 setIsOn={setIsOn} />
                         }
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 9 &&
-                            <Slide10 isOn={isOn} setIsOn={setIsOn} currentSlide={currentSlide} />
+                            <Slide10 setIsOn={setIsOn} />
                         }
                     </WithTitle>
 
@@ -122,34 +122,12 @@ export default function Index() {
                     </>
                 )}
             </div>
-            {
-                loaded && instanceRef.current && (
-                    <div className="dots">
-                        {[
-                            ...Array(instanceRef.current.track.details.slides.length).keys(),
-                        ].map((idx) => {
-                            return (
-                                <button
-                                    key={idx}
-                                    onClick={() => {
-                                        if (!isOn) {
-                                            instanceRef.current?.moveToIdx(idx)
-                                        }
-                                    }}
-                                    className={"dot" + (currentSlide === idx ? " active" : "")}
-                                ></button>
-                            )
-                        })}
-                    </div>
-                )
-            }
         </>
     )
 
 
 
     function Arrow(props) {
-        // console.log(props.disabeld)
         const disabeld = props.disabled ? " arrow--disabled" : ""
         return (
             <svg

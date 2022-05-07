@@ -19,7 +19,6 @@ export default function Index({ setIsOn }) {
 
     const [playTitleAudio, { duration }] = useSound(TitleAudio, {
         onend: () => {
-            setIsOn(false);
             setIsHeadTitleOver(true)
         },
         onload: () => {

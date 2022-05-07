@@ -3,6 +3,7 @@ import { ToastContainer } from "react-toastify";
 import toastifyFile from "../../components/React-toastify/index"
 
 
+
 export default function StudentHome() {
 
     let navigate = useNavigate();
@@ -57,16 +58,10 @@ export default function StudentHome() {
                 draggable
                 pauseOnHover
             />
-            <div className="flex flex-col justify-center items-center h-screen w-screen space-y-2">
-                <div>
-                    <button onClick={() => navigateToLesson1()} className="p-3 rounded-lg  bg-indigo-500 ">الدرس الاول : التيار الكهربائي</button>
-                </div>
-                <div>
-                    <button onClick={() => navigateToLesson2()} className="p-3 rounded-lg bg-red-400">الدرس الثاني : الدوائر الكهربائية</button>
-                </div>
-                <div>
-                    <button onClick={() => navigateToExam()} className="p-3 rounded-lg bg-blue-400">الاختبار</button>
-                </div>
+            <div className="flex flex-col justify-center items-center h-screen w-1/3 mx-auto space-y-2 text-[#efe3d9]">
+                <button onClick={() => navigateToLesson1()} className="p-3 w-full rounded-lg border-2 border-white bg-[#edac34]">الدرس الاول : التيار الكهربائي</button>
+                <button onClick={() => navigateToLesson2()} className="p-3 w-full rounded-lg border-2 border-white bg-[#fc8b92]">الدرس الثاني : الدوائر الكهربائية</button>
+                <button onClick={() => navigateToExam()} className="p-3 w-full rounded-lg border-2 border-white bg-[#fa976d]">الاختبار</button>
             </div>
         </>
     );
