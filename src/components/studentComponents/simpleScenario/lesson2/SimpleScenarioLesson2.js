@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // simple Scenario Slide Imports
 import Intro from "./intro";
@@ -23,6 +23,8 @@ import WithTitle from "../../../Slides/WithTitle"
 
 export default function Index() {
 
+    let navigate = useNavigate();
+
     const [isOn, setIsOn] = useState(false)
 
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -44,9 +46,10 @@ export default function Index() {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     }
 
+    let student = JSON.parse(localStorage.getItem("studentData"))
     let trackData = {
         "progressLesson2Slide": currentSlide,
-        "isCompletedLesson2": currentSlide == 9 ? true : false
+        "isCompletedLesson2": currentSlide == 9 ? true : student.isCompletedLesson2
     }
 
 
@@ -54,10 +57,16 @@ export default function Index() {
         axios
             .post(`https://asr.tawfig.info/api/user/update`, trackData, config)
             .then(response => {
-                // console.log(response)
+                let student = {
+                    name: response.data.user.name, sinarioType: response.data.user.pattern, isCompletedLesson1: response.data.user.isCompletedLesson1,
+                    progressLesson1Slide: response.data.user.progressLesson1Slide,
+                    isCompletedLesson2: response.data.user.isCompletedLesson2, progressLesson2Slide: response.data.user.progressLesson2Slide
+                }
+                localStorage.setItem("studentData", JSON.stringify(student))
             })
             .catch(error => {
-                // console.log(error)
+                localStorage.clear();
+                navigate("/")
             }
             )
     }, [currentSlide]);

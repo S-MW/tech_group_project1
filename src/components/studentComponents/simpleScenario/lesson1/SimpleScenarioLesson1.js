@@ -61,9 +61,10 @@ export default function SimpleScenarioLesson1() {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     }
 
+    let student = JSON.parse(localStorage.getItem("studentData"))
     let trackData = {
         "progressLesson1Slide": currentSlide,
-        "isCompletedLesson1":currentSlide == 26 ? true : false
+        "isCompletedLesson1": currentSlide == 26 ? true : student.isCompletedLesson1
     }
 
 
@@ -71,10 +72,16 @@ export default function SimpleScenarioLesson1() {
         axios
             .post(`https://asr.tawfig.info/api/user/update`, trackData, config)
             .then(response => {
-                // console.log(response)
+                let student = {
+                    name: response.data.user.name, sinarioType: response.data.user.pattern, isCompletedLesson1: response.data.user.isCompletedLesson1,
+                    progressLesson1Slide: response.data.user.progressLesson1Slide,
+                    isCompletedLesson2: response.data.user.isCompletedLesson2, progressLesson2Slide: response.data.user.progressLesson2Slide
+                }
+                localStorage.setItem("studentData", JSON.stringify(student))
             })
             .catch(error => {
-                // console.log(error)
+                localStorage.clear();
+                navigate("/")
             }
             )
     }, [currentSlide]);
