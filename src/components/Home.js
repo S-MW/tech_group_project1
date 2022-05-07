@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
+import useSound from 'use-sound';
+import tester from "../audios/tester.mp3"
 import toastifyFile from "../components/React-toastify/index"
 
 import axios from "axios"
@@ -10,6 +12,12 @@ export default function Home() {
 
     let navigate = useNavigate();
 
+    const [playTester, { stop: stopTester }] = useSound(tester, {
+        onend: () => {
+          console.info('Sound ended!');
+        },
+      });
+
     const [studentCode, setStudentCode] = useState("");
     const handleChangeStudentCode = (e) => {
         setStudentCode(e.target.value)
@@ -17,6 +25,7 @@ export default function Home() {
 
     function navigatePage() {
         login(studentCode)
+        playTester()
     }
 
 
