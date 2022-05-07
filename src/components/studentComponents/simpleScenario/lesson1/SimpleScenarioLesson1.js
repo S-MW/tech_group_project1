@@ -65,7 +65,7 @@ export default function SimpleScenarioLesson1() {
     }
 
     let trackData = {
-        "progressLesson1Slide": currentSlide,
+        "progressLesson1Slide": currentSlide == 26 ? 0 : student.progressLesson1Slide,
         "isCompletedLesson1": currentSlide == 26 ? true : student.isCompletedLesson1
     }
 
