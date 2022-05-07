@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import toastifyFile from "../components/React-toastify/index"
 
+import axios from "axios"
+
+
 export default function Home() {
 
     let navigate = useNavigate();
@@ -13,30 +16,35 @@ export default function Home() {
     }
 
     function navigatePage() {
-
-        // fetch to backend to check the code & get student data
-        // tomprory data from BackEnd
-
-        let student = {};
-        if (studentCode == 999) {
-            student = { isRegisteredStudent: true, name: "saad", sinarioType: "simple", isCompletedLesson1: false, progressLesson1Slide: 2, isCompletedLesson2: false, progressLesson2Slide: 0 }
-            localStorage.setItem("studentData", JSON.stringify(student))
-        } else if (studentCode == 777) {
-            student = { isRegisteredStudent: true, name: "fahad", sinarioType: "complicated", isCompletedLesson1: false, progressLesson1Slide: 2, isCompletedLesson2: false, progressLesson2Slide: 0 }
-            localStorage.setItem("studentData", JSON.stringify(student))
-        }
-        else {
-            student = { isRegisteredStudent: false }
-        }
+        login(studentCode)
+    }
 
 
-        if (student.isRegisteredStudent) {
-            navigate("/StudentHome")
-        }
-        else {
-            document.getElementById("StudentCodeId").value = ""
-            toastifyFile.errorNotify("الرمز خطأ")
-        }
+    function login(studentCode) {
+
+        axios
+            .post(`https://asr.tawfig.info/api/login`, { id: studentCode })
+            .then(response => {
+                let student = {
+                    name: response.data.user.name, sinarioType: response.data.user.pattern, isCompletedLesson1: response.data.user.isCompletedLesson1,
+                    progressLesson1Slide: response.data.user.progressLesson1Slide,
+                    isCompletedLesson2: response.data.user.isCompletedLesson2, progressLesson2Slide: response.data.user.progressLesson2Slide
+                }
+                localStorage.setItem("studentData", JSON.stringify(student))
+                navigate("/StudentHome")
+            })
+            .catch(error => {
+                document.getElementById("StudentCodeId").value = ""
+                if (error.response.status == 404) {
+                    toastifyFile.errorNotify("رقم المعرف غير صحيح")
+                }
+                if (error.response.status == 422) {
+                    toastifyFile.errorNotify("يجب ادخال رقم المعرف")
+                }
+                if (error.response.status == 500) {
+                    toastifyFile.errorNotify("خلل عام")
+                }
+            })
 
     }
     return (
