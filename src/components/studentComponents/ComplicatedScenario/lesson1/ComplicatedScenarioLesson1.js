@@ -31,6 +31,8 @@ import CL1s25 from "./CL1s25";
 import CL1s26 from "./CL1s26";
 import CL1s27 from "./CL1s27";
 
+import axios from "axios"
+
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import 'animate.css';
@@ -56,6 +58,28 @@ export default function ComplicatedScenarioLesson1() {
         rtl: true,
         drag: !isAudioOn
     })
+
+    const config = {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+    }
+
+    let trackData = {
+        "progressLesson1Slide": currentSlide,
+        "isCompletedLesson1": currentSlide == 28 ? true : false
+    }
+
+
+    useEffect(() => {
+        axios
+            .post(`https://asr.tawfig.info/api/user/update`, trackData, config)
+            .then(response => {
+                // console.log(response)
+            })
+            .catch(error => {
+                // console.log(error)
+            }
+            )
+    }, [currentSlide]);
 
     return (
         <>

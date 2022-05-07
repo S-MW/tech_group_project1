@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom";
 
 // simple Scenario Slide Imports
@@ -29,6 +29,8 @@ import SL1s23 from "./SL1s23";
 import SL1s24 from "./SL1s24";
 import SL1s25 from "./SL1s25";
 
+import axios from "axios"
+
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import 'animate.css';
@@ -54,6 +56,28 @@ export default function SimpleScenarioLesson1() {
         rtl: true,
         drag: !isAudioOn
     })
+
+    const config = {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+    }
+
+    let trackData = {
+        "progressLesson1Slide": currentSlide,
+        "isCompletedLesson1":currentSlide == 26 ? true : false
+    }
+
+
+    useEffect(() => {
+        axios
+            .post(`https://asr.tawfig.info/api/user/update`, trackData, config)
+            .then(response => {
+                // console.log(response)
+            })
+            .catch(error => {
+                // console.log(error)
+            }
+            )
+    }, [currentSlide]);
 
     return (
         <>

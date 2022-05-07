@@ -30,6 +30,7 @@ export default function Home() {
                     progressLesson1Slide: response.data.user.progressLesson1Slide,
                     isCompletedLesson2: response.data.user.isCompletedLesson2, progressLesson2Slide: response.data.user.progressLesson2Slide
                 }
+                localStorage.setItem("token", response.data.token)
                 localStorage.setItem("studentData", JSON.stringify(student))
                 navigate("/StudentHome")
             })
@@ -69,7 +70,7 @@ export default function Home() {
                     <div className="rounded-md shadow-sm -space-y-px">
                         <div>
                             <label htmlFor="email-address" className="sr-only">Student Code</label>
-                            <input onChange={handleChangeStudentCode} id="StudentCodeId" type="text" required className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="999 بسيط - 777 معقد" />
+                            <input onChange={handleChangeStudentCode} id="StudentCodeId" type="text" required className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="ادخل الرمز الخاص بك" />
                         </div>
                     </div>
                     <div>

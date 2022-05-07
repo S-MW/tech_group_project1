@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 // import { useNavigate } from "react-router-dom";
 
 // simple Scenario Slide Imports
@@ -12,6 +12,8 @@ import Slide7 from "./Slide7";
 import Slide8 from "./Slide8";
 import Slide9 from "./Slide9";
 import Slide10 from "./Slide10";
+
+import axios from "axios"
 
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
@@ -38,6 +40,27 @@ export default function Index() {
         drag: !isOn
     })
 
+    const config = {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+    }
+
+    let trackData = {
+        "progressLesson2Slide": currentSlide,
+        "isCompletedLesson2": currentSlide == 9 ? true : false
+    }
+
+
+    useEffect(() => {
+        axios
+            .post(`https://asr.tawfig.info/api/user/update`, trackData, config)
+            .then(response => {
+                // console.log(response)
+            })
+            .catch(error => {
+                // console.log(error)
+            }
+            )
+    }, [currentSlide]);
     return (
         <>
             <div className="navigation-wrapper">

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import 'animate.css';
@@ -21,7 +21,7 @@ import Slide15 from "./Slide15";
 import Slide16 from "./Slide16";
 import Slide17 from "./Slide17";
 
-
+import axios from "axios"
 
 export default function Index() {
 
@@ -41,6 +41,28 @@ export default function Index() {
         rtl: true,
         drag: !isOn
     })
+
+    const config = {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+    }
+
+    let trackData = {
+        "progressLesson2Slide": currentSlide,
+        "isCompletedLesson2": currentSlide == 16 ? true : false
+    }
+
+
+    useEffect(() => {
+        axios
+            .post(`https://asr.tawfig.info/api/user/update`, trackData, config)
+            .then(response => {
+                // console.log(response)
+            })
+            .catch(error => {
+                // console.log(error)
+            }
+            )
+    }, [currentSlide]);
 
     return (
         <>
