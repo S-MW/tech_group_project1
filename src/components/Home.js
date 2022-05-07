@@ -12,11 +12,7 @@ export default function Home() {
 
     let navigate = useNavigate();
 
-    const [playTester, { stop: stopTester }] = useSound(tester, {
-        onend: () => {
-          console.info('Sound ended!');
-        },
-      });
+    const [playTester] = useSound(tester);
 
     const [studentCode, setStudentCode] = useState("");
     const handleChangeStudentCode = (e) => {
