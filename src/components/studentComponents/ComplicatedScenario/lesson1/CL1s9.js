@@ -13,15 +13,15 @@ function CL1s9(props) {
   const [audioNumber, setAudioNumber] = useState(0)
   const [image, setImage] = useState(``)
   const [question1, setQuestion1] = useState(`<button class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 
-  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 animate__animated animate__fadeInDownBig animate__delay-41s">
+  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 animate__animated animate__fadeInDownBig">
   الجواب
 </button>`)
   const [question2, setQuestion2] = useState(`<button class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 
-  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 animate__animated animate__fadeInDownBig animate__delay-43s">
+  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 animate__animated animate__fadeInDownBig ">
   الجواب
 </button>`)
   const [question3, setQuestion3] = useState(`<button class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 
-  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 animate__animated animate__fadeInDownBig animate__delay-46s">
+  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 animate__animated animate__fadeInDownBig ">
   الجواب
 </button>`)
 
@@ -67,6 +67,7 @@ function CL1s9(props) {
 
   useEffect(() => {
     if (audioNumber === 0) {
+      stopAudio9_0()
       //console.info('playAudio9_0 Start!');
       playAudio9_0();
       props.setIsAudioOn(true);
@@ -91,44 +92,79 @@ function CL1s9(props) {
     <>
 
       <div dangerouslySetInnerHTML={{ __html: image }} />
-
-      <div className='mt-3'>
-        <table className="table-auto border-collapse  border-2 border-black animate__animated animate__bounceInDown animate__delay-39s">
-          <thead>
-            <tr>
-              <th className="border-2 border-black">السؤال</th>
-              <th className="border-2 border-black">الجواب</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className='animate__animated animate__fadeInDownBig'>
-              <td className="border-2  border-black animate__animated animate__bounceInDown animate__delay-40s"> - بعد عرض هذه التجربة ماذا استنتجت منها ؟</td>
-              <td className="border-2  border-black" >
-                <div onClick={() => {
-                  setQuestion1(`<img src="/slide12.jpg" alt="" width="120" height="60" />
-                  <h2 class='text-base text-blue-600'>استنتجنا من التجربة انه حدث تجاذب بين الشحنات المختلفة الموجبة والسالبة فالورق تجاذب للبالون لان شحناته مختلفة ، اذا عرفنا ان الاجسام التي تحمل شحنات مختلفة تتجاذب بينما الاجسام التي تحمل شحنات متشابهة تتنافر. </h2>`)
-                }} dangerouslySetInnerHTML={{ __html: question1 }} />
-              </td>
-            </tr>
-            <tr className='animate__animated animate__fadeInDownBig animate__animated animate__bounceInDown animate__delay-42s'>
-              <td className="border-2  border-black"> وما هى القوى الكهربائية؟</td>
-              <td className="border-2  border-black" >
-                <div onClick={() => {
-                  setQuestion2(`<h2 class='text-base text-blue-600'>تعرف القوى الكهربائية بانها: هي القوة التي تؤثر بها الأجسام المشحونة في بعضها البعض وهذه القوة يمكن  ان تكون تجاذب أو تنافر</h2>`)
-                }} dangerouslySetInnerHTML={{ __html: question2 }} />
-              </td>
-            </tr>
-            <tr className='animate__animated animate__fadeInDownBig animate__animated animate__bounceInDown animate__delay-44s'>
-              <td className="border-2  border-black"> كيف تعتمد القوى الكهربائية بين جسمين على المسافة بينهم؟</td>
-              <td className="border-2  border-black" >
-                <div onClick={() => {
-                  setQuestion3(`<h2 class='text-base text-blue-600'>تقل القوة الكهربائية المتبادلة بين جسمين عند زيادة المسافة بينهما. حيث تقل القوة للربع إذا تضاعفت المسافة بينهما</h2>`)
-                }} dangerouslySetInnerHTML={{ __html: question3 }} />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <div className='grid grid-rows-3 gap-1   w-2/3 h-fit animate__animated animate__bounceInDown animate__delay-39s'>
+        <div className='grid grid-rows-2 bg-yellow-200 animate__animated animate__bounceInDown animate__delay-40s'>
+          <div className='w-fit h-fit'><h2>بعد عرض هذه التجربة ماذا استنتجت منها ؟</h2></div>
+          <div>
+            <div onClick={() => {
+              setQuestion1(`
+              <div class="flex flex-row">
+                <div class="basis-1/4">  <img src="/slide12.jpg" alt="" width="60" height="60"  />                </div>
+                <div class="basis-3/4">  <h2 class='text-xs  w-fit text-cente
+                md:text-md
+                lg:text-lg '>استنتجنا من التجربة انه حدث تجاذب بين الشحنات المختلفة الموجبة والسالبة فالورق تجاذب للبالون لان شحناته مختلفة ، اذا عرفنا ان الاجسام التي تحمل شحنات مختلفة تتجاذب بينما الاجسام التي تحمل شحنات متشابهة تتنافر. </h2>                </div>
+              </div>
+              `)
+            }} dangerouslySetInnerHTML={{ __html: question1 }} />
+          </div>
+        </div>
+        <div className='grid grid-rows-2 bg-red-300 animate__animated animate__bounceInDown animate__delay-42s'>
+          <h2>وما هى القوى الكهربائية؟</h2>
+          <div>
+            <div onClick={() => {
+              setQuestion2(`<h2 class='text-xs  w-fit text-cente
+              md:text-md
+              lg:text-lg'>تعرف القوى الكهربائية بانها: هي القوة التي تؤثر بها الأجسام المشحونة في بعضها البعض وهذه القوة يمكن  ان تكون تجاذب أو تنافر</h2>`)
+            }} dangerouslySetInnerHTML={{ __html: question2 }} />
+          </div>
+        </div>
+        <div className='grid grid-rows-2 bg-slate-400 animate__animated animate__bounceInDown animate__delay-44s'>
+          <div> كيف تعتمد القوى الكهربائية بين جسمين على المسافة بينهم؟</div>
+          <div>
+            <div onClick={() => {
+              setQuestion3(`<h2 class='text-xs  w-fit text-cente
+              md:text-md
+              lg:text-lg'>تقل القوة الكهربائية المتبادلة بين جسمين عند زيادة المسافة بينهما. حيث تقل القوة للربع إذا تضاعفت المسافة بينهما</h2>`)
+            }} dangerouslySetInnerHTML={{ __html: question3 }} />
+          </div>
+        </div>
       </div>
+
+      {/* <table className="table-auto border-collapse w-2/3 border-2 border-black animate__animated animate__bounceInDown animate__delay-39s">
+        <thead>
+          <tr>
+            <th className="border-2 border-black">السؤال</th>
+            <th className="border-2 border-black">الجواب</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className='animate__animated animate__fadeInDownBig'>
+            <td className="border-2  border-black animate__animated animate__bounceInDown animate__delay-40s"> بعد عرض هذه التجربة ماذا استنتجت منها ؟</td>
+            <td className="border-2  border-black" >
+              <div onClick={() => {
+                setQuestion1(`<img src="/slide12.jpg" alt="" width="120" height="60" />
+                  <h2 class='shadow-md text-xs p-4 px-6 rounded-md bg-[#639e98] text-[#efe3d9] md:text-lg lg:text-xl'>استنتجنا من التجربة انه حدث تجاذب بين الشحنات المختلفة الموجبة والسالبة فالورق تجاذب للبالون لان شحناته مختلفة ، اذا عرفنا ان الاجسام التي تحمل شحنات مختلفة تتجاذب بينما الاجسام التي تحمل شحنات متشابهة تتنافر. </h2>`)
+              }} dangerouslySetInnerHTML={{ __html: question1 }} />
+            </td>
+          </tr>
+          <tr className='animate__animated animate__fadeInDownBig animate__animated animate__bounceInDown animate__delay-42s'>
+            <td className="border-2  border-black"> وما هى القوى الكهربائية؟</td>
+            <td className="border-2  border-black" >
+              <div onClick={() => {
+                setQuestion2(`<h2 class='text-base text-blue-600'>تعرف القوى الكهربائية بانها: هي القوة التي تؤثر بها الأجسام المشحونة في بعضها البعض وهذه القوة يمكن  ان تكون تجاذب أو تنافر</h2>`)
+              }} dangerouslySetInnerHTML={{ __html: question2 }} />
+            </td>
+          </tr>
+          <tr className='animate__animated animate__fadeInDownBig animate__animated animate__bounceInDown animate__delay-44s'>
+            <td className="border-2  border-black"> كيف تعتمد القوى الكهربائية بين جسمين على المسافة بينهم؟</td>
+            <td className="border-2  border-black" >
+              <div onClick={() => {
+                setQuestion3(`<h2 class='text-base text-blue-600'>تقل القوة الكهربائية المتبادلة بين جسمين عند زيادة المسافة بينهما. حيث تقل القوة للربع إذا تضاعفت المسافة بينهما</h2>`)
+              }} dangerouslySetInnerHTML={{ __html: question3 }} />
+            </td>
+          </tr>
+        </tbody>
+      </table> */}
     </>
   );
 }
