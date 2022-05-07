@@ -37,7 +37,13 @@ export default function StudentHome() {
 
     function navigateToExam() {
         if (student.isCompletedLesson1 && student.isCompletedLesson2) {
-            console.log(" go to exam link")
+            if (student.sinarioType == "simple") {
+                window.open('https://docs.google.com/forms/d/1r1yPN8Y4JAwtqFzNusvAFY0yelUJMlvwPLWraLwkC_g/edit?usp=sharing')
+            }
+            else {
+                // That mean she is Complicated Type.
+                window.open('https://docs.google.com/forms/d/1n4p0_d1vAmKFOLo82BJlJTIPzkeUG9gTWh-crocxHvg/edit?usp=sharing')
+            }
         }
         else {
             console.log("You have to finish lesson1 & lesson2")
