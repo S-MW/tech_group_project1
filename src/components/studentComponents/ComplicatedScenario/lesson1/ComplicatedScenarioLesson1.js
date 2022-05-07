@@ -40,15 +40,17 @@ import 'animate.css';
 import WithTitle from "../../../Slides/WithTitle"
 
 export default function ComplicatedScenarioLesson1() {
+
+    let student = JSON.parse(localStorage.getItem("studentData"))
     let navigate = useNavigate();
 
     const [isAudioOn, setIsAudioOn] = useState(false)
 
-    const [currentSlide, setCurrentSlide] = useState(0)
+    const [currentSlide, setCurrentSlide] = useState(student.progressLesson1Slide  == null ? 0 :student.progressLesson1Slide)
     const [loaded, setLoaded] = useState(false)
 
     const [sliderRef, instanceRef] = useKeenSlider({
-        initial: 0,
+        initial: student.progressLesson1Slide  == null ? 0 :student.progressLesson1Slide,
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel)
         },
@@ -63,7 +65,6 @@ export default function ComplicatedScenarioLesson1() {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     }
 
-    let student = JSON.parse(localStorage.getItem("studentData"))
     let trackData = {
         "progressLesson1Slide": currentSlide,
         "isCompletedLesson1": currentSlide == 28 ? true : student.isCompletedLesson1

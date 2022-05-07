@@ -23,15 +23,17 @@ import WithTitle from "../../../Slides/WithTitle"
 
 export default function Index() {
 
+    let student = JSON.parse(localStorage.getItem("studentData"))
+
     let navigate = useNavigate();
 
     const [isOn, setIsOn] = useState(false)
 
-    const [currentSlide, setCurrentSlide] = useState(0)
+    const [currentSlide, setCurrentSlide] = useState(student.progressLesson2Slide == null ? 0 :student.progressLesson2Slide)
     const [loaded, setLoaded] = useState(false)
 
     const [sliderRef, instanceRef] = useKeenSlider({
-        initial: 0,
+        initial: student.progressLesson2Slide == null ? 0 :student.progressLesson2Slide,
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel)
         },
@@ -46,7 +48,6 @@ export default function Index() {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     }
 
-    let student = JSON.parse(localStorage.getItem("studentData"))
     let trackData = {
         "progressLesson2Slide": currentSlide,
         "isCompletedLesson2": currentSlide == 9 ? true : student.isCompletedLesson2
