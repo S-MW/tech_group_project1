@@ -1,9 +1,14 @@
 import { useEffect } from 'react';
 import useSound from 'use-sound';
 import slideAudio0 from "../../../../audios/simpleScenarioAudios/lesson1/slide0.mp3"
+import { useNavigate } from "react-router-dom";
+
+import { AiOutlineLogout } from 'react-icons/ai';
 
 // SL1s0 == (S = Simple) (L1 = Lesson 1) (s0 = slide 0)
 export default function SL1s0(props) {
+
+  let navigate = useNavigate();
 
 
   const [playAudio0, { stop: stopAudio0 }] = useSound(slideAudio0, {
@@ -21,12 +26,25 @@ export default function SL1s0(props) {
   }, [playAudio0]);
 
   return (
-    <div className="h-screen grid place-items-center">
-      <div>
-        <h1 className="animate__animated animate__fadeInDownBig TitleHeading">
-          الأهداف التعليمية
-        </h1>
+    <>
+      <div onClick={() => {
+        localStorage.clear();
+        navigate("/")
+      }} className='bg-red-300 text-[#efe3d9] w-fit h-fit absolute top-3 left-3 rounded-md flex flex-row cursor-pointer'>
+        <div className="m-2">
+          <AiOutlineLogout />
+        </div>
+        <div className="m-1">
+          <button className='font-bold'>تسجيل الخروج</button>
+        </div>
       </div>
-    </div>
+      <div className="h-screen grid place-items-center">
+        <div>
+          <h1 className="animate__animated animate__fadeInDownBig TitleHeading">
+            الأهداف التعليمية
+          </h1>
+        </div>
+      </div>
+    </>
   );
 }
