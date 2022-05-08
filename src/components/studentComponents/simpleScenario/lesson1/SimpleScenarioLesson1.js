@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom";
 
+import useSound from 'use-sound';
+import tester from "../../../../audios/tester.mp3"
+
 // simple Scenario Slide Imports
 import SL1s0 from "./SL1s0";
 import SL1s1 from "./SL1s1";
@@ -39,6 +42,8 @@ import WithTitle from "../../../Slides/WithTitle"
 
 export default function SimpleScenarioLesson1() {
 
+    const [playTester] = useSound(tester);
+
     let student = JSON.parse(localStorage.getItem("studentData"))
 
     let navigate = useNavigate();
@@ -71,6 +76,7 @@ export default function SimpleScenarioLesson1() {
 
 
     useEffect(() => {
+        playTester()
         axios
             .post(`https://asr.tawfig.info/api/user/update`, trackData, config)
             .then(response => {
