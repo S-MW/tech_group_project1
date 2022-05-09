@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom";
 
+import useSound from 'use-sound';
+import tester from "../../../../audios/tester.mp3"
+
 // simple Scenario Slide Imports
 import Intro from "./intro";
 import Slide2 from "./Slide2";
@@ -22,6 +25,8 @@ import 'animate.css';
 import WithTitle from "../../../Slides/WithTitle"
 
 export default function Index() {
+
+    const [playTester] = useSound(tester);
 
     let student = JSON.parse(localStorage.getItem("studentData"))
 
@@ -55,6 +60,7 @@ export default function Index() {
 
 
     useEffect(() => {
+        playTester()
         axios
             .post(`https://asr.tawfig.info/api/user/update`, trackData, config)
             .then(response => {
