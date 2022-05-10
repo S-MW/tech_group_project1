@@ -175,10 +175,9 @@ export default function Index() {
                         <Arrow
                             left
                             onClick={(e) => {
-                                // if (!isOn) {
-                                //     e.stopPropagation() || instanceRef.current?.next()
-                                // }
-                                e.stopPropagation() || instanceRef.current?.next()
+                                if (!isOn) {
+                                    e.stopPropagation() || instanceRef.current?.next()
+                                }
                             }
                             }
                             disabled={
@@ -189,10 +188,9 @@ export default function Index() {
 
                         <Arrow
                             onClick={(e) => {
-                                // if (!isOn) {
-                                //     e.stopPropagation() || instanceRef.current?.prev()
-                                // }
-                                e.stopPropagation() || instanceRef.current?.prev()
+                                if (!isOn) {
+                                    e.stopPropagation() || instanceRef.current?.prev()
+                                }
                             }
                             }
                             disabled={currentSlide === 0 || isOn}
