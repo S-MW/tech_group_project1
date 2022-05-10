@@ -28,19 +28,19 @@ export default function Index({ setIsOn }) {
             <div className={`px-8 text-[#efe3d9] h-full font-normal flex gap-5 justify-center flex-col w-full`}>
                 {showImgs &&
                     <>
-                        <div className='px-6 py-2 text-xl mx-auto md:text-3xl shadow-md lg:text-xl rounded-md animate__animated animate__backInDown bg-[#fa976d]'>
+                        <div className='px-6 py-2 text-2xl mx-auto md:text-3xl shadow-md lg:text-xl rounded-md animate__animated animate__backInDown bg-[#fa976d]'>
                             القدرة الكهربائية
                         </div>
-                        <div className='px-6 py-2 text-xl mx-auto md:text-3xl shadow-md lg:text-xl rounded-md animate__animated animate__backInDown animate__delay-2s bg-[#edac34]'>
+                        <div className='px-6 py-2 text-xl mx-auto md:text-3xl shadow-md lg:text-xl rounded-md animate__animated animate__backInDown animate__delay-2s bg-[#edac34] text-center'>
                             ما هى اكثر الاجهزة استهلاكا للقدرة الكهربائية؟
                         </div>
                         <div className='animate__animated animate__backInDown animate__delay-7s'>
                             <img src="./lesson2/slide11/table.png" className='shadow-md mx-auto md:w-1/2 lg:w-1/4' alt="جدول المقارنة بين الأجهزة الكهربائية" />
-                            <div className="flex justify-center gap-1 mt-2">
-                                <img src="./lesson2/slide11/conditioner.png" className='shadow-md' alt="مكيف" />
-                                <img src="./lesson2/slide11/fridge.png" className='shadow-md' alt="ثلاجة" />
-                                <img src="./lesson2/slide11/tv.png" className='shadow-md' alt="تلفاز" />
+                            <div className="flex justify-center gap-1 mt-2 mx-2">
+                                <img src="./lesson2/slide11/conditioner.png" className='shadow-md w-2/4' alt="مكيف" />
+                                <img src="./lesson2/slide11/fridge.png" className='shadow-md w-2/4' alt="ثلاجة" />
                             </div>
+                            <img src="./lesson2/slide11/tv.png" className='shadow-md mx-auto mt-2' alt="تلفاز" />
                         </div>
                     </>
                 }

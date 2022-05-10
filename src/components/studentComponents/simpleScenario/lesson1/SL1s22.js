@@ -6,7 +6,7 @@ import slideAudio22 from "../../../../audios/simpleScenarioAudios/lesson1/slide2
 
 function SL1s22(props) {
 
-  const [image, setImage] = useState(`<img src="/slide22.jpg" alt="" class="animate__animated animate__bounceInDown w-60 h-60" />`)
+  const [image, setImage] = useState(`<img src="/slide22.jpg" alt="" class="animate__animated animate__bounceInDown w-56 h-60" />`)
 
 
   const [playAudio22, { stop: stopAudio22 }] = useSound(slideAudio22, {
@@ -23,7 +23,7 @@ function SL1s22(props) {
 
     const timer = setTimeout(() => {
       //console.log('This will run after 8 second!')
-      setImage(`<img src="/slide22_1.jpg" alt="" class="animate__animated animate__bounceInDown w-60 h-60" />`)
+      setImage(`<img src="/slide22_1.jpg" alt="" class="animate__animated animate__bounceInDown w-56 h-60" />`)
     }, 8000);
 
     props.setIsAudioOn(true);
@@ -35,7 +35,7 @@ function SL1s22(props) {
       <div>
         <div className="text-xl" dangerouslySetInnerHTML={{ __html: image }} />
       </div>
-      <h3 className="animate__animated animate__fadeInDownBig  text-sm w-2/3 text-center p-3 m-2 rounded-md bg-[#8c7c5e]
+      <h3 className="animate__animated animate__fadeInDownBig text-2xl w-2/3 text-center p-2 m-2 rounded-md bg-[#fc8b92]
       md:text-lg
       lg:text-3xl">هو مقياس كمّيّة طاقة الوضع الكهربائيّة التي تسبّب حركة الإلكترونات في الدائرة الكهربائيّة، وتُقاس بوحدة الفولت</h3>
     </>

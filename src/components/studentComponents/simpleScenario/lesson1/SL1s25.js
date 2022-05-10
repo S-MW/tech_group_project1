@@ -41,8 +41,8 @@ function SL1s25(props) {
   return (
     <>
       <div>
-        <img src="/slide25.jpg" alt="" className="animate__animated animate__bounceInDown w-60 h-60" />
-        <div className={`mb-2 text-2xl lg:text-xl flex items-center animate__animated animate__backInDown animate__delay-30s`}>
+        <img src="/slide25.jpg" alt="" className="animate__animated animate__bounceInDown w-60 h-56 md:w-72 md:h-60" />
+        <div className={`my-2 text-2xl lg:text-xl flex items-center animate__animated animate__backInDown animate__delay-30s`}>
           <button onClick={() => window.open('https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_en.html')} className='bg-[#fc8b92] block mx-auto py-3 px-5 rounded-md text-3xl shadow-md border-2 animate__animated animate__pulse animate__infinite'>
             التجربة
             <FontAwesomeIcon icon={faHandPointer} className="mr-2 " />

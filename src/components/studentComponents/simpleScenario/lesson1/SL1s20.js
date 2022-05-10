@@ -12,7 +12,7 @@ import { faHandPointer } from '@fortawesome/free-regular-svg-icons'
 function SL1s20(props) {
 
   const [audioNumber, setAudioNumber] = useState(0)
-  const [image, setImage] = useState(`<img src="/slide20.jpg" alt="" class="animate__animated animate__bounceInDown w-60 h-60" />`)
+  const [image, setImage] = useState(`<img src="/slide20.jpg" alt="" class="animate__animated animate__bounceInDown w-56 h-60" />`)
 
 
 
@@ -23,7 +23,7 @@ function SL1s20(props) {
 
       const timer = setTimeout(() => {
         //console.log('This will run after 5 second!')
-        setImage(`<img src="/slide20_1.gif" alt="" class="animate__animated animate__bounceInDown w-60 h-60 bg-white" />`)
+        setImage(`<img src="/slide20_1.gif" alt="" class="animate__animated animate__bounceInDown w-56 h-60 bg-white" />`)
       }, 16000);
     },
   });
@@ -68,10 +68,10 @@ function SL1s20(props) {
     <>
       <div>
         <div className="text-xl" dangerouslySetInnerHTML={{ __html: image }} />
-        <div className={`mb-2 text-2xl lg:text-xl flex items-center animate__animated animate__backInDown animate__delay-40s`}>
+        <div className={`my-2 text-2xl lg:text-xl flex items-center animate__animated animate__backInDown animate__delay-40s`}>
           <button onClick={() => window.open('https://phet.colorado.edu/sims/html/circuit-construction-kit-dc-virtual-lab/latest/circuit-construction-kit-dc-virtual-lab_en.html')} className='bg-[#fc8b92] block mx-auto py-3 px-5 rounded-md text-3xl shadow-md border-2 animate__animated animate__pulse animate__infinite'>
             التجربة
-            <FontAwesomeIcon icon={faHandPointer} className="mr-2 " />
+            <FontAwesomeIcon icon={faHandPointer} className="mr-2" />
           </button>
         </div>
       </div>

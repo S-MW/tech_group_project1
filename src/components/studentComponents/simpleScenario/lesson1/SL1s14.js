@@ -9,14 +9,14 @@ function SL1s14(props) {
   const [audioNumber, setAudioNumber] = useState(0)
 
 
-  const [playAudio14_0, { stop: stopAudio14_0 }] = useSound(slideAudio14_0, {
+  const [playAudio14_0] = useSound(slideAudio14_0, {
     onend: () => {
       //console.info('Sound ended!');
       setAudioNumber(1)
     },
   });
 
-  const [playAudio14_1, { stop: stopAudio14_1 }] = useSound(slideAudio14_1, {
+  const [playAudio14_1] = useSound(slideAudio14_1, {
     onend: () => {
       //console.info('Sound ended!');
       props.setIsAudioOn(false);
@@ -44,13 +44,11 @@ function SL1s14(props) {
   return (
     <>
       <div>
-        <a href='https://phet.colorado.edu/sims/html/charges-and-fields/latest/charges-and-fields_ar_SA.html' target="_blank" >
-          <img src="/slide14.jpg" alt="" className="animate__animated animate__bounceInDown  animate__delay-2s w-60 h-60" />
+        <a href='https://phet.colorado.edu/sims/html/charges-and-fields/latest/charges-and-fields_ar_SA.html' rel="noreferrer" target="_blank" >
+          <img src="/slide14.jpg" alt="" className="animate__animated animate__bounceInDown mx-8 animate__delay-2s w-56" />
         </a>
       </div>
-      <h3 className="animate__animated animate__fadeInDownBig text-sm w-2/3 text-center p-3 m-2 rounded-md bg-[#fa976d]
-      md:text-lg
-      lg:text-3xl">هو الحيز الذي يحيط بالشحنة الكهربائية والذي تظهر فيه الآثار الكهربائية لتلك الشحنة وتــزداد قوة المجال الكهربائي كلما اقتربنا من الشحنة الكهربائية</h3>
+      <h3 className="animate__animated animate__fadeInDownBig text-2xl text-center p-2 mt-2 mx-8 rounded-md bg-[#fa976d]">هو الحيز الذي يحيط بالشحنة الكهربائية والذي تظهر فيه الآثار الكهربائية لتلك الشحنة وتــزداد قوة المجال الكهربائي كلما اقتربنا من الشحنة الكهربائية</h3>
     </>
   );
 }

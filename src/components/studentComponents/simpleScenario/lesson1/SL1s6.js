@@ -5,26 +5,26 @@ import slideAudio6 from "../../../../audios/simpleScenarioAudios/lesson1/slide6.
 
 function SL1s6(props) {
 
-    const [playAudio6 , { stop: stopAudio6 }] = useSound(slideAudio6, {
-        onend: () => {
-          //console.info('Sound ended!');
-          props.setIsAudioOn(false);
-        },
-      });
+  const [playAudio6] = useSound(slideAudio6, {
+    onend: () => {
+      //console.info('Sound ended!');
+      props.setIsAudioOn(false);
+    },
+  });
 
 
-    useEffect(() => {
-        //console.info('Sound Start!');
-        playAudio6();
-        props.setIsAudioOn(true);
-      },[playAudio6]);
+  useEffect(() => {
+    //console.info('Sound Start!');
+    playAudio6();
+    props.setIsAudioOn(true);
+  }, [playAudio6]);
 
 
-    return (
-        <>
-            <h1 className="animate__animated animate__fadeInDownBig TitleHeading">حركة الايونات فى المحاليل</h1>
-        </>
-    );
+  return (
+    <>
+      <h1 className="animate__animated animate__fadeInDownBig px-4 py-2 mx-8 text-5xl text-center font-bold shadow-md rounded-md bg-[#fa976d]">حركة الايونات فى المحاليل</h1>
+    </>
+  );
 }
 
 export default SL1s6;

@@ -46,11 +46,11 @@ export default function ComplicatedScenarioLesson1() {
 
     const [isAudioOn, setIsAudioOn] = useState(false)
 
-    const [currentSlide, setCurrentSlide] = useState(student.progressLesson1Slide  == null ? 0 :student.progressLesson1Slide)
+    const [currentSlide, setCurrentSlide] = useState(student.progressLesson1Slide == null ? 0 : student.progressLesson1Slide)
     const [loaded, setLoaded] = useState(false)
 
     const [sliderRef, instanceRef] = useKeenSlider({
-        initial: student.progressLesson1Slide  == null ? 0 :student.progressLesson1Slide,
+        initial: student.progressLesson1Slide == null ? 0 : student.progressLesson1Slide,
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel)
         },
@@ -235,7 +235,7 @@ export default function ComplicatedScenarioLesson1() {
                     </WithTitle>
                     <WithTitle>
                         {currentSlide === 28 &&
-                            <button className=" p-3 rounded-lg bg-blue-300" onClick={() => navigate("/StudentHome")}>العودة الى القائمة الرئيسية</button>
+                            <button className="text-3xl border-2 border-white mx-8 p-3 rounded-md bg-[#fa976d]" onClick={() => navigate("/StudentHome")}>العودة الى القائمة الرئيسية</button>
                         }
                     </WithTitle>
 
@@ -245,9 +245,10 @@ export default function ComplicatedScenarioLesson1() {
                         <Arrow
                             left
                             onClick={(e) => {
-                                if (!isAudioOn) {
-                                    e.stopPropagation() || instanceRef.current?.next()
-                                }
+                                // if (!isAudioOn) {
+                                //     e.stopPropagation() || instanceRef.current?.next()
+                                // }
+                                e.stopPropagation() || instanceRef.current?.next()
                             }
                             }
                             disabled={
@@ -258,9 +259,10 @@ export default function ComplicatedScenarioLesson1() {
 
                         <Arrow
                             onClick={(e) => {
-                                if (!isAudioOn) {
-                                    e.stopPropagation() || instanceRef.current?.prev()
-                                }
+                                // if (!isAudioOn) {
+                                //     e.stopPropagation() || instanceRef.current?.prev()
+                                // }
+                                e.stopPropagation() || instanceRef.current?.prev()
                             }
                             }
                             disabled={currentSlide === 0 || isAudioOn}
@@ -268,25 +270,6 @@ export default function ComplicatedScenarioLesson1() {
                     </>
                 )}
             </div>
-            {/* {
-                loaded && instanceRef.current && (
-                    <div className="dots">
-                        {[
-                            ...Array(instanceRef.current.track.details.slides.length).keys(),
-                        ].map((idx) => {
-                            return (
-                                <button
-                                    key={idx}
-                                    onClick={() => {
-                                        instanceRef.current?.moveToIdx(idx)
-                                    }}
-                                    className={"dot" + (currentSlide === idx ? " active" : "")}
-                                ></button>
-                            )
-                        })}
-                    </div>
-                )
-            } */}
         </>
     )
 

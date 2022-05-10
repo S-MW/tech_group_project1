@@ -24,10 +24,10 @@ export default function Index({ setIsOn }) {
     return (
         <div className="h-screen grid place-items-center w-5/6 text-[#efe3d9]">
             <div>
-                <h1 className="shadow-md px-1 md:px-10 py-4 mx-auto lg:text-xl rounded-md animate__animated animate__fadeInDownBig animate__delay-1s text-5xl bg-[#fc8b92]">
+                <h1 className="animate__animated animate__fadeInDownBig animate__delay-1s mb-5 px-4 py-2 text-4xl text-center font-bold mx-auto md:text-5xl shadow-md rounded-md bg-[#fa976d]">
                     الدرس الثاني:
                 </h1>
-                <h1 className="shadow-md px-1 py-4 md:px-10 mx-auto lg:text-xl rounded-md animate__animated animate__fadeInDownBig animate__delay-2s text-3xl mt-5 bg-[#fc8b92]">الدوائر الكهربائية</h1>
+                <h1 className="shadow-md p-2 text-3xl mx-auto md:text-4xl text-center rounded-md bg-[#639e98] animate__animated animate__fadeInDownBig animate__delay-2s">الدوائر الكهربائية</h1>
             </div>
         </div>
     )

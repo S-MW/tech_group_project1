@@ -47,8 +47,8 @@ function SL1s5(props) {
 
     return (
         <>
-            <div className="animate__animated animate__bounceInDown">
-                <h1 className="mb-3 text-2xl animate__animated animate__fadeInDownBig animate__delay-3s TitleHeading">الشحنة الكهربائية الساكنة Charge Static</h1>
+            <div className="animate__animated animate__bounceInDown mx-8">
+                <h1 className="mb-3 animate__animated animate__fadeInDownBig animate__delay-3s head-title">الشحنة الكهربائية الساكنة Charge Static</h1>
                 <div className={`mb-2 text-2xl lg:text-xl flex items-center animate__animated animate__backInDown animate__delay-8s`}>
                     <button onClick={() => window.open('https://phet.colorado.edu/sims/html/john-travoltage/latest/john-travoltage_ar_SA.html')} className='bg-[#fc8b92] block mx-auto py-3 px-5 rounded-md text-3xl shadow-md border-2 animate__animated animate__pulse animate__infinite'>
                         التجربة

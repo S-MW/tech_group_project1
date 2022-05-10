@@ -46,12 +46,10 @@ function CL1s4(props) {
   const [playAudio4_3, { stop: stopAudio4_3 }] = useSound(slideAudio4_3, {
     onend: () => {
       //console.info('Sound ended!');
-      setImage(`<h4 class="animate__animated animate__fadeInDownBig  mx-10 text-sm w-2/3 text-center p-3 m-2 rounded-md bg-[#96d2ca]
-      md:text-lg
-      lg:text-3xl">اذا كيف يصبح الجسم مشحونًا كهربائيًا؟</h4>
-      <h4 class="animate__animated animate__fadeInDownBig animate__delay-3s mx-10 text-sm w-2/3 text-center p-3 m-2 rounded-md bg-[#507570]
-      md:text-lg
-      lg:text-3xl">يصبح الجسم مشحونا بالكهرباء إذا افقد أو اكتسب الكترونات.</h4>`)
+      setImage(`<h4 class="animate__animated animate__fadeInDownBig mx-10 text-2xl w-2/3 text-center p-3 m-2 rounded-md bg-[#fc8b92]
+      md:text-4xl">اذا كيف يصبح الجسم مشحونًا كهربائيًا؟</h4>
+      <h4 class="animate__animated animate__fadeInDownBig animate__delay-3s mx-10 text-xl w-2/3 text-center p-3 m-2 rounded-md bg-[#507570]
+      md:text-3xl">يصبح الجسم مشحونا بالكهرباء إذا افقد أو اكتسب الكترونات.</h4>`)
       setAudioNumber(4);
     },
   });
@@ -107,7 +105,7 @@ function CL1s4(props) {
   return (
     <>
       <div className="grid justify-items-center" dangerouslySetInnerHTML={{ __html: image }} />
-      <div className={`mb-2 text-2xl lg:text-xl flex items-center animate__animated animate__backInDown animate__delay-50s`}>
+      <div className={`mt-2 text-2xl lg:text-xl flex items-center animate__animated animate__backInDown animate__delay-50s`}>
         <button onClick={() => window.open('https://phet.colorado.edu/sims/html/john-travoltage/latest/john-travoltage_ar_SA.html')} className='bg-[#fc8b92] block mx-auto py-3 px-5 rounded-md text-3xl shadow-md border-2 animate__animated animate__pulse animate__infinite'>
           التجربة
           <FontAwesomeIcon icon={faHandPointer} className="mr-2 " />

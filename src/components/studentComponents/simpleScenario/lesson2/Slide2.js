@@ -27,10 +27,10 @@ export default function Index({ setIsOn }) {
 
 
     return (
-        <div className="h-screen grid place-items-center">
-            <div>
-                <h1 className="shadow-md px-1 py-4 md:px-10 mx-auto lg:text-xl rounded-md bg-[#639e98] text-[#efe3d9] animate__animated animate__fadeInDownBig animate__delay-1s text-4xl">
-                    الأهداف التعليمية
+        <div className="h-full grid place-items-center">
+            <div className="pb-20">
+                <h1 className="p-2 text-4xl text-center font-bold mx-auto md:text-6xl shadow-md rounded-md bg-[#fa976d] animate__animated animate__fadeInDownBig animate__delay-1s">
+                    الأهـداف التعليمية
                 </h1>
             </div>
         </div>

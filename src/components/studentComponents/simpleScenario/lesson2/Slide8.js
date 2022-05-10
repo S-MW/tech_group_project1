@@ -16,6 +16,8 @@ export default function Index({ setIsOn }) {
         playIntro()
     }, [playIntro, setIsOn])
 
+    // FIIIIIIIIIIIIIIIIXXxxXXxXXXX
+
     return (
         <>
             <div className={`px-8 text-[#efe3d9] h-full font-normal flex gap-10 lg:gap-0 items-center justify-center flex-col w-full`}>

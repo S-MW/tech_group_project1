@@ -29,10 +29,8 @@ function CL1s27(props) {
                 lg:text-3xl'>
                 <h2>الربط مع التاريخ</h2>
             </div>
-            <h1 className="font-bold animate__animated animate__fadeInDownBig animate__delay-2s text-sm my-2 w-fit text-center p-3 rounded-md bg-[#96d2ca]
-                md:text-lg
-                lg:text-3xl">الأوم.... وحدة قياس المقاومة الكهربائية</h1>
-            <img src="ComplicatedScenarioImages/slide27.jpg" alt="" className="animate__animated animate__bounceInDown animate__delay-7s w-60 h-60" />
+            <h1 className="font-bold animate__animated animate__fadeInDownBig animate__delay-2s my-2 shadow-md p-2 text-2xl md:text-3xl text-center bg-[#639e98] mx-8 rounded-md">الأوم.... وحدة قياس المقاومة الكهربائية</h1>
+            <img src="ComplicatedScenarioImages/slide27.jpg" alt="" className="animate__animated animate__bounceInDown animate__delay-7s w-52 mx-8" />
         </>
     );
 }

@@ -78,24 +78,24 @@ export default function Index({ setIsOn }) {
 
     return (
         <>
-            <div className={`px-8 text-[#efe3d9] h-full font-normal grid place-items-center w-full`}>
+            <div className={`px-8 text-[#efe3d9] h-full font-normal grid place-items-center justify-center w-full`}>
                 {introImg &&
-                    <div className='w-72 animate__animated animate__backInDown animate__delay-1s animate__slower'>
-                        <img src="./lesson2/slide7/img1.png" alt="الدائرة الكهربائية" />
+                    <div className='mx-auto animate__animated animate__backInDown animate__delay-1s animate__slower'>
+                        <img src="./lesson2/slide7/img1.png" className='w-38 sm:w-72' alt="الدائرة الكهربائية" />
                     </div>
                 }
                 {way1Img &&
-                    <div className='text-2xl w-80 h-80 lg:text-xl'>
-                        <h3 className='p-4 mb-5 rounded-md bg-[#639e98] animate__animated animate__backInDown'>
+                    <div className='text-2xl h-80 lg:text-xl'>
+                        <h3 className='p-2 text-center mb-5 rounded-md bg-[#639e98] animate__animated animate__backInDown'>
                             <b>دوائر التوصيل على التوالى </b>
                             وهى دائرة كهربائية تتضمن مسارأ واحدًا فقط ، يتدفق فيه التيار الكهربائى
                         </h3>
-                        <img src="./lesson2/slide7/img2.png" className='w-full  animate__animated animate__backInDown animate__delay-1s' alt="دوائر التوصيل على التوالى" />
+                        <img src="./lesson2/slide7/img2.png" className='animate__animated animate__backInDown animate__delay-1s' alt="دوائر التوصيل على التوالى" />
                     </div>
                 }
                 {way2Img &&
-                    <div className='mx-auto text-2xl w-80 h-80 lg:text-xl'>
-                        <h3 className='p-4 mb-5 rounded-md bg-[#639e98] animate__animated animate__backInDown'>
+                    <div className='mx-auto text-2xl h-80 lg:text-xl'>
+                        <h3 className='p-2 text-center mb-5 rounded-md bg-[#639e98] animate__animated animate__backInDown'>
                             <b>دوائر التوصيل على التوازى </b>
                             وهى دائرة كهربائية تتضمن أكثر من مسار لتدفق التيار الكهربائى خلالها.
                         </h3>

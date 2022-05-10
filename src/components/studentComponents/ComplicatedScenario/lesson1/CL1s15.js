@@ -38,21 +38,18 @@ function CL1s15(props) {
 
     return (
         <>
-            <h1 className="font-bold animate__animated animate__fadeInDownBig text-sm my-2 w-fit text-center p-3 rounded-md bg-[#fa976d]
-                md:text-lg
-                lg:text-3xl">هل يمكن للبرق ان يحرز شحنات كهربائية؟
+            <h1 className="font-bold animate__animated animate__fadeInDownBig text-2xl w-2/3 text-center p-2 rounded-md bg-[#fa976d]
+                md:text-3xl">هل يمكن للبرق ان يحرز شحنات كهربائية؟
             </h1>
-            <h1 className="font-bold animate__animated animate__fadeInDownBig  animate__delay-4s text-sm my-2 w-2/3 text-center p-3 rounded-md bg-[#96d2ca]
-                md:text-lg
-                lg:text-3xl">
-                -يمكن للتفريغ الكهربائى أن يحرز كمية هائلة من الطاقة الكهربائية فى لحظة واحدة ، كما يحدث فى صاعقة البرق
+            <h1 className="animate__animated animate__fadeInDownBig animate__delay-4s text-lg my-2 w-2/3 text-center p-2 rounded-md bg-[#fc8b92]
+                md:text-2xl">
+                يمكن للتفريغ الكهربائى أن يحرز كمية هائلة من الطاقة الكهربائية فى لحظة واحدة ، كما يحدث فى صاعقة البرق
             </h1>
             <div>
-                <img src="/slide16.jpg" alt="" className="animate__animated animate__bounceInDown animate__delay-15s w-60 h-60" />
+                <img src="/slide16.jpg" alt="" className="animate__animated animate__bounceInDown animate__delay-15s w-48" />
             </div>
-            <h1 className=" text-white  font-bold animate__animated animate__fadeInDownBig animate__delay-15s  text-sm my-2 w-2/3 text-center p-3 rounded-md bg-[#a19a8c]
-                md:text-lg
-                lg:text-3xl">هو الحركة السريعة للشحنات الفائضة من مكان إلى آخر.</h1>
+            <h1 className=" text-white animate__animated animate__fadeInDownBig animate__delay-15s text-lg my-2 w-2/3 text-center p-3 rounded-md bg-[#639e98]
+                md:text-2xl">هو الحركة السريعة للشحنات الفائضة من مكان إلى آخر.</h1>
         </>
     );
 }

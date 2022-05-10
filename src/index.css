@@ -8,6 +8,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url('../public/main-bg.jpg');
   background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #efe3d9;
 }
 
 .number-slide {
@@ -20,10 +22,10 @@ body {
   height: 90vh;
   /* gap: 0.5rem; */
 }
-
+/* 
 p {
   padding: 5px 0;
-}
+} */
 
 
 .navigation-wrapper {
@@ -78,11 +80,6 @@ p {
 .arrow--disabled {
   fill: #6d6d6d;
   cursor: auto;
-}
-
-h1 {
-  font-weight: 500;
-  font-size: 5.5rem;
 }
 
 .animate__delay-6s {
@@ -267,4 +264,12 @@ h1 {
 
 .TitleHeading {
   @apply shadow-md text-sm p-4 px-6 rounded-md bg-[#639e98] text-[#efe3d9] md:text-lg lg:text-xl
+}
+
+.head-title {
+  @apply px-4 py-2 text-3xl text-center font-bold mx-auto md:text-5xl shadow-md rounded-md bg-[#fa976d]
+}
+
+.sub-title {
+  @apply shadow-md p-2 text-2xl mx-auto md:text-3xl text-center rounded-md bg-[#639e98]
 }

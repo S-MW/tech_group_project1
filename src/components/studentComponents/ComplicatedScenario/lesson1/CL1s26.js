@@ -6,7 +6,7 @@ import slideAudio26 from "../../../../audios/complicatedScenarioAudios/lesson1/s
 function CL1s26(props) {
 
 
-  const [image, setImage] = useState(`<img src="ComplicatedScenarioImages/slide26_0.png" alt="" class=" animate__animated animate__bounceInDown  w-60 h-60" />`)
+  const [image, setImage] = useState(`<img src="ComplicatedScenarioImages/slide26_0.png" alt="" class="animate__animated animate__bounceInDown w-40 md:w-64 mx-auto inline-block" />`)
 
 
   const [playAudio26, { stop: stopAudio26 }] = useSound(slideAudio26, {
@@ -22,9 +22,9 @@ function CL1s26(props) {
     props.setIsAudioOn(true);
 
     const timer = setTimeout(() => {
-      setImage(`<img src="ComplicatedScenarioImages/slide26_1.png" alt="" class="animate__animated animate__bounceInDown  w-60 h-60" />`)
+      setImage(`<img src="ComplicatedScenarioImages/slide26_1.png" alt="" class="animate__animated animate__bounceInDown w-60 md:w-64" />`)
       const timer2 = setTimeout(() => {
-        setImage(`<img src="ComplicatedScenarioImages/slide26_2.jpg" alt="" class="animate__animated animate__bounceInDown  w-60 h-60" />`)
+        setImage(`<img src="ComplicatedScenarioImages/slide26_2.jpg" alt="" class="animate__animated animate__bounceInDown w-60 md:w-64" />`)
       }, 5000);
     }, 17000);
 

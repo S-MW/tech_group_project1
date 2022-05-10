@@ -3,9 +3,33 @@ import useSound from 'use-sound';
 import slideAudio5_0 from "../../../../audios/complicatedScenarioAudios/lesson1/slide5_0.mp3"
 import slideAudio5_1 from "../../../../audios/complicatedScenarioAudios/lesson1/slide5_1.mp3"
 import slideAudio5_2 from "../../../../audios/complicatedScenarioAudios/lesson1/slide5_2.mp3"
+import { faHandPointer, faQuestionCircle } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-
-
+/* 
+<div class='flex w-full gap-2 flex-wrap justify-center pt-11'>
+    <div class='animate__animated animate__bounceInDown animate__delay-8s text-center bg-white p-1 md:text-2xl'>
+      <img src="ComplicatedScenarioImages/slide5_4.jpg" alt="" class="w-28 h-28 md:h-40 md:w-40" />
+      <h2 class='text-black'>صحن</h2>
+    </div>
+    <div class='animate__animated animate__bounceInDown animate__delay-9s text-center bg-white p-1 md:text-2xl'>
+      <img src="ComplicatedScenarioImages/slide5_0.jpg" alt="" class="w-28 h-28 md:h-40 md:w-40" />
+      <h2 class='text-black'>ملح</h2>
+    </div>
+    <div class='animate__animated animate__bounceInDown animate__delay-10s text-center bg-white p-1 md:text-2xl'>
+      <img src="ComplicatedScenarioImages/slide5_1.jpg" alt="" class="w-28 h-28 md:h-40 md:w-40" />
+      <h2 class='text-black'>فلفل اسود مطحون</h2>
+    </div>
+    <div class='animate__animated animate__bounceInDown animate__delay-11s text-center bg-white p-1 md:text-2xl'>
+      <img src="ComplicatedScenarioImages/slide5_2.jpg" alt="" class="w-28 h-28 md:h-40 md:w-40" />
+      <h2 class='text-black'>مشط بلاستيكي</h2>
+    </div>
+    <div class='animate__animated animate__bounceInDown animate__delay-12s text-center bg-white p-1 md:text-2xl'>
+      <img src="ComplicatedScenarioImages/slide5_3.jpg" alt="" class="w-28 h-28 md:h-40 md:w-40" />
+      <h2 class='text-black'>ملابس صوف</h2>
+    </div>
+  </div>
+*/
 
 function CL1s5(props) {
 
@@ -18,27 +42,31 @@ function CL1s5(props) {
   const [question2, setQuestion2] = useState(`<button class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 animate__animated animate__fadeInDownBig animate__delay-5s">
   الجواب
 </button>`)
+
+  const [showAnswer1, setShowAnswer1] = useState(false)
+  const [showAnswer2, setShowAnswer2] = useState(false)
+
   const [image, setImage] = useState(`
-  <div class='grid grid-rows-3 grid-flow-col gap-2  md:grid-cols-3 lg:grid-cols-5'>
-    <div class='animate__animated animate__bounceInDown animate__delay-8s text-center'>
-      <img src="ComplicatedScenarioImages/slide5_4.jpg" alt="" class="w-40 h-40" />
-      <h2 class='text-base text-white p-2 text-center rounded-md bg-[#639e98]'>صحن</h2>
+  <div class='flex w-full gap-2 flex-wrap justify-center pt-11'>
+    <div class='animate__animated animate__bounceInDown animate__delay-8s text-center bg-white p-1 md:text-2xl'>
+      <img src="ComplicatedScenarioImages/slide5_4.jpg" alt="" class="w-28 h-28 md:h-40 md:w-40" />
+      <h2 class='text-black'>صحن</h2>
     </div>
-    <div class='animate__animated animate__bounceInDown animate__delay-9s text-center'>
-      <img src="ComplicatedScenarioImages/slide5_0.jpg" alt="" class="w-40 h-40" />
-      <h2 class='text-base text-white p-2 text-center rounded-md bg-[#639e98]'>ملح</h2>
+    <div class='animate__animated animate__bounceInDown animate__delay-9s text-center bg-white p-1 md:text-2xl'>
+      <img src="ComplicatedScenarioImages/slide5_0.jpg" alt="" class="w-28 h-28 md:h-40 md:w-40" />
+      <h2 class='text-black'>ملح</h2>
     </div>
-    <div class='animate__animated animate__bounceInDown animate__delay-10s text-center'>
-      <img src="ComplicatedScenarioImages/slide5_1.jpg" alt="" class="w-40 h-40" />
-      <h2 class='text-base text-white p-2 text-center rounded-md bg-[#639e98]'>فلفل اسود مطحون</h2>
+    <div class='animate__animated animate__bounceInDown animate__delay-10s text-center bg-white p-1 md:text-2xl'>
+      <img src="ComplicatedScenarioImages/slide5_1.jpg" alt="" class="w-28 h-28 md:h-40 md:w-40" />
+      <h2 class='text-black'>فلفل اسود مطحون</h2>
     </div>
-    <div class='animate__animated animate__bounceInDown animate__delay-11s text-center'>
-      <img src="ComplicatedScenarioImages/slide5_2.jpg" alt="" class="w-40 h-40" />
-      <h2 class='text-base text-white p-2 text-center rounded-md bg-[#639e98]'>مشط بلاستيكي</h2>
+    <div class='animate__animated animate__bounceInDown animate__delay-11s text-center bg-white p-1 md:text-2xl'>
+      <img src="ComplicatedScenarioImages/slide5_2.jpg" alt="" class="w-28 h-28 md:h-40 md:w-40" />
+      <h2 class='text-black'>مشط بلاستيكي</h2>
     </div>
-    <div class='animate__animated animate__bounceInDown animate__delay-12s text-center'>
-      <img src="ComplicatedScenarioImages/slide5_3.jpg" alt="" class="w-40 h-40" />
-      <h2 class='text-base text-white p-2 text-center rounded-md bg-[#639e98]'>ملابس صوف</h2>
+    <div class='animate__animated animate__bounceInDown animate__delay-12s text-center bg-white p-1 md:text-2xl'>
+      <img src="ComplicatedScenarioImages/slide5_3.jpg" alt="" class="w-28 h-28 md:h-40 md:w-40" />
+      <h2 class='text-black'>ملابس صوف</h2>
     </div>
   </div>
 `)
@@ -57,7 +85,7 @@ function CL1s5(props) {
   const [playAudio5_1, { stop: stopAudio5_1 }] = useSound(slideAudio5_1, {
     onend: () => {
       //console.info('Sound ended!');
-      setImage(`<h2 class="m-2 animate__animated animate__fadeInDownBig animate__delay-3s TitleHeading">	الشحنة الكهرابائية الساكنة بانها هى عدم توازن للشحنة الكهربائية على الجسم</h2>`)
+      setImage(`<h2 class="mx-8 animate__animated animate__fadeInDownBig animate__delay-3s shadow-md p-2 text-2xl md:text-3xl text-center rounded-md bg-[#fc8b92]">	الشحنة الكهربائية الساكنة بانها هى عدم توازن للشحنة الكهربائية على الجسم</h2>`)
       setAudioNumber(2);
     },
   });
@@ -104,28 +132,30 @@ function CL1s5(props) {
 
       <div dangerouslySetInnerHTML={{ __html: image }} />
 
-        <table className={`  table-auto border-collapse w-2/3 border-2 border-black animate__animated animate__bounceInDown ${showGeorge} `} >
-          <thead>
-            <tr>
-              <th className="border-2 border-black">السؤال</th>
-              <th className="border-2 border-black">الجواب</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className='animate__animated animate__fadeInDownBig'>
-              <td className="border-2  border-black animate__animated animate__bounceInDown animate__delay-1s"> كيف استجاب كلا من الملح والفلفل مع المشط؟</td>
-              <td className="border-2  border-black" ><div onClick={() => {
-                setQuestion1(`<h2 class='TitleHeading'>.يجذب المشط دقائق الفلفل وبعض بلورات الملح الصغيرة</h2>`)
-              }} dangerouslySetInnerHTML={{ __html: question1 }} /></td>
-            </tr>
-            <tr className='animate__animated animate__fadeInDownBig animate__animated animate__bounceInDown animate__delay-5s'>
-              <td className="border-2  border-black"> فسر سبب استجابة الفلفل بصورة مختلفة عن استجابة الملح للمشط؟</td>
-              <td className="border-2  border-black" ><div onClick={() => {
-                setQuestion2(`<h2 class='TitleHeading'>بلورات الملح كبيرة وثقيلة مقارنة بدقائق الفلفل، والقوة الكهربائية لا تكفي إلا لرفع بلورات الملح الصغيرة.</h2>`)
-              }} dangerouslySetInnerHTML={{ __html: question2 }} /></td>
-            </tr>
-          </tbody>
-        </table>
+      <div className={`animate__animated animate__fadeInDownBig animate__delay-1s ${showGeorge}`}>
+        <div className='mx-8 animate__animated animate__fadeInDownBig animate__delay-1s'>
+          <h3 className='shadow-md p-1 text-xl my-2 mx-auto md:text-2xl text-center rounded-md bg-[#639e98]'>كيف استجاب كلا من الملح والفلفل مع المشط؟</h3>
+          {!showAnswer1 ?
+            <button className='group relative w-full flex justify-center py-2 px-4 border-2 border-white text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500  animate__animated animate__pulse animate__infinite' onClick={() => setShowAnswer1(true)}>
+              الجواب
+              <FontAwesomeIcon icon={faQuestionCircle} className="mr-2" />
+            </button>
+            : <h2 className='shadow-md animate__animated animate__slideInRight mb-2 p-2 text-lg mx-auto md:text-xl text-center rounded-md bg-[#fa976d]'>يجذب المشط دقائق الفلفل وبعض بلورات الملح الصغيرة</h2>
+          }
+        </div>
+
+        <div className='mx-8 animate__animated animate__fadeInDownBig animate__delay-5s'>
+          <h3 className='shadow-md p-2 text-xl mb-2 mx-auto md:text-2xl text-center rounded-md mt-2 bg-[#639e98]'> فسر سبب استجابة الفلفل بصورة مختلفة عن استجابة الملح للمشط؟</h3>
+          {!showAnswer2 ?
+            <button className='group relative w-full flex justify-center py-2 px-4 border-2 border-white text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500  animate__animated animate__pulse animate__infinite' onClick={() => setShowAnswer2(true)}>
+              الجواب
+              <FontAwesomeIcon icon={faQuestionCircle} className="mr-2" />
+            </button>
+            : <h2 className='shadow-md animate__animated animate__slideInRight mb-2 p-2 text-lg mx-auto md:text-xl text-center rounded-md bg-[#edac34]'>بلورات الملح كبيرة وثقيلة مقارنة بدقائق الفلفل، والقوة الكهربائية لا تكفي إلا لرفع بلورات الملح الصغيرة.</h2>
+          }
+        </div>
+      </div>
+
     </>
   );
 }

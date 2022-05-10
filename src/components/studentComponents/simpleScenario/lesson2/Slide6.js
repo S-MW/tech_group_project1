@@ -23,8 +23,8 @@ export default function Index({ setIsOn }) {
 
     return (
         <>
-            <div className="mx-8 text-[#efe3d9] h-full flex justify-center flex-col font-normal w-4/6">
-                <h3 className='p-4 lg:p-5 text-3xl max-w-fit mx-auto lg:text-xl rounded-md bg-[#639e98] animate__animated animate__backInDown animate__slower'>
+            <div className="mx-8text-[#efe3d9] h-full flex justify-center flex-col font-normal w-4/6">
+                <h3 className='head-title animate__animated animate__backInDown animate__slower'>
                     دوائر التوصيل على التوالي وعلى التوازى
                 </h3>
             </div>

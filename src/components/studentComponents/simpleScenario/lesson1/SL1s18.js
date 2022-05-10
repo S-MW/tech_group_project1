@@ -23,13 +23,12 @@ function SL1s18(props) {
   return (
     <>
       <div>
-        <img src="/slide18.jpg" alt="" className="animate__animated animate__bounceInDown w-60 h-60" />
+        <img src="/slide18.jpg" alt="" className="animate__animated animate__bounceInDown w-60 md:w-72" />
       </div>
-      <h3 className="animate__animated animate__fadeInDownBig text-sm w-2/3 text-center p-3 m-2 rounded-md bg-[#639e98]
+      <h3 className="animate__animated animate__fadeInDownBig text-xl w-2/3 text-center p-2 m-2 rounded-md bg-[#639e98]
       md:text-lg
       lg:text-3xl">يقصد به تدفّق الشحنات الكهربائيّة (الإلكترونات) وينتج التيار الكهربائــي في المواد الصلبة بســبب تدفق الإلكترونات.</h3>
-      <h3 className="animate__animated animate__fadeInDownBig  animate__delay-8s text-sm w-2/3 text-center p-3 m-2 rounded-md bg-[#8c7c5e]
-      md:text-lg
+      <h3 className="animate__animated animate__fadeInDownBig  animate__delay-8s text-xl w-2/3 text-center p-2 rounded-md bg-[#fc8b92]
       lg:text-3xl">أما في السوائل فينتج التيارّ الكهربائي بســبب تدفق الأيونات التي يمكن أن تكون ذات شــحنة موجبة أو شحنة ُسالبة </h3>
     </>
   );

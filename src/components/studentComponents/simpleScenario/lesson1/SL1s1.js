@@ -6,7 +6,7 @@ import slideAudio1 from "../../../../audios/simpleScenarioAudios/lesson1/slide1.
 export default function SL1s1(props) {
 
 
-  const [playAudio1, { stop: stopAudio1 }] = useSound(slideAudio1, {
+  const [playAudio1] = useSound(slideAudio1, {
     onend: () => {
       //console.info('Sound ended!');
       props.setIsAudioOn(false);
@@ -20,15 +20,14 @@ export default function SL1s1(props) {
   }, [playAudio1]);
 
   return (
-    <>
-      <h4 className="animate__animated animate__fadeInDownBig text-sm text-center mb-5 p-3 rounded-md bg-[#edac34]
-      md:text-lg
-      lg:text-4xl
-      ">عزيزتى الطالبة ،</h4>
-      <h4 className="animate__animated animate__fadeInDownBig animate__delay-1s text-sm w-2/3 text-center p-3 rounded-md bg-[#fa976d]
-      md:text-lg
-      lg:text-4xl
-      ">من المتوقع بعد انتهائك منْ هذا الدرس أنْ تكونى قادرة وبكفاءة على أنْ:</h4>
-    </>
+    <div className='h-full flex flex-col justify-center gap-3 mx-8'>
+      <h4 className="animate__animated animate__fadeInDownBig sub-title">
+        عزيزتى الطالبة ،
+        <br />
+        من المتوقع بعد انتهائك منْ هذا الدرس
+        <br />
+        أنْ تكونى قادرة وبكفاءة على أنْ:
+      </h4>
+    </div>
   );
 }

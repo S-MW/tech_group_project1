@@ -67,7 +67,7 @@ export default function Index({ setIsOn }) {
     return (
         <>
             <div className="mx-8 text-[#efe3d9] h-full flex justify-center flex-col font-normal w-4/6">
-                <h3 className={`p-4 lg:p-5 text-3xl max-w-fit mx-auto lg:text-4xl rounded-md bg-[#639e98] ${introTitle}`}>
+                <h3 className={`p-2 lg:p-5 text-2xl max-w-fit mx-auto lg:text-4xl rounded-md bg-[#639e98] ${introTitle}`}>
                     الربط مع المناهج
                 </h3>
                 <h3 className={`p-4 lg:p-5 text-xl max-w-fit shadow-md mx-auto md:text-3xl rounded-md bg-[#fa976d] ${qClass}`}>

@@ -31,11 +31,11 @@ export default function Index() {
 
     const [isOn, setIsOn] = useState(false)
 
-    const [currentSlide, setCurrentSlide] = useState(student.progressLesson2Slide == null ? 0 :student.progressLesson2Slide)
+    const [currentSlide, setCurrentSlide] = useState(student.progressLesson2Slide == null ? 0 : student.progressLesson2Slide)
     const [loaded, setLoaded] = useState(false)
 
     const [sliderRef, instanceRef] = useKeenSlider({
-        initial: student.progressLesson2Slide == null ? 0 :student.progressLesson2Slide,
+        initial: student.progressLesson2Slide == null ? 0 : student.progressLesson2Slide,
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel)
         },
@@ -52,7 +52,7 @@ export default function Index() {
 
     let trackData = {
         "progressLesson2Slide": currentSlide == 16 ? 0 : currentSlide,
-        "isCompletedLesson2": currentSlide == 16 ? true :  student.isCompletedLesson2
+        "isCompletedLesson2": currentSlide == 16 ? true : student.isCompletedLesson2
     }
 
 
@@ -163,6 +163,11 @@ export default function Index() {
                             <Slide17 setIsOn={setIsOn} />
                         }
                     </WithTitle>
+                    <WithTitle>
+                        {currentSlide === 17 &&
+                            <button className="text-3xl border-2 border-white mx-8 p-3 rounded-md bg-[#fa976d]" onClick={() => navigate("/StudentHome")}>العودة الى القائمة الرئيسية</button>
+                        }
+                    </WithTitle>
 
                 </div>
                 {loaded && instanceRef.current && (
@@ -170,9 +175,10 @@ export default function Index() {
                         <Arrow
                             left
                             onClick={(e) => {
-                                if (!isOn) {
-                                    e.stopPropagation() || instanceRef.current?.next()
-                                }
+                                // if (!isOn) {
+                                //     e.stopPropagation() || instanceRef.current?.next()
+                                // }
+                                e.stopPropagation() || instanceRef.current?.next()
                             }
                             }
                             disabled={
@@ -183,9 +189,10 @@ export default function Index() {
 
                         <Arrow
                             onClick={(e) => {
-                                if (!isOn) {
-                                    e.stopPropagation() || instanceRef.current?.prev()
-                                }
+                                // if (!isOn) {
+                                //     e.stopPropagation() || instanceRef.current?.prev()
+                                // }
+                                e.stopPropagation() || instanceRef.current?.prev()
                             }
                             }
                             disabled={currentSlide === 0 || isOn}

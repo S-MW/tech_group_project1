@@ -78,33 +78,33 @@ export default function Index({ setIsOn }) {
 
     return (
         <>
-            <div className={`px-8 text-[#efe3d9] h-full font-normal grid place-items-center w-full`}>
+            <div className={`text-[#efe3d9] h-full font-normal grid place-items-center w-full`}>
                 {introImg &&
-                    <div className='w-72 animate__animated animate__backInDown animate__delay-1s animate__slower mt-4'>
-                        <h3 className='p-4 mb-5 rounded-md bg-[#639e98] shadow-md'>هل سبق لك أن شاركت في توصيل الزينة في الاحتفالات ولاحظت أن مصابيح بعض هذه الاسلاك تضيء ً حتى وإن كان بعض المصابيح فيها مفقود ًا أو تالفا، في حين تتوقف مصابيح بعض ُ الاسلاك الصغيرة عن الاضاءة إن فقد منها أو تعطل فيها مصباح واحد؟ </h3>
+                    <div className='mx-8 animate__animated animate__backInDown animate__delay-1s animate__slower mt-4'>
+                        <h3 className='p-2 text-xl mb-5 rounded-md bg-[#639e98] shadow-md'>هل سبق لك أن شاركت في توصيل الزينة في الاحتفالات ولاحظت أن مصابيح بعض هذه الاسلاك تضيء ً حتى وإن كان بعض المصابيح فيها مفقود ًا أو تالفا، في حين تتوقف مصابيح بعض ُ الاسلاك الصغيرة عن الاضاءة إن فقد منها أو تعطل فيها مصباح واحد؟ </h3>
                         <img src="./lesson2/slide9/lamps.jpg" alt="الدائرة الكهربائية" className='animate__animated animate__delay-4s animate__fadeIn animate__slower w-40 mx-auto' />
                     </div>
                 }
                 {way1Img &&
-                    <div className='text-xl w-80 h-80 lg:text-2xl'>
+                    <div className='text-xl mx-8 lg:text-2xl'>
                         <h3 className='p-4 mb-5 rounded-md bg-[#639e98] animate__animated animate__backInDown shadow-md'>
                             <b>دوائر التوصيل على التوالى </b>
                             وهى دائرة كهربائية تتضمن مسارأ واحدًا فقط ، يتدفق فيه التيار الكهربائى
                         </h3>
-                        <img src="./lesson2/slide7/img2.png" className='w-full  animate__animated animate__backInDown animate__delay-1s' alt="دوائر التوصيل على التوالى" />
+                        <img src="./lesson2/slide7/img2.png" className='w-full mx-auto md:w-80 animate__animated animate__backInDown animate__delay-1s' alt="دوائر التوصيل على التوالى" />
                     </div>
                 }
                 {way2Img &&
-                    <div className='mx-auto text-xl w-80 h-80 lg:text-2xl'>
+                    <div className='text-xl mx-8 lg:text-2xl'>
                         <h3 className='p-4 mb-5 rounded-md bg-[#639e98] animate__animated animate__backInDown shadow-md'>
                             <b>دوائر التوصيل على التوازى </b>
                             وهى دائرة كهربائية تتضمن أكثر من مسار لتدفق التيار الكهربائى خلالها.
                         </h3>
-                        <img src="./lesson2/slide7/img3.png" className='w-full animate__animated animate__backInDown animate__delay-1s' alt="دوائر التوصيل على التوازى" />
+                        <img src="./lesson2/slide7/img3.png" className='w-full mx-auto md:w-80 animate__animated animate__backInDown animate__delay-1s' alt="دوائر التوصيل على التوازى" />
                     </div>
                 }
                 {lab &&
-                    <div className='mx-auto text-2xl sm:w-80 w-80 h-80 lg:text-xl flex items-center lg:mt-16 animate__animated animate__backInDown'>
+                    <div className='text-2xl sm:w-80 mx-8 lg:text-xl flex items-center lg:mt-16 animate__animated animate__backInDown'>
                         <button className='bg-[#639e98] block mx-auto py-5 px-8 rounded-md text-3xl shadow-md border-2 animate__animated animate__pulse animate__infinite' onClick={() => window.open('https://phet.colorado.edu/sims/html/circuit-construction-kit-dc-virtual-lab/latest/circuit-construction-kit-dc-virtual-lab_en.html')}>
                             التطبيق
                             <FontAwesomeIcon icon={faHandPointer} className="mr-2 " />

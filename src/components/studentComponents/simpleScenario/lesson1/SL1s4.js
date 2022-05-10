@@ -11,10 +11,10 @@ function SL1s4(props) {
   const [audioNumber, setAudioNumber] = useState(0)
 
 
-  const [playAudio4_0 , { stop: stopAudio4_0 }] = useSound(slideAudio4_0, {
+  const [playAudio4_0, { stop: stopAudio4_0 }] = useSound(slideAudio4_0, {
     onend: () => {
       //console.info('Sound ended!');
-      setImage(`<img src="/slide4_0.jpg" alt="" class="animate__animated animate__bounceInDown w-60 h-60" />`)
+      setImage(`<img src="/slide4_0.jpg" alt="" class="mx-auto animate__animated animate__bounceInDown w-52 h-52 sm:w-60 sm:h-60 md:72 md:h-72" />`)
       setAudioNumber(1);
     },
   });
@@ -29,7 +29,7 @@ function SL1s4(props) {
   const [playAudio4_2] = useSound(slideAudio4_2, {
     onend: () => {
       //console.info('Sound ended!');
-      setImage(`<img src="/slide4_1.jpg" alt="" class="animate__animated animate__bounceInDown w-60 h-60" />`)
+      setImage(`<img src="/slide4_1.jpg" alt="" class="mx-auto animate__animated animate__bounceInDown w-52 h-52 sm:w-60 sm:h-60 md:72 md:h-72" />`)
       setAudioNumber(3);
     },
   });
@@ -70,14 +70,12 @@ function SL1s4(props) {
 
 
   return (
-    <>
+    <div className='mx-8'>
       <div>
-        <div className="text-xl" dangerouslySetInnerHTML={{ __html: image }} />
+        <div className="text-xl mx-auto" dangerouslySetInnerHTML={{ __html: image }} />
       </div>
-      <h3 className="animate__animated animate__fadeInDownBig animate__delay-18s text-sm w-2/3 text-center p-3 rounded-md bg-[#fa976d]
-      md:text-lg
-      lg:text-3xl">قوة ارتباط ذرات الشعر بإلكتروناتها أقل من قوة ارتباط ذرات البالون بإلكتروناتها</h3>
-    </>
+      <h3 className="animate__animated animate__fadeInDownBig animate__delay-18s sub-title">قوة ارتباط ذرات الشعر بإلكتروناتها أقل من قوة ارتباط ذرات البالون بإلكتروناتها</h3>
+    </div>
   );
 }
 

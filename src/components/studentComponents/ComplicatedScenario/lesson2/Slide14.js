@@ -27,13 +27,15 @@ export default function Index({ setIsOn }) {
     return (
         <>
             <div className="mx-5 text-[#efe3d9] h-full flex justify-center flex-col font-normal w-4/6">
-                <h3 className={`mt-4 p-4 lg:p-5 text-2xl max-w-fit mx-auto lg:text-3xl rounded-md shadow-md bg-[#639e98] ${introTitle}`}>
-                    تطبيق الرياضيات
-                </h3>
-                <h3 className='p-4 mb-1 lg:p-5 text-sm sm:text-base max-w-fit mx-auto md:text-2xl shadow-md rounded-md bg-[#fa976d] animate__animated animate__backInDown animate__delay-3s'>
+                <div className='absolute top-5 right-5 animate__animated animate__bounceInDown animate__delay-1s text-sm my-2 w-fit text-center p-2 rounded-md bg-[#639e98]
+                md:text-lg
+                lg:text-3xl'>
+                    <h2> تطبيق الرياضيات</h2>
+                </div>
+                <h3 className='p-2 mt-5 mb-1 lg:p-5 text-xl text-center w-full md:text-3xl shadow-md rounded-md bg-[#fa976d] animate__animated animate__backInDown animate__delay-3s'>
                     القدرة الكهربائية لمصباح كهربائي
                 </h3>
-                <h3 className='p-2 lg:p-5 text-xs sm:text-base max-w-fit mx-auto md:text-xl shadow-md rounded-md bg-[#fc8b92] animate__animated animate__backInDown animate__delay-5s'>
+                <h3 className='p-2 lg:p-5 max-w-fit mx-auto md:text-xl shadow-md rounded-md bg-[#fc8b92] animate__animated animate__backInDown animate__delay-5s'>
                     ُوصل مصباح كهربائي بمصدر جهد كهربائي مقداره 110 فولت. واحسب مقدار القدرة الكهربائية التي يستهلكها المصباح إذا كانت شدة التيار فيه تساوي 55.0 أمبير؟
                 </h3>
                 <h3 className='my-1 p-2 lg:p-5 max-w-fit mx-auto text-xs sm:text-base md:text-lg shadow-md rounded-md bg-[#639e98] animate__animated animate__backInDown animate__delay-21s'>

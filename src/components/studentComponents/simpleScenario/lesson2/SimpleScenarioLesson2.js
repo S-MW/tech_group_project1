@@ -34,11 +34,11 @@ export default function Index() {
 
     const [isOn, setIsOn] = useState(false)
 
-    const [currentSlide, setCurrentSlide] = useState(student.progressLesson2Slide == null ? 0 :student.progressLesson2Slide)
+    const [currentSlide, setCurrentSlide] = useState(student.progressLesson2Slide == null ? 0 : student.progressLesson2Slide)
     const [loaded, setLoaded] = useState(false)
 
     const [sliderRef, instanceRef] = useKeenSlider({
-        initial: student.progressLesson2Slide == null ? 0 :student.progressLesson2Slide,
+        initial: student.progressLesson2Slide == null ? 0 : student.progressLesson2Slide,
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel)
         },
@@ -129,6 +129,11 @@ export default function Index() {
                     <WithTitle>
                         {currentSlide === 9 &&
                             <Slide10 setIsOn={setIsOn} />
+                        }
+                    </WithTitle>
+                    <WithTitle>
+                        {currentSlide === 10 &&
+                            <button className="text-3xl border-2 border-white mx-8 p-3 rounded-md bg-[#fa976d]" onClick={() => navigate("/StudentHome")}>العودة الى القائمة الرئيسية</button>
                         }
                     </WithTitle>
 

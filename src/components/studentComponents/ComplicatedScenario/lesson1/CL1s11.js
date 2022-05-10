@@ -44,12 +44,10 @@ function CL1s11(props) {
                 lg:text-3xl'>
                 <h2>تنوع الثقافات</h2>
             </div>
-            <h1 className="font-bold animate__animated animate__fadeInDownBig animate__delay-2s text-sm my-2 w-fit text-center p-3 rounded-md bg-[#96d2ca]
-                md:text-lg
-                lg:text-3xl">هل تعلمى عزيزتى الطالبة اصل كلمة كهرباء؟</h1>
-            <h1 className=" text-white fort-bold font-bold animate__animated animate__fadeInDownBig animate__delay-5s text-sm my-2 w-2/3 text-center p-3 rounded-md bg-[#a19a8c]
-                md:text-lg
-                lg:text-3xl">كلمة كهرباء أصلها من اللغة اإلغريقية ومعناها الكترون. حيث وجد عالم إغريقي أن دلك العنبر بالفرو يجعل العنبر ً قادرا على جذب قطع صغيرة من القش.</h1>
+            <h1 className="font-bold animate__animated animate__fadeInDownBig animate__delay-2s text-2xl mx-8 my-2 w-fit text-center p-2 rounded-md bg-[#639e98]
+                md:text-3xl">هل تعلمى عزيزتى الطالبة اصل كلمة كهرباء؟</h1>
+            <h1 className="animate__animated animate__fadeInDownBig animate__delay-5s text-xl mx-8 my-2 text-center p-2 rounded-md bg-[#fc8b92]
+                md:text-2xl w-2/3">كلمة كهرباء أصلها من اللغة الإغريقية ومعناها الكترون. حيث وجد عالم إغريقي أن دلك العنبر بالفرو يجعل العنبر ً قادرا على جذب قطع صغيرة من القش.</h1>
 
 
 

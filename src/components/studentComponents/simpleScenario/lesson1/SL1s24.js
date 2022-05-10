@@ -23,9 +23,9 @@ function SL1s24(props) {
   return (
     <>
       <div>
-        <img src="/slide24.jpg" alt="" className="animate__animated animate__bounceInDown w-60 h-60" />
+        <img src="/slide24.jpg" alt="" className="animate__animated animate__bounceInDown w-60" />
       </div>
-      <h3 className="animate__animated animate__fadeInDownBig  text-sm w-2/3 text-center p-3 m-2 rounded-md bg-[#96d2ca]
+      <h3 className="animate__animated animate__fadeInDownBig text-2xl w-2/3 text-center p-3 m-2 rounded-md bg-[#fa976d]
       md:text-lg
       lg:text-3xl">مقياس لمدى ممانعة الموصل (السلك)  لمرور التيّار الكهربائيّ من خلاله، وتقاس بوحدة الأوم.</h3>
     </>

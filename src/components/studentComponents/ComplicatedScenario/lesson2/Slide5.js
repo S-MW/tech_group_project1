@@ -90,9 +90,9 @@ export default function Index({ setIsOn }) {
 
     return (
         <>
-            <div className="mx-5 text-[#efe3d9] h-full flex justify-center flex-col font-normal">
+            <div className="h-full flex justify-center items-center flex-col font-normal">
                 {!isIntroOver &&
-                    <h3 className='p-4 lg:p-5 text-2xl w-[300px] sm:w-[600px] xl:w[800px] mx-auto lg:text-xl rounded-md bg-[#639e98] animate__animated animate__backInDown animate__slower'>
+                    <h3 className='p-2 lg:p-5 text-2xl mx-8 lg:text-xl rounded-md bg-[#639e98] animate__animated animate__backInDown animate__slower text-center'>
                         علاقة الجهد والتيار الكهربائي والمقاومة الكهربائية في دائرة كهربائية
                     </h3>
                 }
@@ -117,15 +117,15 @@ export default function Index({ setIsOn }) {
                     </h3>
                 }
                 {isAnswerPlaying &&
-                    <h3 className='mx-6 p-4 lg:p-5 text-2xl rounded-md bg-[#fc8b92] shadow-md animate__animated animate__backInDown'>
+                    <h3 className='p-2 mx-8 w-2/3 text-xl md:text-2xl text-center rounded-md bg-[#fc8b92] shadow-md animate__animated animate__backInDown'>
                         نلاحظ أن الماء الهابط من أعلى يخسر طاقة وضعه، وكلما زاد ذلك الارتفاع ازدادت ّطاقة الماء المتحولة، وتشبه زيادة الارتفاع في النموذج زيادة الجهد الكهربائي للبطارية في الدائرة الكهربائية. وكما أن تيار الماء يزداد بزيادة الارتفاع فإن تيار الكهرباء يزداد بزيادة الجهد الكهربائي للبطارية.
                     </h3>
                 }
                 {isGeorgePlaying &&
                     <>
-                        <div className='mt-10'>
-                            <img src="./lesson2/slide5/George.jpg" className={`w-72 mx-auto mb-2 ${showGeorge}`} alt="جورج سيمون أوم" />
-                            <h3 className={`mx-6 p-4 lg:p-5 text-xl lg:text-2xl rounded-md bg-[#edac34] ${showGeorge2}`}>
+                        <div className='mt-10 mx-8 w-2/3'>
+                            <img src="./lesson2/slide5/George.jpg" className={`w-36 md:w-72 mx-auto mb-2 ${showGeorge}`} alt="جورج سيمون أوم" />
+                            <h3 className={`p-2 lg:p-5 text-xl md:text-2xl mx-auto text-center lg:text-2xl rounded-md bg-[#edac34] ${showGeorge2}`}>
                                 وهذا ما توصل اليه العالم الالمانى
                                 <b>
                                     &nbsp;
@@ -137,8 +137,8 @@ export default function Index({ setIsOn }) {
                             </h3>
                         </div>
                         <>
-                            <h3 className={`p-2 mb-2 text-xl lg:text-2xl max-w-fit mx-auto my-2 rounded-md bg-[#fc8b92] shadow-md ${ohmsLaw}`}>
-                                <img src="./lesson2/slide5/img.png" alt="" className={`w-72 mx-auto mb-2 ${ohmsLaw}`} />
+                            <h3 className={`p-2 mb-2 text-xl lg:text-2xl max-w-fit mx-8 my-2 rounded-md bg-[#fc8b92] shadow-md ${ohmsLaw}`}>
+                                <img src="./lesson2/slide5/img.png" alt="" className={`w-64 md:w-72 mx-auto mb-2 ${ohmsLaw}`} />
 
                                 <p className='mt-2 p-1' style={{ textShadow: 'unset' }}>
                                     <b className='text-[#000]'> قانون أوم: </b>
@@ -154,7 +154,7 @@ export default function Index({ setIsOn }) {
                             </h3>
                         </>
 
-                        <div className='mx-auto text-2xl w-80 h-80 lg:text-xl flex items-center lg:mt-16 animate__animated animate__backInDown animate__delay-17s'>
+                        <div className='mx-auto text-2xl w-64 h-64 lg:text-xl flex items-center lg:mt-16 animate__animated animate__backInDown animate__delay-17s'>
                             <button className='bg-[#639e98] block mx-auto py-5 px-8 rounded-md text-3xl shadow-md border-2 animate__animated animate__pulse animate__infinite' onClick={() => window.open('https://phet.colorado.edu/sims/html/ohms-law/latest/ohms-law_ar_SA.html')}>
                                 التطبيق
                                 <FontAwesomeIcon icon={faHandPointer} className="mr-2 " />

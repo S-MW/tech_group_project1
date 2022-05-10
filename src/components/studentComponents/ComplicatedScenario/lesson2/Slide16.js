@@ -68,26 +68,26 @@ export default function Index({ setIsOn }) {
     return (
         <>
             <div className="mx-8 text-[#efe3d9] h-full flex justify-center flex-col font-normal w-4/6">
-                <h3 className={`p-4 lg:p-5 text-2xl max-w-fit mx-auto lg:text-xl rounded-md bg-[#639e98] ${intro}`}>
+                <h3 className={`p-2 lg:p-5 text-2xl max-w-fit mx-auto lg:text-xl rounded-md bg-[#639e98] ${intro}`}>
                     الربط مع الصحة
                 </h3>
 
                 {showContent &&
                     <>
-                        <h3 className='p-4 lg:p-5 font-bold md:text-2xl max-w-fit mx-auto lg:text-2xl rounded-md bg-[#edac34] animate__animated animate__backInDown'>
+                        <h3 className='p-2 lg:p-5 font-bold text-xl text-center md:text-2xl w-full mx-auto rounded-md bg-[#edac34] animate__animated animate__backInDown mt-2'>
                             لماذا يصاب جسم الانسان بصدمة كهربائية؟
                         </h3>
 
-                        <h3 className='p-4 my-2 lg:p-5 text-sm md:text-2xl max-w-fit mx-auto lg:text-2xl rounded-md bg-[#fc8b92] animate__animated animate__fadeInRight animate__delay-3s'>
+                        <h3 className='p-2 my-2 lg:p-5 md:text-2xl text-center w-full mx-auto lg:text-2xl rounded-md bg-[#fc8b92] animate__animated animate__fadeInRight animate__delay-3s'>
                             إذا سرى تيار كهربائي في جسمك فسوف تعاني من ً صدمة كهربائية؛ إذ يشبه جسمك في بعض الأحيان سلكا معزولا؛ فالسوائل داخل جسمك موصلة جيدة للكهرباء، في حين أن مقاومة الجلد الجاف أكبر كثير فالجلد يعزل الجسم كما يفعل الغلاف البلاستيكي حول السلك النحاسي، وهو يمنع التيار من دخول الجسم، إلا أن التيار الكهربائي يعبر جسمك عندما يصبح جسمك جزءا من دائرة كهربائية بطريق الخطأ. وقد تكون الصدمة قاتلة عند مرور بمقدار معين من التيار الكهربائي.
                         </h3>
 
                         <div className='h-40'>
 
-                            <img src="./lesson2/slide16/shockY.jpg" alt="" className={`w-40 md:w-56 mx-auto ${shockY}`} />
-                            <img src="./lesson2/slide16/water.jpg" alt="" className={`w-40 md:w-56 mx-auto ${water}`} />
-                            <img src="./lesson2/slide16/shock.png" alt="" className={`w-40 md:w-56 mx-auto ${shock}`} />
-                            <img src="./lesson2/slide16/dead.png" alt="" className={`w-40 md:w-56 mx-auto ${dead}`} />
+                            <img src="./lesson2/slide16/shockY.jpg" alt="" className={`w-36 md:w-56 mx-auto ${shockY}`} />
+                            <img src="./lesson2/slide16/water.jpg" alt="" className={`w-36 md:w-56 mx-auto ${water}`} />
+                            <img src="./lesson2/slide16/shock.png" alt="" className={`w-36 md:w-56 mx-auto ${shock}`} />
+                            <img src="./lesson2/slide16/dead.png" alt="" className={`w-36 md:w-56 mx-auto ${dead}`} />
                         </div>
 
                     </>

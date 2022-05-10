@@ -86,10 +86,11 @@ export default function StudentHome() {
                 draggable
                 pauseOnHover
             />
-            <div className="flex flex-col justify-center items-center h-screen w-1/3 mx-auto space-y-2 text-[#efe3d9]">
-                <button onClick={() => navigateToLesson1()} className="p-3 w-full rounded-lg border-2 border-white bg-[#edac34]">الدرس الاول : التيار الكهربائي</button>
-                <button onClick={() => navigateToLesson2()} className="p-3 w-full rounded-lg border-2 border-white bg-[#fc8b92]">الدرس الثاني : الدوائر الكهربائية</button>
-                <button onClick={() => navigateToExam()} className="p-3 w-full rounded-lg border-2 border-white bg-[#fa976d]">الاختبار</button>
+
+            <div className="flex flex-col justify-center items-center h-screen gap-2 w-3/4 mx-auto md:w-1/3 text-xl md:text-2xl text-[#efe3d9]">
+                <button onClick={() => navigateToLesson1()} className="p-2 w-full rounded-lg border-2 border-white bg-[#edac34]">الدرس الاول : التيار الكهربائي</button>
+                <button onClick={() => navigateToLesson2()} className="p-2 w-full rounded-lg border-2 border-white bg-[#fc8b92]">الدرس الثاني : الدوائر الكهربائية</button>
+                <button onClick={() => navigateToExam()} className="p-2 w-full rounded-lg border-2 border-white bg-[#fa976d]">الاختبار</button>
             </div>
         </>
     );
