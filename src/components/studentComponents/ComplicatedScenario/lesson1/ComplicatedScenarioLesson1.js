@@ -245,10 +245,9 @@ export default function ComplicatedScenarioLesson1() {
                         <Arrow
                             left
                             onClick={(e) => {
-                                // if (!isAudioOn) {
-                                //     e.stopPropagation() || instanceRef.current?.next()
-                                // }
-                                e.stopPropagation() || instanceRef.current?.next()
+                                if (!isAudioOn) {
+                                    e.stopPropagation() || instanceRef.current?.next()
+                                }
                             }
                             }
                             disabled={
@@ -259,10 +258,9 @@ export default function ComplicatedScenarioLesson1() {
 
                         <Arrow
                             onClick={(e) => {
-                                // if (!isAudioOn) {
-                                //     e.stopPropagation() || instanceRef.current?.prev()
-                                // }
-                                e.stopPropagation() || instanceRef.current?.prev()
+                                if (!isAudioOn) {
+                                    e.stopPropagation() || instanceRef.current?.prev()
+                                }
                             }
                             }
                             disabled={currentSlide === 0 || isAudioOn}
