@@ -16,16 +16,15 @@ export default function Index({ setIsOn }) {
         playIntro()
     }, [playIntro, setIsOn])
 
-    // FIIIIIIIIIIIIIIIIXXxxXXxXXXX
 
     return (
         <>
-            <div className={`px-8 text-[#efe3d9] h-full font-normal flex gap-10 lg:gap-0 items-center justify-center flex-col w-full`}>
-                <div className='animate__animated animate__backInDown lg:mr-6'>
-                    <img src="./lesson2/slide8/power.png" className='' alt="الدائرة الكهربائية" />
+            <div className={`px-8 text-[#efe3d9] h-full font-normal flex gap-10 items-center justify-center flex-col w-full`}>
+                <div className='animate__animated animate__backInDown lg:mr-6 mt-5'>
+                    <img src="./lesson2/slide8/power.png" className='w-60 lg:w-64' alt="الدائرة الكهربائية" />
                 </div>
                 <div className='animate__animated animate__backInDown animate__delay-22s '>
-                    <img src="./lesson2/slide8/kwh.png" alt="الدائرة الكهربائية" className='' />
+                    <img src="./lesson2/slide8/kwh.png" alt="الدائرة الكهربائية" className='w-60 lg:w-64' />
                 </div>
 
             </div>
