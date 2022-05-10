@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import toastifyFile from "../../components/React-toastify/index"
 
-
+import axios from "axios"
 
 export default function StudentHome() {
 
@@ -35,13 +35,35 @@ export default function StudentHome() {
         // }
     }
 
+    const config = {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+    }
+
+    let data = { "test": 1 }
+
+    function studentIsNavigatedToExam() {
+
+        axios
+            .post(`https://asr.tawfig.info/api/user/update`, data, config)
+            .then(response => {
+                // console.log(response);
+            })
+            .catch(error => {
+                // console.log(error);
+            }
+            )
+    }
+
     function navigateToExam() {
+
         if (student.isCompletedLesson1 && student.isCompletedLesson2) {
             if (student.sinarioType == "simple") {
+                studentIsNavigatedToExam()
                 window.open('https://docs.google.com/forms/d/1r1yPN8Y4JAwtqFzNusvAFY0yelUJMlvwPLWraLwkC_g/edit?usp=sharing')
             }
             else {
                 // That mean she is Complicated Type.
+                studentIsNavigatedToExam()
                 window.open('https://docs.google.com/forms/d/1n4p0_d1vAmKFOLo82BJlJTIPzkeUG9gTWh-crocxHvg/edit?usp=sharing')
             }
         }
