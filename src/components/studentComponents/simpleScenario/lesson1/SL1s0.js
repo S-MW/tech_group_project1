@@ -26,25 +26,12 @@ export default function SL1s0(props) {
   }, [playAudio0]);
 
   return (
-    <>
-      <div onClick={() => {
-        localStorage.clear();
-        navigate("/")
-      }} className='bg-red-300 text-[#efe3d9] w-fit h-fit absolute top-3 left-3 rounded-md flex flex-row cursor-pointer'>
-        <div className="m-2">
-          {/* <AiOutlineLogout /> */}
-        </div>
-        <div className="m-1">
-          <button className='font-bold'>تسجيل الخروج</button>
-        </div>
+    <div className="h-full grid place-items-center">
+      <div className="pb-20">
+        <h1 className="p-2 text-4xl text-center font-bold mx-auto md:text-6xl shadow-md rounded-md bg-[#fa976d] animate__animated animate__fadeInDownBig animate__delay-1s">
+          الأهـداف التعليمية
+        </h1>
       </div>
-      <div className="h-full grid place-items-center">
-        <div className="pb-20">
-          <h1 className="p-2 text-4xl text-center font-bold mx-auto md:text-6xl shadow-md rounded-md bg-[#fa976d] animate__animated animate__fadeInDownBig animate__delay-1s">
-            الأهـداف التعليمية
-          </h1>
-        </div>
-      </div>
-    </>
+    </div>
   );
 }

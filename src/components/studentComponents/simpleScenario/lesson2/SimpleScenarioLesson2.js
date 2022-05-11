@@ -54,8 +54,8 @@ export default function Index() {
     }
 
     let trackData = {
-        "progressLesson2Slide": currentSlide == 9 ? 0 : currentSlide,
-        "isCompletedLesson2": currentSlide == 9 ? true : student.isCompletedLesson2
+        "progressLesson2Slide": currentSlide == 10 ? 0 : currentSlide,
+        "isCompletedLesson2": currentSlide == 10 ? true : student.isCompletedLesson2
     }
 
 
