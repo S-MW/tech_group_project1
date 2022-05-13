@@ -78,7 +78,7 @@ export default function SimpleScenarioLesson1() {
     useEffect(() => {
         playTester()
         axios
-            .post(`https://asr.tawfig.info/api/user/update`, trackData, config)
+            .post(`https://api.abedahstem.com/api/user/update`, trackData, config)
             .then(response => {
                 let student = {
                     name: response.data.user.name, sinarioType: response.data.user.pattern, isCompletedLesson1: response.data.user.isCompletedLesson1,

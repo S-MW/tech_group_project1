@@ -28,7 +28,7 @@ export default function Home() {
     function login(studentCode) {
 
         axios
-            .post(`https://asr.tawfig.info/api/login`, { id: studentCode })
+            .post(`https://api.abedahstem.com/api/login`, { id: studentCode })
             .then(response => {
                 let student = {
                     name: response.data.user.name, sinarioType: response.data.user.pattern, isCompletedLesson1: response.data.user.isCompletedLesson1,

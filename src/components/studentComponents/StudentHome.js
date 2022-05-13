@@ -44,7 +44,7 @@ export default function StudentHome() {
     function studentIsNavigatedToExam() {
 
         axios
-            .post(`https://asr.tawfig.info/api/user/update`, data, config)
+            .post(`https://api.abedahstem.com/api/user/update`, data, config)
             .then(response => {
                 // console.log(response);
             })
