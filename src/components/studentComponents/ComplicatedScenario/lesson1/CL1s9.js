@@ -34,7 +34,7 @@ function CL1s9(props) {
   const [playAudio9_0, { stop: stopAudio9_0 }] = useSound(slideAudio9_0, {
     onend: () => {
       //console.info('Sound ended!');
-      // setImage(`<img src="ComplicatedScenarioImages/slide9_0.gif" alt="" class="w-60 h-60" />`)
+      setImage(`<img src="ComplicatedScenarioImages/slide9_0.gif" alt="" class="w-60 h-60" />`)
 
       const timer = setTimeout(() => {
         //console.log(' setTimeout :: playAudio9_0 : 13s')
@@ -46,7 +46,7 @@ function CL1s9(props) {
   const [playAudio9_1, { stop: stopAudio9_1 }] = useSound(slideAudio9_1, {
     onend: () => {
       //console.info('Sound ended!');
-      // setImage(`<img src="ComplicatedScenarioImages/slide9_1.gif" alt="" class="w-60 h-60" />`)
+      setImage(`<img src="ComplicatedScenarioImages/slide9_1.gif" alt="" class="w-60 h-60" />`)
 
       const timer = setTimeout(() => {
         //console.log(' setTimeout :: playAudio9_0 : 10s')
