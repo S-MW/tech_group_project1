@@ -20,19 +20,19 @@ export default function StudentHome() {
     }
 
     function navigateToLesson2() {
-        // if (student.isCompletedLesson1) {
-        if (student.sinarioType == "simple") {
-            navigate("/SimpleScenarioLesson2")
+        if (student.isCompletedLesson1) {
+            if (student.sinarioType == "simple") {
+                navigate("/SimpleScenarioLesson2")
+            }
+            else {
+                // That mean she is Complicated Type.
+                navigate("/ComplicatedScenarioLesson2")
+            }
         }
         else {
-            // That mean she is Complicated Type.
-            navigate("/ComplicatedScenarioLesson2")
+            // console.log("You have to finish lesson1 first")
+            toastifyFile.warnNotify('يجب عليك الإنتهاء من الدرس الأول.')
         }
-        // }
-        // else {
-        //     console.log("You have to finish lesson1 first")
-        //     toastifyFile.warnNotify('يجب عليك الإنتهاء من الدرس الأول.')
-        // }
     }
 
     const config = {
