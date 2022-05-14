@@ -76,9 +76,9 @@ export default function ComplicatedScenarioLesson1() {
             .post(`https://api.abedahstem.com/api/user/update`, trackData, config)
             .then(response => {
                 let student = {
-                    name: response.data.user.name, sinarioType: response.data.user.pattern, isCompletedLesson1: response.data.user.isCompletedLesson1,
-                    progressLesson1Slide: response.data.user.progressLesson1Slide,
-                    isCompletedLesson2: response.data.user.isCompletedLesson2, progressLesson2Slide: response.data.user.progressLesson2Slide
+                    name: response.data.user.name, sinarioType: response.data.user.pattern, isCompletedLesson1: parseInt(response.data.user.isCompletedLesson1),
+                    progressLesson1Slide: parseInt(response.data.user.progressLesson1Slide),
+                    isCompletedLesson2: parseInt(response.data.user.isCompletedLesson2), progressLesson2Slide: parseInt(response.data.user.progressLesson2Slide)
                 }
                 localStorage.setItem("studentData", JSON.stringify(student))
             })
